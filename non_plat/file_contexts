@@ -328,7 +328,6 @@
 /dev/ancservice(/.*)? u:object_r:ancservice_device:s0
 /dev/offloadservice(/.*)? u:object_r:offloadservice_device:s0
 /dev/audio_ipi(/.*)? u:object_r:audio_ipi_device:s0
-/dev/audio_scp(/.*)? u:object_r:audio_scp_device:s0
 /dev/irtx u:object_r:irtx_device:s0
 /dev/spm(/.*)? u:object_r:spm_device:s0
 /dev/xt_qtaguid(/.*)? u:object_r:xt_qtaguid_device:s0
@@ -557,8 +556,6 @@
 # Google Trusty system files
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.keymaster@3\.0-service\.trusty u:object_r:hal_keymaster_default_exec:s0
 
-#Widevine drm hal
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine           u:object_r:hal_drm_widevine_exec:s0
 #PQ hal
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.pq@2\.2-service u:object_r:mtk_hal_pq_exec:s0
 #MMS hal
@@ -617,8 +614,6 @@
 /vendor/lib(64)?/libtflite_mtk.so u:object_r:same_process_hal_file:s0
 
 /vendor/bin/hw/vendor\.mediatek\.hardware\.log@1\.0-service u:object_r:aee_hal_exec:s0
-
-/vendor/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey          u:object_r:hal_drm_clearkey_exec:s0
 
 /vendor/bin/loghidlvendorservice u:object_r:loghidlvendorservice_exec:s0
 
