@@ -76,3 +76,4 @@ type mtk_hal_bluetooth_audio_hwservice,hwservice_manager_type;
 type mtk_hal_composer_ext_hwservice, hwservice_manager_type, protected_hwservice;
 
 type mtk_hal_keyinstall_hwservice, hwservice_manager_type;
+type mtk_hal_gpu_hwservice, hwservice_manager_type;

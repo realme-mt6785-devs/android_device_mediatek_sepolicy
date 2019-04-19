@@ -115,3 +115,8 @@ attribute hal_teei_capi_server;
 attribute hal_teei_wechat;
 attribute hal_teei_wechat_client;
 attribute hal_teei_wechat_server;
+
+# GPU HIDL
+attribute hal_gpu;
+attribute hal_gpu_client;
+attribute hal_gpu_server;
