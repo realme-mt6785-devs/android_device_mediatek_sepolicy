@@ -71,6 +71,11 @@ type proc_kpageflags, fs_type, proc_type;
 type proc_slabtrace, fs_type, proc_type;
 type proc_cmdq_debug, fs_type, proc_type;
 type proc_dbg_repo, fs_type, proc_type;
+type proc_isp_p2_dump, fs_type, proc_type;
+type proc_isp_p2_kedump, fs_type, proc_type;
+type proc_memory_usage, fs_type, proc_type;
+type proc_mtk_es_reg_dump, fs_type, proc_type;
+type sysfs_execstate, fs_type, sysfs_type;
 type sysfs_therm, fs_type, sysfs_type;
 type sysfs_fps, fs_type, sysfs_type;
 type sysfs_ccci, fs_type, sysfs_type;
@@ -317,9 +322,6 @@ type rilproxy_atci_socket, file_type;
 type atci_service_socket, file_type;
 type adb_atci_socket, file_type;
 
-# EM Power PMU register reading/setting
-type debugfs_regmap, fs_type, debugfs_type;
-
 # Date : 2018/11/01
 # Purpose : mtk EM c2k bypass read usb file
 type sys_usb_rawbulk, fs_type, sysfs_type;
@@ -333,7 +335,3 @@ type sysfs_mmcblk, fs_type, sysfs_type;
 
 # Vibrator vibrate file
 type sysfs_leds_setting, fs_type, sysfs_type;
-
-# Date : 2019/04/09
-# Purpose: mtk EM battery temprature settings
-type sysfs_battery_temp, fs_type, sysfs_type;
