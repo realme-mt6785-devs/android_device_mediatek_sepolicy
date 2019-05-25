@@ -53,7 +53,6 @@ type proc_mtktz, fs_type, proc_type;
 type proc_slogger, fs_type, proc_type;
 type proc_lk_env, fs_type, proc_type;
 type proc_ged, fs_type, proc_type;
-type proc_mtk_jpeg, fs_type, proc_type;
 type proc_perfmgr, fs_type, proc_type;
 type proc_wmtdbg, fs_type, proc_type;
 type proc_zraminfo, fs_type, proc_type;
@@ -110,7 +109,7 @@ type nvcfg_file, file_type, data_file_type;
 type cct_data_file, file_type, data_file_type;
 type mediaserver_data_file, file_type, data_file_type;
 type mediacodec_data_file, file_type, data_file_type;
-type connsyslog_data_vendor_file, file_type, data_file_type;
+
 
 #mobilelog data/misc/mblog
 type logmisc_data_file, file_type, data_file_type, core_data_file_type;
@@ -141,7 +140,7 @@ type ccci_cfg_file, file_type, data_file_type;
 type c2k_file, file_type, data_file_type;
 #For sensor
 type sensor_data_file, file_type, data_file_type;
-type stp_dump_data_file, file_type, data_file_type;
+type stp_dump_data_file, file_type, data_file_type, core_data_file_type;
 type sysfs_keypad_file, fs_type, sysfs_type;
 type rild_via_socket, file_type;
 type rpc_socket, file_type;
@@ -342,7 +341,14 @@ type sysfs_mmcblk, fs_type, sysfs_type;
 type sysfs_leds_setting, fs_type, sysfs_type;
 
 # Date : 2019/04/09
-# Purpose: mtk EM battery temprature settings
+# Purpose: mtk EM battery settings
 type sysfs_battery_temp, fs_type, sysfs_type;
+type sysfs_battery_consumption, fs_type, sysfs_type;
+type sysfs_power_on_vol, fs_type, sysfs_type;
+type sysfs_power_off_vol, fs_type, sysfs_type;
+type sysfs_fg_disable, fs_type, sysfs_type;
+type sysfs_dis_nafg, fs_type, sysfs_type;
+
+
 
 type aee_dipdebug_vendor_file, file_type, data_file_type;
