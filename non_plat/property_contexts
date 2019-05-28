@@ -328,3 +328,7 @@ ro.vendor.init.sensor.rc u:object_r:vendor_mtk_sensor_prop:s0
 
 #=============add for bluetooth ldac abr====================
 vendor.bluetooth.ldac.abr u:object_r:vendor_mtk_default_prop:s0
+
+# Wifi version recorder
+vendor.wlan.driver.version       u:object_r:vendor_wifi_version:s0
+vendor.wlan.firmware.version     u:object_r:vendor_wifi_version:s0
