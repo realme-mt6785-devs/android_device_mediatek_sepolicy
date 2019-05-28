@@ -1,5 +1,5 @@
 # Board specific SELinux policy variable definitions
-BOARD_SEPOLICY_DIRS := \
+BOARD_VENDOR_SEPOLICY_DIRS := \
         device/mediatek/sepolicy/neverallows/non_plat \
         device/mediatek/sepolicy/non_plat
 
