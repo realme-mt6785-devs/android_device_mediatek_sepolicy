@@ -12,13 +12,13 @@
 #############################
 # Custom files
 (/vendor)?/custom(/.*)?		u:object_r:custom_file:s0
-/dev/socket/netd    u:object_r:netd_socket:s0
+
 
 
 #############################
 # Data files
 #
-/data/vendor_de/meta(/.*)?    u:object_r:mddb_data_file:s0
+/data/vendor/meta(/.*)?    u:object_r:mddb_data_file:s0
 /data/aee_exp(/.*)?  u:object_r:aee_exp_data_file:s0
 /data/vendor/aee_exp(/.*)?  u:object_r:aee_exp_vendor_file:s0
 /data/vendor/agps_supl(/.*)?    u:object_r:agpsd_data_file:s0
@@ -62,7 +62,7 @@
 /data/vendor/powerhal(/.*)? u:object_r:mtk_powerhal_data_file:s0
 #/data/vendor/nfc(/.*)? u:object_r:nfc_data_file:s0
 /data/connsyslog(/.*)?  u:object_r:consyslog_data_file:s0
-/data/vendor/stp_dump(/.*)? u:object_r:stp_dump_data_file:s0
+/data/misc/stp_dump(/.*)? u:object_r:stp_dump_data_file:s0
 /data/vendor/mediadrm(/.*)?      u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/dipdebug(/.*)?    u:object_r:aee_dipdebug_vendor_file:s0
 
@@ -76,8 +76,6 @@
 
 # Wallpaper file for smartbook
 /data/system/users/[0-9]+/smartbook_wallpaper   u:object_r:wallpaper_file:s0
-
-/data/vendor/connsyslog(/.*)? u:object_r:connsyslog_data_vendor_file:s0
 
 # nvdata
 /mnt/vendor/nvdata(/.*)? u:object_r:nvdata_file:s0
@@ -131,7 +129,6 @@
 /dev/camera-sysram(/.*)? u:object_r:camera_sysram_device:s0
 /dev/ccu(/.*)? u:object_r:ccu_device:s0
 /dev/vpu(/.*)? u:object_r:vpu_device:s0
-/dev/mdlactl(/.*)? u:object_r:mdla_device:s0
 /dev/ccci_monitor     u:object_r:ccci_monitor_device:s0
 /dev/ccci.* u:object_r:ccci_device:s0
 /dev/cpu_dma_latency(/.*)? u:object_r:cpu_dma_latency_device:s0
@@ -208,7 +205,6 @@
 /dev/mtk_sched(/.*)? u:object_r:mtk_sched_device:s0
 /dev/MTK_SMI(/.*)? u:object_r:MTK_SMI_device:s0
 /dev/mtk_cmdq(/.*)? u:object_r:mtk_cmdq_device:s0
-/dev/mdp_device(/.*)? u:object_r:mdp_device:s0
 /dev/mdp_sync(/.*)? u:object_r:mtk_mdp_device:s0
 /dev/mtk_rrc(/.*)? u:object_r:mtk_rrc_device:s0
 /dev/mtk_dfrc(/.*)? u:object_r:mtk_dfrc_device:s0
@@ -521,7 +517,7 @@
 # System files
 #
 /(system\/vendor|vendor)/bin/audiocmdservice_atci u:object_r:audiocmdservice_atci_exec:s0
-/(system\/vendor|vendor)/bin/stp_dump3 u:object_r:stp_dump3_exec:s0
+/system/bin/stp_dump3 u:object_r:stp_dump3_exec:s0
 /(system\/vendor|vendor)/bin/wmt_launcher u:object_r:mtk_wmt_launcher_exec:s0
 /(system\/vendor|vendor)/bin/ccci_fsd u:object_r:ccci_fsd_exec:s0
 /(system\/vendor|vendor)/bin/fuelgauged u:object_r:fuelgauged_exec:s0
@@ -554,7 +550,7 @@
 
 /(system\/vendor|vendor)/bin/biosensord_nvram u:object_r:biosensord_nvram_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.bluetooth@1\.0-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.gnss@2\.0-service-mediatek u:object_r:mtk_hal_gnss_exec:s0
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.gnss@1\.1-service-mediatek u:object_r:mtk_hal_gnss_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.audio@5\.0-service-mediatek u:object_r:mtk_hal_audio_exec:s0
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.mtkpower@1\.0-service u:object_r:mtk_hal_power_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.sensors@1\.0-service-mediatek u:object_r:mtk_hal_sensors_exec:s0
@@ -562,9 +558,6 @@
 /(system\/vendor|vendor)/bin/hw/rilproxy u:object_r:rild_exec:s0
 /(system\/vendor|vendor)/bin/hw/mtkfusionrild u:object_r:rild_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service-mediatek u:object_r:mtk_hal_light_exec:s0
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.light@2\.0-service-mediatek-lazy u:object_r:mtk_hal_light_exec:s0
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service-mediatek u:object_r:hal_vibrator_default_exec:s0
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service-mediatek-lazy u:object_r:hal_vibrator_default_exec:s0
 /(system\/vendor|vendor)/bin/hw/camerahalserver u:object_r:mtk_hal_camera_exec:s0
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.imsa@1\.0-service u:object_r:mtk_hal_imsa_exec:s0
 
@@ -581,6 +574,7 @@
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.1-service-st u:object_r:hal_nfc_default_exec:s0
 # MTK Wifi Hal
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.wifi@1\.0-service-mediatek           u:object_r:mtk_hal_wifi_exec:s0
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.wifi@1\.0-service-lazy-mediatek      u:object_r:mtk_hal_wifi_exec:s0
 # MTK USB hal
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.usb@1\.1-service-mediatek u:object_r:mtk_hal_usb_exec:s0
 # MTK OMAPI for UICC
@@ -626,8 +620,6 @@
 /vendor/lib(64)?/libpq_cust_base\.so                                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.mediatek\.hardware\.pq@[0-9]\.[0-9]\.so                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libpq_prot\.so                                      u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libhdrvideo\.so                                      u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libscltm\.so                                      u:object_r:same_process_hal_file:s0
 
 /vendor/lib(64)?/vendor\.mediatek\.hardware\.gpu@1\.0.so u:object_r:same_process_hal_file:s0
 
@@ -653,17 +645,3 @@
 /proc/mali/memory_usage u:object_r:proc_memory_usage:s0
 /proc/mtk_es_reg_dump u:object_r:proc_mtk_es_reg_dump:s0
 /sys/power/mtkpasr/execstate u:object_r:sysfs_execstate:s0
-
-# Date: 2018/12/04
-# Purpose: Neuron runtime API and the dependencies
-/vendor/lib(64)?/libneuron_platform.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libion_mtk.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libvpu.so u:object_r:same_process_hal_file:s0
-
-# Date: 2019/01/21
-# Purpose: OpenCL feature requirments
-/vendor/lib(64)?/libOpenCL\.so                                  u:object_r:same_process_hal_file:s0
-
-#MRDUMP
-/dev/block/platform/bootdevice/by-name/mrdump(/.*)? u:object_r:mrdump_device:s0
-
