@@ -67,7 +67,6 @@ type proc_last_kmsg, fs_type, proc_type;
 type proc_bootprof, fs_type, proc_type;
 type proc_pl_lk, fs_type, proc_type;
 type proc_msdc_debug, fs_type, proc_type;
-type proc_ufs_debug, fs_type, proc_type;
 type proc_pidmap, fs_type, proc_type;
 type proc_kpageflags, fs_type, proc_type;
 type proc_slabtrace, fs_type, proc_type;
@@ -118,8 +117,6 @@ type logmisc_data_file, file_type, data_file_type, core_data_file_type;
 
 #mobilelog data/log_temp
 type logtemp_data_file, file_type, data_file_type, core_data_file_type;
-
-type debuglog_data_file, file_type, data_file_type, core_data_file_type;
 
 # NE core_forwarder
 type aee_core_data_file, file_type, data_file_type, core_data_file_type;
@@ -356,7 +353,3 @@ type sysfs_mmcblk, fs_type, sysfs_type;
 type aee_dipdebug_vendor_file, file_type, data_file_type;
 
 type netd_socket, file_type, coredomain_socket;
-
-# Date : WK19.27
-# Purpose: Android Migration for SVP
-type proc_m4u, fs_type, proc_type;
