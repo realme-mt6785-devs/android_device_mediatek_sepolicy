@@ -25,6 +25,7 @@ allow vendor_init vendor_file:system module_load;
 allow vendor_init kmsg_device:chr_file unlink;
 set_prop(vendor_init, system_mtk_persist_mtk_aee_prop)
 set_prop(vendor_init, vendor_mtk_ro_aee_prop)
+set_prop(vendor_init, vendor_mtk_sensor_prop)
 set_prop(vendor_init, vendor_mtk_usb_prop)
 set_prop(vendor_init, vendor_mtk_ct_volte_prop)
 set_prop(vendor_init, vendor_mtk_gps_support_prop)

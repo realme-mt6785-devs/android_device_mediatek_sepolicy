@@ -105,6 +105,7 @@ allow factory nvdata_device:blk_file rw_file_perms;
 
 #Date: WK16.12
 #Purpose: For sensor test
+allow factory hf_manager_device:chr_file rw_file_perms;
 allow factory als_ps_device:chr_file r_file_perms;
 allow factory barometer_device:chr_file r_file_perms;
 allow factory gsensor_device:chr_file r_file_perms;

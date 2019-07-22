@@ -252,6 +252,7 @@ type barometer_device,dev_type;
 type humidity_device,dev_type;
 type biometric_device,dev_type;
 type sensorlist_device,dev_type;
+type hf_manager_device,dev_type;
 ##########################
 # Sensor Devices Start
 #
