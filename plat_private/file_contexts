@@ -40,6 +40,9 @@
 /system/bin/mtkbootanimation u:object_r:mtkbootanimation_exec:s0
 /system/bin/boot_logo_updater u:object_r:boot_logo_updater_exec:s0
 
+# b/135474897
+/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service.software    u:object_r:hal_gatekeeper_default_exec:s0
+
 /dev/ubi_ctrl u:object_r:mtd_device:s0
 /dev/ubi[_0-9]* u:object_r:mtd_device:s0
 /dev/block/mtd(.*)?     u:object_r:mtd_device:s0
