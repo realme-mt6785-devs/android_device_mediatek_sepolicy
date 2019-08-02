@@ -65,7 +65,6 @@
 /data/vendor/stp_dump(/.*)? u:object_r:stp_dump_data_file:s0
 /data/vendor/mediadrm(/.*)?      u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/dipdebug(/.*)?    u:object_r:aee_dipdebug_vendor_file:s0
-/data/vendor/key_provisioning(/.*)?   u:object_r:key_install_data_file:s0
 
 # Misc data
 #/data/misc/acdapi(/.*)? u:object_r:acdapi_data_file:s0
@@ -480,12 +479,6 @@
 /dev/block/platform/bootdevice/by-name/loader_ext(_[ab])?    u:object_r:loader_ext_block_device:s0
 /dev/block/platform/bootdevice/by-name/vbmeta(_system|_vendor)?(_[ab])?    u:object_r:vbmeta_block_device:s0
 
-# Key manager
-/dev/block/platform/bootdevice/by-name/kb        u:object_r:kb_block_device:s0
-/dev/block/platform/bootdevice/by-name/dkb       u:object_r:dkb_block_device:s0
-/dev/kb                                          u:object_r:kb_block_device:s0
-/dev/dkb                                         u:object_r:dkb_block_device:s0
-
 # W19.23 Q new feature - Userdata Checkpoint
 /dev/block/by-name/md_udc             u:object_r:metadata_block_device:s0
 
@@ -531,7 +524,6 @@
 /sys/kernel/debug/fpsgo(/.*)? u:object_r:debugfs_fpsgo:s0
 /sys/kernel/debug/emi_mbw/dump_buf(/.*)? u:object_r:debugfs_emi_mbw_buf:s0
 /sys/kernel/debug/vpu/device_dbg(/.*)? u:object_r:debugfs_vpu_device_dbg:s0
-/sys/kernel/debug/kmemleak u:object_r:debugfs_kmemleak:s0
 
 #############################
 # System files
@@ -557,7 +549,6 @@
 /(system\/vendor|vendor)/bin/thermalloadalgod u:object_r:thermalloadalgod_exec:s0
 /(system\/vendor|vendor)/bin/lbs_hidl_service u:object_r:lbs_hidl_service_exec:s0
 /(system\/vendor|vendor)/bin/meta_tst u:object_r:meta_tst_exec:s0
-/(system\/vendor|vendor)/bin/kisd u:object_r:kisd_exec:s0
 
 /(system\/vendor|vendor)/bin/fm_hidl_service u:object_r:fm_hidl_service_exec:s0
 /(system\/vendor|vendor)/bin/wlan_assistant u:object_r:wlan_assistant_exec:s0
@@ -567,7 +558,7 @@
 /(system\/vendor|vendor)/bin/factory u:object_r:factory_exec:s0
 
 /(system\/vendor|vendor)/bin/mnld u:object_r:mnld_exec:s0
-#/system/bin/connsyslogger u:object_r:connsyslogger_exec:s0
+/system/bin/connsyslogger u:object_r:connsyslogger_exec:s0
 
 /(system\/vendor|vendor)/bin/biosensord_nvram u:object_r:biosensord_nvram_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.bluetooth@1\.0-service-mediatek u:object_r:mtk_hal_bluetooth_exec:s0
@@ -594,8 +585,8 @@
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.2-service u:object_r:mtk_hal_mms_exec:s0
 # Keymaster Attestation Hal
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.keymaster_attestation@1\.1-service u:object_r:hal_keymaster_attestation_exec:s0
-#ST NFC 1.1 hidl service
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.1-service-st u:object_r:hal_nfc_default_exec:s0
+#ST NFC 1.2 hidl service
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.nfc@1\.2-service-st u:object_r:hal_nfc_default_exec:s0
 # MTK Wifi Hal
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.wifi@1\.0-service-mediatek           u:object_r:mtk_hal_wifi_exec:s0
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.wifi@1\.0-service-lazy-mediatek      u:object_r:mtk_hal_wifi_exec:s0
