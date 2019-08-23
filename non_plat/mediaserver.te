@@ -155,6 +155,7 @@ allow mediaserver uhid_device:chr_file rw_file_perms;
 allow mediaserver CAM_CAL_DRV_device:chr_file rw_file_perms;
 allow mediaserver CAM_CAL_DRV1_device:chr_file rw_file_perms;
 allow mediaserver CAM_CAL_DRV2_device:chr_file rw_file_perms;
+allow mediaserver camera_eeprom_device:chr_file rw_file_perms;
 
 # Date : WK14.43
 # Operation : Migration

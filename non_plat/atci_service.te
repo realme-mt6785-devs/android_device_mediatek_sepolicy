@@ -101,6 +101,7 @@ allow atci_service MT_pmic_adc_cali_device:chr_file rw_file_perms;
 allow atci_service CAM_CAL_DRV_device:chr_file rw_file_perms;
 allow atci_service CAM_CAL_DRV1_device:chr_file rw_file_perms;
 allow atci_service CAM_CAL_DRV2_device:chr_file rw_file_perms;
+allow atci_service camera_eeprom_device:chr_file rw_file_perms;
 allow atci_service fwk_sensor_hwservice:hwservice_manager find;
 allow atci_service hidl_allocator_hwservice:hwservice_manager find;
 allow atci_service hidl_memory_hwservice:hwservice_manager find;

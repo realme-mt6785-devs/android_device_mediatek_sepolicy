@@ -88,6 +88,7 @@ type ttyGS_device, dev_type;
 type CAM_CAL_DRV_device, dev_type;
 type CAM_CAL_DRV1_device, dev_type;
 type CAM_CAL_DRV2_device, dev_type;
+type camera_eeprom_device, dev_type;
 type MTK_SMI_device, dev_type;
 type mtk_cmdq_device, dev_type;
 type mtk_mdp_device, dev_type;

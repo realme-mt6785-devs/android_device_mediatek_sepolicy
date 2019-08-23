@@ -127,6 +127,7 @@ allow mtk_hal_camera BU64745GWZAF_device:chr_file rw_file_perms;
 allow mtk_hal_camera CAM_CAL_DRV_device:chr_file rw_file_perms;
 allow mtk_hal_camera CAM_CAL_DRV1_device:chr_file rw_file_perms;
 allow mtk_hal_camera CAM_CAL_DRV2_device:chr_file rw_file_perms;
+allow mtk_hal_camera camera_eeprom_device:chr_file rw_file_perms;
 
 # -----------------------------------
 # Purpose: Other device drivers used by camera

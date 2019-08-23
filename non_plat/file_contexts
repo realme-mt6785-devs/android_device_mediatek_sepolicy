@@ -122,6 +122,7 @@
 /dev/CAM_CAL_DRV(/.*)? u:object_r:CAM_CAL_DRV_device:s0
 /dev/CAM_CAL_DRV1(/.*)? u:object_r:CAM_CAL_DRV1_device:s0
 /dev/CAM_CAL_DRV2(/.*)? u:object_r:CAM_CAL_DRV2_device:s0
+/dev/camera_eeprom[0-9]+ u:object_r:camera_eeprom_device:s0
 /dev/gz_kree(/.*)? u:object_r:gz_device:s0
 /dev/camera-fdvt(/.*)? u:object_r:camera_fdvt_device:s0
 /dev/camera-isp(/.*)? u:object_r:camera_isp_device:s0
