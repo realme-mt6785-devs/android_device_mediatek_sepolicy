@@ -211,4 +211,7 @@ genfscon iso9660 / u:object_r:iso9660:s0
 genfscon rawfs / u:object_r:rawfs:s0
 genfscon fuseblk / u:object_r:fuseblk:s0
 
-
+# Date: 2019/08/07
+# Purpose:dumpstate debugfs cmdq access
+genfscon debugfs /cmdq/cmdq-status u:object_r:debugfs_cmdq:s0
+genfscon debugfs /cmdq/cmdq-record u:object_r:debugfs_cmdq:s0

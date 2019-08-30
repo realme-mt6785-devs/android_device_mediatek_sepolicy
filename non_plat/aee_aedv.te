@@ -409,6 +409,9 @@ allow aee_aedv proc_slabtrace:file r_file_perms;
 #Purpose: Allow aee_aedv to read /proc/mtk_cmdq_debug/status
 allow aee_aedv proc_cmdq_debug:file r_file_perms;
 
+#Purpose: Allow aee_aedv to read /sys/kernel/debug/cmdq/
+allow aee_aedv debugfs_cmdq:file r_file_perms;
+
 # temp solution
 get_prop(aee_aedv, vendor_default_prop)
 

@@ -170,3 +170,7 @@ allow dumpstate debugfs_kmemleak:file r_file_perms;
 
 #Purpose: Allow dumpstate to read /sys/class/misc/adsp/adsp_last_log
 allow dumpstate sysfs_adsp:file r_file_perms;
+
+# Date: 19/08/07
+#Purpose: Allow dumpstate to read /sys/kernel/debug/cmdq
+allow dumpstate debugfs_cmdq:file r_file_perms;
