@@ -215,3 +215,7 @@ genfscon fuseblk / u:object_r:fuseblk:s0
 # Purpose:dumpstate debugfs cmdq access
 genfscon debugfs /cmdq/cmdq-status u:object_r:debugfs_cmdq:s0
 genfscon debugfs /cmdq/cmdq-record u:object_r:debugfs_cmdq:s0
+
+# 2019/08/24
+genfscon sysfs /class/sensor u:object_r:sysfs_sensor:s0
+genfscon sysfs /devices/virtual/sensor u:object_r:sysfs_sensor:s0
