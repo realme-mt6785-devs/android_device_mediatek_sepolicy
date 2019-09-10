@@ -18,3 +18,6 @@
 #  -product_property_type
 #  -vendor_property_type
 #}:file no_rw_file_perms;
+
+
+system_internal_prop(mobile_log_post_prop)
