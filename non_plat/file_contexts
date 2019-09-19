@@ -136,6 +136,7 @@
 /dev/ccu(/.*)? u:object_r:ccu_device:s0
 /dev/vpu(/.*)? u:object_r:vpu_device:s0
 /dev/mdlactl(/.*)? u:object_r:mdla_device:s0
+/dev/apusys(/.*)? u:object_r:apusys_device:s0
 /dev/ccci_monitor     u:object_r:ccci_monitor_device:s0
 /dev/ccci.* u:object_r:ccci_device:s0
 /dev/cpu_dma_latency(/.*)? u:object_r:cpu_dma_latency_device:s0
