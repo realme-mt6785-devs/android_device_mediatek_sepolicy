@@ -77,3 +77,7 @@ vendor.mediatek.hardware.hdmi::IMtkHdmiService u:object_r:mtk_hal_hdmi_hwservice
 vendor.mediatek.hardware.camera.atms::IATMs u:object_r:hal_camera_hwservice:s0
 
 vendor.mediatek.hardware.aee::IAee u:object_r:mtk_hal_aee_hwservice:s0
+
+# Date: 2019/09/04
+# bluetooth audio hidl
+vendor.mediatek.hardware.bluetooth.audio::IBluetoothAudioProvidersFactory u:object_r:mtk_hal_bluetooth_audio_hwservice:s0
