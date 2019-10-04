@@ -235,3 +235,8 @@ allow mtk_hal_audio sysfs_dt_firmware_android:dir search;
 # Operation: adsp
 allow mtk_hal_audio adsp_device:file rw_file_perms;
 allow mtk_hal_audio adsp_device:chr_file rw_file_perms;
+
+# Date : 2020/3/21
+# Operation: audio dptx
+allow mtk_hal_audio dri_device:chr_file rw_file_perms;
+allow mtk_hal_audio gpu_device:dir search;
