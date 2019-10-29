@@ -161,3 +161,9 @@ get_prop(rild, mtk_wfc_serv_prop)
 # Operation: RILD init flow
 # Purpose: To handle illegal rild started
 set_prop(rild, gsm0710muxd_prop)
+
+# Date : 2019/10/29
+# Operation: imstestmode
+# Purpose: Allow HIDL to set vendor property
+set_prop(rild, mtk_imstestmode_prop)
+
