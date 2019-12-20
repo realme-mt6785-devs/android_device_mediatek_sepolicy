@@ -504,3 +504,7 @@ type proc_ion, fs_type, proc_type;
 # Operation: R migration
 # Purpose: Add permission for access /proc/m4u_dbg/*
 type proc_m4u_dbg, fs_type, proc_type;
+
+# Date : 20120/07/02
+# Purpose: define sysfs_mtk_nanohub_state fs_type
+type sysfs_mtk_nanohub_state, fs_type, sysfs_type;
