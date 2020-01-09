@@ -244,9 +244,6 @@ persist.vendor.radio. u:object_r:vendor_radio_prop:s0
 #=============allow bluetooth==============
 vendor.bthcisnoop u:object_r:vendor_bluetooth_prop:s0
 
-#=============em camera property==============
-vendor.debug. u:object_r:vendor_debug_prop:s0
-
 #=============allow ct volte==============
 persist.vendor.mtk_ct_volte_support u:object_r:mtk_ct_volte_prop:s0
 
