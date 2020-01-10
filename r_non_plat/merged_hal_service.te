@@ -14,9 +14,6 @@ hal_server_domain(merged_hal_service, hal_power)
 hal_server_domain(merged_hal_service, hal_thermal)
 hal_server_domain(merged_hal_service, hal_memtrack)
 
-#adjust light brightness
-allow merged_hal_service sysfs:file write;
-
 #mtk libs_hidl_service permissions
 hal_server_domain(merged_hal_service, mtk_hal_lbs)
 vndbinder_use(merged_hal_service)
@@ -59,7 +56,6 @@ allow merged_hal_service debugfs_ged:dir search;
 allow merged_hal_service debugfs_ged:file { getattr open read write };
 allow merged_hal_service proc_thermal:file { write open };
 allow merged_hal_service proc_thermal:dir search;
-allow merged_hal_service sysfs:file {open write read};
 allow merged_hal_service proc_perfmgr:dir search;
 allow merged_hal_service proc_perfmgr:file rw_file_perms;
 allow merged_hal_service sdcard_type:dir create_dir_perms;

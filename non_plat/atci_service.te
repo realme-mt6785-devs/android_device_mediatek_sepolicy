@@ -38,7 +38,6 @@ allow atci_service devmap_device:chr_file { open read write ioctl };
 allow atci_service sdcard_type:dir { search write read open add_name remove_name create getattr setattr };
 allow atci_service sdcard_type:file { setattr read create write getattr unlink open append };
 allow atci_service mediaserver:binder call;
-#allow atci_service sysfs:file write;
 #allow atci_service system_server:unix_stream_socket { read write };
 allow atci_service self:capability sys_boot;
 

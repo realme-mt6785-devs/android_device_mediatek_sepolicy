@@ -30,3 +30,68 @@ allow { domain -coredomain -hal_configstore_server -vendor_init } aee_aedv:unix_
 allow { domain -coredomain -hal_configstore_server -vendor_init } aee_exp_vendor_file:file w_file_perms;
 allow { domain -coredomain -hal_configstore_server -vendor_init } aee_aedv:fd use;
 
+
+# Do not allow access to the generic sysfs label. This is too broad.
+# Instead, if access to part of sysfs is desired, it should have a
+# more specific label.
+# TODO: Remove hal_usb/mtk_hal_usb and so on once there are no violations.
+#   allow hal_usb sysfs:file write;
+#   hal_server_domain(mtk_hal_usb, hal_usb)
+#
+#   r_dir_file(hal_wifi, sysfs_type)
+#   hal_server_domain(mtk_hal_wifi, hal_wifi)
+full_treble_only(`
+  neverallow ~{
+    init
+    merged_hal_service
+    mtk_hal_bluetooth
+    mtk_hal_power
+    mtk_hal_usb
+    mtk_hal_wifi
+    hal_bluetooth_btlinux
+    hal_bluetooth_default
+    hal_drm_clearkey
+    hal_drm_default
+    hal_drm_widevine
+    hal_fingerprint_default
+    hal_radio_config_default
+    hal_radio_default
+    hal_usb_default
+    hal_wifi_default
+    hal_wifi_supplicant_default
+    rild
+    tee
+    ueventd
+    vendor_init
+    vold
+    } sysfs:file *;
+
+  neverallow {
+    merged_hal_service
+    mtk_hal_bluetooth
+    mtk_hal_power
+    mtk_hal_wifi
+    hal_bluetooth_btlinux
+    hal_bluetooth_default
+    hal_drm_clearkey
+    hal_drm_default
+    hal_drm_widevine
+    hal_fingerprint_default
+    hal_radio_config_default
+    hal_radio_default
+    hal_wifi_default
+    hal_wifi_supplicant_default
+    rild
+    tee
+  } sysfs:file ~r_file_perms;
+
+  neverallow {
+    hal_usb_default
+    init
+    mtk_hal_usb
+    ueventd
+    vendor_init
+    vold
+  } sysfs:file ~{ r_file_perms write setattr append relabelfrom relabelto };
+')
+

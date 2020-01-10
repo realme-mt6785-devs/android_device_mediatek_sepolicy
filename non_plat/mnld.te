@@ -19,7 +19,6 @@ net_domain(mnld)
 allow mnld agpsd_data_file:dir create_dir_perms;
 allow mnld agpsd_data_file:sock_file create_file_perms;
 allow mnld mtk_agpsd:unix_dgram_socket sendto;
-allow mnld sysfs:file rw_file_perms;
 allow mnld sysfs_wake_lock:file rw_file_perms;
 # Purpose : For access NVRAM data
 allow mnld nvram_data_file:dir create_dir_perms;

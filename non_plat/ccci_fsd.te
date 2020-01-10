@@ -41,7 +41,6 @@ allow ccci_fsd c2k_file:dir create_dir_perms;
 allow ccci_fsd c2k_file:file create_file_perms;
 allow ccci_fsd otp_part_block_device:blk_file rw_file_perms;
 allow ccci_fsd otp_device:chr_file rw_file_perms;
-allow ccci_fsd sysfs:file r_file_perms;
 allow ccci_fsd sysfs_boot_type:file { read open };
 #============= ccci_fsd MD block data==============
 ##restore>NVM_GetDeviceInfo>open  /dev/block/platform/bootdevice/by-name/nvram
