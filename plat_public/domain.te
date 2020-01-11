@@ -47,11 +47,66 @@ full_treble_only(`
 ')
 
 
-
 # Do not allow access to the generic proc label. This is too broad.
 # Instead, if access to part of proc is desired, it should have a
 # more specific label.
-#neverallow * proc:dir_file_class_set *;
+# TODO: Remove mtk_hal_audio/audioserver and so on once there are no violations.
+#
+#   r_dir_file(hal_audio, proc)
+#   hal_server_domain(mtk_hal_audio, hal_audio)
+#   hal_client_domain(audioserver, hal_audio)
+#
+full_treble_only(`
+  neverallow * proc:{ chr_file blk_file sock_file fifo_file } *;
+
+  neverallow {
+    coredomain
+    -audioserver
+    -bluetooth
+    -init
+    -system_server
+    -vold
+    } proc:file *;
+
+  neverallow {
+    audioserver
+    bluetooth
+    init
+    system_server
+    vold
+    } proc:file ~r_file_perms;
+
+  neverallow vendor_init proc:file ~{ read setattr map open };
+
+  neverallow {
+    coredomain
+    -audioserver
+    -bluetooth
+    -init
+    -system_server
+    } proc:lnk_file ~{ read getattr };
+
+  neverallow {
+    audioserver
+    bluetooth
+    init
+    system_server
+    } proc:lnk_file ~r_file_perms;
+
+  neverallow ~{
+    init
+    vendor_init
+    } proc:dir ~{ r_file_perms search };
+
+  neverallow {
+    init
+    vendor_init
+    } proc:dir ~{ r_file_perms search setattr };
+')
+
+
+
+
 
 # Do not allow access to the generic debugfs label. This is too broad.
 # Instead, if access to part of debugfs is desired, it should have a

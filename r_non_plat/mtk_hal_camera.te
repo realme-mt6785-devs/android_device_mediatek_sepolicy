@@ -64,7 +64,6 @@ hal_client_domain(mtk_hal_camera, hal_graphics_allocator)
 # -----------------------------------
 # Purpose: Camera-related devices (driver)
 # -----------------------------------
-allow mtk_hal_camera proc:file rw_file_perms;
 allow mtk_hal_camera proc_mtk_jpeg:file r_file_perms;
 allowxperm mtk_hal_camera proc_mtk_jpeg:file ioctl {
      JPG_BRIDGE_ENC_IO_INIT

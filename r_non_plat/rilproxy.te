@@ -24,7 +24,6 @@ allow rild mtk_agpsd:unix_stream_socket connectto;
 allow servicemanager rild:dir search;
 allow servicemanager rild:file { read open };
 allow servicemanager rild:process getattr;
-allow rild proc:file read;
 
 # Allow the socket read/write of netd for rild
 allow rild netd_socket:sock_file write;

@@ -51,7 +51,6 @@ allow merged_hal_service debugfs_tracing:file write;
 
 #power permissions
 allow merged_hal_service proc:dir  {search getattr};
-allow merged_hal_service proc:file rw_file_perms;
 allow merged_hal_service debugfs_ged:dir search;
 allow merged_hal_service debugfs_ged:file { getattr open read write };
 allow merged_hal_service proc_thermal:file { write open };

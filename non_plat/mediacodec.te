@@ -16,7 +16,6 @@ allow mediacodec Vcodec_device:chr_file rw_file_perms;
 # Operation : Migration
 # Purpose : VP & VR dump and debug
 allow mediacodec M4U_device_device:chr_file rw_file_perms;
-allow mediacodec proc:file r_file_perms;
 allow mediacodec debugfs_binder:dir search;
 allow mediacodec MTK_SMI_device:chr_file { ioctl read open };
 allow mediacodec storage_file:lnk_file {read write open};

@@ -40,6 +40,7 @@ allow { domain -coredomain -hal_configstore_server -vendor_init } aee_aedv:fd us
 #
 #   r_dir_file(hal_wifi, sysfs_type)
 #   hal_server_domain(mtk_hal_wifi, hal_wifi)
+#
 full_treble_only(`
   neverallow ~{
     init
@@ -93,5 +94,69 @@ full_treble_only(`
     vendor_init
     vold
   } sysfs:file ~{ r_file_perms write setattr append relabelfrom relabelto };
+')
+
+# Do not allow access to the generic proc label. This is too broad.
+# Instead, if access to part of proc is desired, it should have a
+# more specific label.
+# TODO: Remove mtk_hal_audio/audioserver and so on once there are no violations.
+#
+#   r_dir_file(hal_audio, proc)
+#   hal_server_domain(mtk_hal_audio, hal_audio)
+#   hal_client_domain(audioserver, hal_audio)
+#
+full_treble_only(`
+  neverallow ~{
+    audiocmdservice_atci
+    audioserver
+    bluetooth
+    hal_audio_default
+    hal_graphics_allocator_default
+    init
+    merged_hal_service
+    mtk_hal_audio
+    rild
+    system_server
+    vendor_init
+    vold
+    } proc:file *;
+
+  neverallow {
+    audiocmdservice_atci
+    audioserver
+    bluetooth
+    hal_audio_default
+    hal_graphics_allocator_default
+    init
+    merged_hal_service
+    mtk_hal_audio
+    rild
+    system_server
+    vold
+    } proc:file ~r_file_perms;
+
+  neverallow vendor_init proc:file ~{ r_file_perms setattr };
+
+  neverallow ~{
+    audiocmdservice_atci
+    audioserver
+    bluetooth
+    hal_audio_default
+    init
+    mtk_hal_audio
+    rild
+    system_server
+    } proc:lnk_file ~{ read getattr };
+
+  neverallow {
+    audiocmdservice_atci
+    audioserver
+    bluetooth
+    hal_audio_default
+    init
+    mtk_hal_audio
+    rild
+    system_server
+    } proc:lnk_file ~r_file_perms;
 ')
 
