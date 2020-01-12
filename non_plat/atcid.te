@@ -63,8 +63,8 @@ allow atcid nvdata_file:file { open read write create getattr setattr };
 allow atcid nvram_device:blk_file { open read write };
 allow atcid proc_meminfo:file { open read };
 allow atcid sysfs_batteryinfo:dir search;
-allow atcid sysfs_mmcblk:dir search;
-allow atcid sysfs_mmcblk:file { read open };
+allow atcid sysfs_devices_block:dir search;
+allow atcid sysfs_devices_block:file { read open };
 
 # Date : WK18.35
 # Purpose: Add socket for TelephonyWare ATCI

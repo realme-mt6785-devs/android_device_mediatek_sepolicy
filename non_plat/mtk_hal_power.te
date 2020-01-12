@@ -118,8 +118,8 @@ allow mtk_hal_power rild:unix_stream_socket connectto;
 # Purpose : Allow powerHAL to access block read ahead
 allow mtk_hal_power sysfs_dm:dir r_dir_perms;
 allow mtk_hal_power sysfs_dm:file rw_file_perms;
-allow mtk_hal_power sysfs_mmcblk:dir r_dir_perms;
-allow mtk_hal_power sysfs_mmcblk:file rw_file_perms;
+allow mtk_hal_power sysfs_devices_block:dir r_dir_perms;
+allow mtk_hal_power sysfs_devices_block:file rw_file_perms;
 
 allow mtk_hal_power debugfs_eara_thermal:dir search;
 allow mtk_hal_power debugfs_eara_thermal:file { getattr open write read };
