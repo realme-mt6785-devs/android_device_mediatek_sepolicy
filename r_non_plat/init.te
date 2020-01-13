@@ -66,10 +66,6 @@ allow init tmpfs:lnk_file create;
 # Purpose : bt hal interface permission
 allow init mtk_hal_bluetooth_exec:file getattr;
 
-# Date : WK17.12
-# Purpose: Fix bootup fail
-allow init debugfs:file w_file_perms;
-
 # Date : WK17.02
 # Purpose: Fix audio hal service fail
 allow init mtk_hal_audio_exec:file getattr;
@@ -88,7 +84,6 @@ allow init debugfs_tracing_instances:file relabelfrom;
 # Date: W17.22
 # Operation : New Feature
 # Purpose : Add for A/B system
-allow init debugfs:file write;
 allow init kernel:system module_request;
 allow init nvdata_file:dir mounton;
 allow init oemfs:dir mounton;
