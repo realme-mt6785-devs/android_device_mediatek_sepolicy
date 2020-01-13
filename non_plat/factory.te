@@ -370,8 +370,8 @@ allow factory vendor_data_file:file { create read write open };
 # Date : WK18.31
 # Operation: P migration
 # Purpose : Refine policy
-allow factory sysfs_mmcblk:dir { search };
-allow factory sysfs_mmcblk:file { read getattr open };
+allow factory sysfs_devices_block:dir { search };
+allow factory sysfs_devices_block:file { read getattr open };
 
 # Date : WK18.37
 # Operation: P migration

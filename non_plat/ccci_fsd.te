@@ -64,5 +64,5 @@ allow ccci_fsd proc_lk_env:file rw_file_perms;
 #============= ccci_fsd MD Low Power Monitor Related ==============
 allow ccci_fsd ccci_data_md1_file:dir create_dir_perms;
 allow ccci_fsd ccci_data_md1_file:file create_file_perms;
-allow ccci_fsd sysfs_mmcblk:dir search;
-allow ccci_fsd sysfs_mmcblk:file { read getattr open };
+allow ccci_fsd sysfs_devices_block:dir search;
+allow ccci_fsd sysfs_devices_block:file { read getattr open };
