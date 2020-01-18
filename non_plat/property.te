@@ -224,11 +224,6 @@ type vendor_radio_prop, property_type, mtk_core_property_type;
 #=============allow bluetooth==============
 type vendor_bluetooth_prop, property_type, extended_core_property_type;
 
-
-
-#=============em camera property==============
-type vendor_debug_prop, property_type, mtk_core_property_type;
-
 #=============allow ct volte==============
 type mtk_ct_volte_prop, property_type, mtk_core_property_type;
 
