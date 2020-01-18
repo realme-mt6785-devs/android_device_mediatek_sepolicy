@@ -15,7 +15,6 @@ r_dir_file(mtk_hal_bluetooth, bluetooth_efs_file)
 allow mtk_hal_bluetooth { uhid_device hci_attach_dev }:chr_file rw_file_perms;
 
 # sysfs access.
-r_dir_file(mtk_hal_bluetooth, sysfs_type)
 allow mtk_hal_bluetooth sysfs_bluetooth_writable:file rw_file_perms;
 allow mtk_hal_bluetooth self:capability2 wake_alarm;
 

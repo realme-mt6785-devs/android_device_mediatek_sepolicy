@@ -73,7 +73,6 @@ allowxperm mtk_hal_camera proc_mtk_jpeg:file ioctl {
      JPG_BRIDGE_ENC_IO_DEINIT
      JPG_BRIDGE_ENC_IO_START
      };
-allow mtk_hal_camera sysfs:file { read write open getattr };
 
 allow mtk_hal_camera camera_sysram_device:chr_file r_file_perms;
 allow mtk_hal_camera camera_pipemgr_device:chr_file r_file_perms;

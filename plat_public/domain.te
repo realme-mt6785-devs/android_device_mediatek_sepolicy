@@ -1,0 +1,109 @@
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+# Rules for all domains.
+
+# Do not allow access to the generic sysfs label. This is too broad.
+# Instead, if access to part of sysfs is desired, it should have a
+# more specific label.
+full_treble_only(`
+  neverallow * sysfs:{ chr_file blk_file sock_file fifo_file } *;
+
+  neverallow {
+    coredomain
+    -init
+    -ueventd
+    -vold
+    } sysfs:file *;
+
+  neverallow {
+    init
+    ueventd
+    vold
+    } sysfs:file ~{ r_file_perms write setattr append relabelfrom relabelto };
+
+  neverallow ~{
+    init
+    ueventd
+    } sysfs:lnk_file ~r_file_perms;
+
+  neverallow {
+    init
+    ueventd
+    } sysfs:lnk_file ~{ r_file_perms setattr relabelfrom relabelto };
+
+  neverallow ~{
+    init
+    ueventd
+    vendor_init
+    } sysfs:dir ~r_dir_perms;
+
+  neverallow {
+    init
+    ueventd
+    vendor_init
+    } sysfs:dir ~{ r_dir_perms relabelfrom relabelto mounton setattr };
+')
+
+
+
+# Do not allow access to the generic proc label. This is too broad.
+# Instead, if access to part of proc is desired, it should have a
+# more specific label.
+#neverallow * proc:dir_file_class_set *;
+
+# Do not allow access to the generic debugfs label. This is too broad.
+# Instead, if access to part of debugfs is desired, it should have a
+# more specific label.
+#neverallow * debugfs:dir_file_class_set *;
+
+# Do not allow access to the generic system_data_file label. This is
+# too broad.
+# Instead, if access to part of system_data_file is desired, it should
+# have a more specific label.
+#neverallow * system_data_file:dir_file_class_set *;
+
+# Do not allow access to the generic vendor_data_file label. This is
+# too broad.
+# Instead, if access to part of vendor_data_file is desired, it should
+# have a more specific label.
+#neverallow * vendor_data_file:dir_file_class_set *;
+
+# Do not allow access to the generic app_data_file label. This is too broad.
+# Instead, if access to part of app_data_file is desired, it should have a
+# more specific label.
+#neverallow * app_data_file:dir_file_class_set *;
+
+# Do not allow access to the generic default_prop label. This is too broad.
+# Instead, if access to part of default_prop is desired, it should have a
+# more specific label.
+#neverallow * default_prop:dir_file_class_set *;
+
+# Do not allow access to the generic vendor_default_prop label. This is
+# too broad.
+# Instead, if access to part of vendor_default_prop is desired, it should
+# have a more specific label.
+#neverallow * vendor_default_prop:dir_file_class_set *;
+
+# Do not allow access to the generic device label. This is too broad.
+# Instead, if access to part of device is desired, it should have a
+# more specific label.
+#neverallow * device:dir_file_class_set *;
+
+# Do not allow access to the generic socket_device label. This is too broad.
+# Instead, if access to part of socket_device is desired, it should have a
+# more specific label.
+#neverallow * socket_device:dir_file_class_set *;
+
+# Do not allow access to the generic block_device label. This is too broad.
+# Instead, if access to part of block_device is desired, it should have a
+# more specific label.
+#neverallow * block_device:dir_file_class_set *;
+
+# Do not allow access to the generic bootdevice_block_device label. This is
+# too broad.
+# Instead, if access to part of bootdevice_block_device is desired, it should
+# have a more specific label.
+#neverallow * bootdevice_block_device:dir_file_class_set *;
+

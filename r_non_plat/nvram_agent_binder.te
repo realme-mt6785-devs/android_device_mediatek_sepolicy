@@ -47,9 +47,6 @@ allow nvram_agent_binder mtd_device:chr_file rw_file_perms;
 #for nvram agent hidl
 get_prop(nvram_agent_binder, hwservicemanager_prop)
 
-#for nvram hidl client support
-allow nvram_agent_binder sysfs:file { read open };
-
 # Allow to use HWBinder IPC
 hwbinder_use(nvram_agent_binder);
 

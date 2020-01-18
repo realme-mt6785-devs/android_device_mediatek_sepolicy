@@ -361,7 +361,6 @@ allow meta_tst proc_asound:dir { read search open };
 allow meta_tst proc_asound:file { read open getattr write };
 allow meta_tst mtk_audiohal_data_file:dir { read search open };
 allow meta_tst audiohal_prop:property_service set;
-allow meta_tst sysfs:file { read open };
 allow meta_tst sysfs_headset:file { read open };
 
 # Date: W18.05
@@ -370,7 +369,7 @@ allow meta_tst meta_tst:netlink_kobject_uevent_socket { read bind create setopt 
 
 # Date : WK18.28
 # Operation: P migration
-# Purpose : 
+# Purpose :
 set_prop(meta_tst, vendor_usb_prop);
 
 # Date: W18.29
@@ -381,7 +380,7 @@ allow meta_tst loghidlvendorservice:unix_stream_socket connectto;
 # Date: W18.32
 # Operation: Android P migration
 # Purpose : Allow meta_tst to set powerctl property
-# avc:  denied  { set } for property=sys.powerctl pid=330 uid=0 gid=1001 scontext=u:r:meta_tst:s0 
+# avc:  denied  { set } for property=sys.powerctl pid=330 uid=0 gid=1001 scontext=u:r:meta_tst:s0
 # tcontext=u:object_r:powerctl_prop:s0 tclass=property_service permissive=0
 set_prop(meta_tst, powerctl_prop);
 

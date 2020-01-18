@@ -14,9 +14,6 @@ hal_server_domain(merged_hal_service, hal_power)
 hal_server_domain(merged_hal_service, hal_thermal)
 hal_server_domain(merged_hal_service, hal_memtrack)
 
-#adjust light brightness
-allow merged_hal_service sysfs:file write;
-
 #mtk libs_hidl_service permissions
 hal_server_domain(merged_hal_service, mtk_hal_lbs)
 vndbinder_use(merged_hal_service)
