@@ -281,7 +281,6 @@ binder_call(meta_tst, mtk_hal_audio)
 allow meta_tst mtk_hal_audio:binder call;
 #allow meta_tst hal_audio_hwservice:hwservice_manager find;
 allow meta_tst mtk_audiohal_data_file:dir {read search open};
-allow meta_tst proc:file {read open};
 allow meta_tst audio_device:chr_file rw_file_perms;
 allow meta_tst audio_device:dir w_dir_perms;
 allow meta_tst audiohal_prop:property_service set;

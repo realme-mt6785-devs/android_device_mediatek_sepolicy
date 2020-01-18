@@ -28,23 +28,6 @@ allow cameraserver self:process { ptrace };
 # -----------------------------------
 allow cameraserver mtkcam_prop:file { open read getattr };
 
-# Date : WK14.31
-# Operation : Migration
-# Purpose : camera devices access.
-# allow cameraserver camera_isp_device:chr_file rw_file_perms;
-# allow cameraserver ccu_device:chr_file rw_file_perms;
-# allow cameraserver vpu_device:chr_file rw_file_perms;
-# allow cameraserver kd_camera_hw_device:chr_file rw_file_perms;
-# allow cameraserver seninf_device:chr_file rw_file_perms;
-# allow cameraserver self:capability { setuid ipc_lock sys_nice };
-# allow cameraserver sysfs_wake_lock:file rw_file_perms;
-# allow cameraserver MTK_SMI_device:chr_file r_file_perms;
-# allow cameraserver camera_pipemgr_device:chr_file r_file_perms;
-# allow cameraserver kd_camera_flashlight_device:chr_file rw_file_perms;
-# allow cameraserver lens_device:chr_file rw_file_perms;
-# allow cameraserver nvdata_file:lnk_file read;
-# allow cameraserver proc_meminfo:file { read getattr open };
-
 # Date : WK14.34
 # Operation : Migration
 # Purpose : nvram access (dumchar case for nand and legacy chip)
@@ -201,13 +184,6 @@ allow cameraserver graphics_device:chr_file rw_file_perms;
 # Purpose : for low SD card latency issue
 # allow cameraserver sysfs_lowmemorykiller:file { read open };
 
-# Data: WK14.45
-# Operation : Migration
-# Purpose : for change thermal policy when needed
-# allow cameraserver proc_mtkcooler:dir search;
-# allow cameraserver proc_mtktz:dir search;
-# allow cameraserver proc_thermal:dir search;
-
 # Date : WK14.46
 # Operation : Migration
 # Purpose : for MTK Emulator HW GPU
@@ -278,14 +254,6 @@ allow cameraserver tmpfs:dir search;
 allow cameraserver system_file:dir { read open };
 allow cameraserver gpu_device:chr_file rw_file_perms;
 allow cameraserver gpu_device:dir search;
-
-# Date : WK16.30
-# Operation : Migration
-# Purpose :  Use file_type_auto_trans to specify label to avoid violated(never allow)
-# allow cameraserver property_socket:sock_file write;
-# allow cameraserver proc:file getattr;
-# allow cameraserver shell_exec:file { execute read getattr open};
-# allow cameraserver init:unix_stream_socket connectto;
 
 # Date : WK16.32
 # Operation : Migration

@@ -54,7 +54,6 @@ allow mtkrild bluetooth_efs_file:dir r_dir_perms;
 allow mtkrild sdcardfs:dir r_dir_perms;
 # Violate Android P rule
 #allow mtkrild system_file:file x_file_perms;
-#allow mtkrild proc:file rw_file_perms;
 allow mtkrild proc_net:file w_file_perms;
 
 # Set and get routes directly via netlink.
