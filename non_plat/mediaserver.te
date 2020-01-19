@@ -38,11 +38,6 @@ allow mediaserver self:capability { net_admin };
 # Purpose : VP/VR
 allow mediaserver devmap_device:chr_file { ioctl };
 
-# Date : WK14.34
-# Operation : Migration
-# Purpose : Smartcard Service
-allow mediaserver system_data_file:file open;
-
 # Date : WK14.36
 # Operation : Migration
 # Purpose : media server and bt process communication for A2DP data.and other control flow
@@ -234,7 +229,6 @@ allow mediaserver sensorservice_service:service_manager find;
 # Date : WK15.34
 # Operation : Migration
 # Purpose: for camera middleware dump image buffer to sdcard & audio frameworks dump
-allow mediaserver system_data_file:dir write;
 allow mediaserver storage_file:lnk_file {read write};
 allow mediaserver mnt_user_file:dir {write read search};
 allow mediaserver mnt_user_file:lnk_file {read write};

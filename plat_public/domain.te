@@ -115,7 +115,7 @@ full_treble_only(`
     dumpstate
     init
     vendor_init
-} debugfs:file *;
+    } debugfs:file *;
 
   neverallow dumpstate debugfs:file ~r_file_perms;
 
@@ -130,22 +130,150 @@ full_treble_only(`
   neverallow ~{
     init
     vendor_init
-} debugfs:dir ~{ search getattr };
+    } debugfs:dir ~{ search getattr };
 
   neverallow init debugfs:dir ~{ search getattr relabelfrom open read setattr relabelto };
 
   neverallow vendor_init debugfs:dir ~{ search getattr read setattr open };
-
 ')
-
-
 
 
 # Do not allow access to the generic system_data_file label. This is
 # too broad.
 # Instead, if access to part of system_data_file is desired, it should
 # have a more specific label.
-#neverallow * system_data_file:dir_file_class_set *;
+# TODO: Remove merged_hal_service and so on once there are no violations.
+#
+#   allow hal_drm system_data_file:file { getattr read };
+#   hal_server_domain(merged_hal_service, hal_drm)
+#
+full_treble_only(`
+  neverallow ~{
+    init
+    installd
+    system_server
+    } system_data_file:{ chr_file blk_file sock_file fifo_file } *;
+
+  neverallow init system_data_file:{ chr_file blk_file } ~{ relabelto };;
+
+  neverallow init system_data_file:{ sock_file fifo_file } ~{ create getattr open read setattr relabelfrom unlink relabelto };
+
+  neverallow installd system_data_file:{ chr_file blk_file } *;
+
+  neverallow installd system_data_file:{ sock_file fifo_file } ~{ getattr relabelfrom unlink };
+
+  neverallow system_server system_data_file:{ lnk_file sock_file fifo_file } ~create_file_perms;
+
+  neverallow {
+    coredomain
+    -appdomain
+    -app_zygote
+    -init
+    -installd
+    -iorap_prefetcherd
+    -system_server
+    -toolbox
+    -vold
+    -vold_prepare_subdirs
+    } system_data_file:file ~r_file_perms;
+
+  neverallow { appdomain app_zygote } system_data_file:file ~{ getattr read map };
+
+  neverallow init system_data_file:file ~{ create getattr open read write setattr relabelfrom unlink map getattr relabelto };
+
+  neverallow installd system_data_file:file ~{ getattr relabelfrom unlink };
+
+  neverallow iorap_prefetcherd system_data_file:file ~{ open read };
+
+  neverallow {
+    mediadrmserver
+    mediaextractor
+    mediaserver
+   } system_data_file:file ~{ read getattr };
+
+  neverallow system_server system_data_file:file ~{ create_file_perms relabelfrom link };
+
+  neverallow { toolbox vold_prepare_subdirs } system_data_file:file ~{ getattr unlink };
+
+  neverallow vold system_data_file:file ~read;
+
+  neverallow ~{
+    appdomain
+    app_zygote
+    init
+    installd
+    iorap_prefetcherd
+    logd
+    rs
+    runas
+    simpleperf_app_runner
+    system_server
+    tee
+    vold
+    webview_zygote
+    zygote
+    } system_data_file:lnk_file ~getattr;
+
+  neverallow {
+    appdomain
+    app_zygote
+    logd
+    webview_zygote
+    } system_data_file:lnk_file ~r_file_perms;
+
+  neverallow init system_data_file:lnk_file ~{ r_file_perms create setattr relabelfrom relabelto unlink };
+
+  neverallow installd system_data_file:lnk_file ~{ create getattr read setattr unlink relabelfrom };
+
+  neverallow iorap_prefetcherd system_data_file:lnk_file ~{ read open };
+
+  neverallow rs system_data_file:lnk_file ~{ read };
+
+  neverallow {
+    runas
+    simpleperf_app_runner
+    tee
+    } system_data_file:lnk_file ~{ read getattr };
+
+  neverallow system_server system_data_file:lnk_file ~create_file_perms;
+
+  neverallow ~{
+    init
+    installd
+    iorap_prefetcherd
+    system_server
+    toolbox
+    traced_probes
+    vold
+    vold_prepare_subdirs
+    zygote
+    } system_data_file:dir ~{ search getattr };
+
+  neverallow init system_data_file:dir ~{
+    create search getattr open read setattr ioctl
+    mounton
+    relabelto
+    write add_name remove_name rmdir relabelfrom
+    };
+
+  neverallow installd system_data_file:dir ~{ relabelfrom create_dir_perms };
+
+  neverallow {
+    iorap_prefetcherd
+    traced_probes
+    } system_data_file:dir ~{ open read search getattr };
+
+  neverallow system_server system_data_file:dir ~{ relabelfrom create_dir_perms };
+
+  neverallow toolbox system_data_file:dir ~{ rmdir rw_dir_perms };
+
+  neverallow vold system_data_file:dir ~{ create rw_dir_perms mounton setattr rmdir };
+
+  neverallow vold_prepare_subdirs system_data_file:dir ~{ open read write add_name remove_name rmdir relabelfrom search getattr };
+
+  neverallow zygote system_data_file:dir ~{ r_dir_perms mounton relabelto };
+')
+
 
 # Do not allow access to the generic vendor_data_file label. This is
 # too broad.

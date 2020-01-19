@@ -19,14 +19,8 @@ allow thermal_manager proc_mtkcooler:file rw_file_perms;
 allow thermal_manager proc_mtktz:file rw_file_perms;
 allow thermal_manager proc_thermal:file rw_file_perms;
 
-
-# Date : WK15.30
-# Operation : Migration
-# Purpose : Use file_type_auto_trans to specify label to avoid violated(never allow)
-
 allow thermal_manager thermal_manager_data_file:file create_file_perms;
 allow thermal_manager thermal_manager_data_file:dir { rw_dir_perms setattr };
-
 
 allow thermal_manager mediaserver:fd use;
 allow thermal_manager mediaserver:fifo_file { read write };
@@ -34,7 +28,7 @@ allow thermal_manager mediaserver:tcp_socket { read write };
 
 # Date : WK16.30
 # Operation : Migration
-# Purpose : Use file_type_auto_trans to specify label to avoid violated(never allow)
+# Purpose :
 allow thermal_manager camera_isp_device:chr_file { read write };
 allow thermal_manager cameraserver:fd use;
 allow thermal_manager kd_camera_hw_device:chr_file { read write };

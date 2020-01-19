@@ -26,7 +26,6 @@ allow emdlogger sdcard_type:file { create_file_perms };
 allow emdlogger mdlog_data_file:dir { create_dir_perms relabelto };
 allow emdlogger mdlog_data_file:fifo_file { create_file_perms };
 allow emdlogger mdlog_data_file:file { create_file_perms };
-allow emdlogger system_data_file:dir { create_dir_perms relabelfrom};
 
 # modem logger control port access /dev/ttyC1
 allow emdlogger mdlog_device:chr_file { rw_file_perms};
