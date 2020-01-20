@@ -198,7 +198,6 @@ allow factory camera_wpe_device:chr_file rw_file_perms;
 allow factory camera_owe_device:chr_file rw_file_perms;
 allow factory camera_mfb_device:chr_file rw_file_perms;
 allow factory mtk_hal_power_hwservice:hwservice_manager find;
-allow factory vendor_data_file:file getattr;
 allow factory mtk_hal_power:binder call;
 get_prop(factory,mediatek_prop);
 #Purpose: For FM test and headset test
@@ -359,12 +358,6 @@ allow factory factory:capability { sys_module net_admin net_raw };
 # For power_supply and switch permission
 r_dir_file(factory, sysfs_batteryinfo)
 r_dir_file(factory, sysfs_switch)
-
-# Date : WK18.27
-# Operation: P migration
-# Purpose : Allow factory to save test report to /data/vendor
-allow factory vendor_data_file:dir { add_name read write};
-allow factory vendor_data_file:file { create read write open };
 
 # Date : WK18.31
 # Operation: P migration
