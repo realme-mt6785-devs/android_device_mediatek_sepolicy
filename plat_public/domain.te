@@ -279,7 +279,48 @@ full_treble_only(`
 # too broad.
 # Instead, if access to part of vendor_data_file is desired, it should
 # have a more specific label.
-#neverallow * vendor_data_file:dir_file_class_set *;
+full_treble_only(`
+  neverallow ~{
+    init
+    vendor_init
+    } vendor_data_file:file_class_set *;
+
+  neverallow {
+    init
+    vendor_init
+    } vendor_data_file:{ chr_file blk_file } ~{ relabelto };
+
+  neverallow {
+    init
+    vendor_init
+    } vendor_data_file:{ sock_file fifo_file } ~{ create getattr open read setattr relabelfrom unlink relabelto };
+
+  neverallow {
+    init
+    vendor_init
+    } vendor_data_file:file ~{ create getattr open read write setattr relabelfrom unlink map relabelto };
+
+  neverallow {
+    init
+    vendor_init
+    } vendor_data_file:lnk_file ~{ create getattr setattr relabelfrom unlink relabelto };
+
+  neverallow ~{
+    init
+    vendor_init
+    vold
+    vold_prepare_subdirs
+    } vendor_data_file:dir ~{ getattr search };
+
+  neverallow {
+    init
+    vendor_init
+    } vendor_data_file:dir ~{ create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom relabelto };
+
+  neverallow vold vendor_data_file:dir ~create_dir_perms;
+
+  neverallow vold_prepare_subdirs vendor_data_file:dir ~{ getattr search open read write add_name remove_name rmdir relabelfrom };
+')
 
 # Do not allow access to the generic app_data_file label. This is too broad.
 # Instead, if access to part of app_data_file is desired, it should have a
