@@ -8,7 +8,6 @@
 # ==============================================
 # MTK Policy Rule
 # ==============================================
-#file_type_auto_trans(factory, system_data_file, factory_data_file)
 type factory, domain;
 type factory_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(factory)

@@ -61,7 +61,6 @@ allow ccci_mdinit nvdata_file:lnk_file read;
 allow ccci_mdinit nvdata_file:dir rw_dir_perms;
 allow ccci_mdinit nvdata_file:file create_file_perms;
 allow ccci_mdinit nvram_device:chr_file rw_file_perms;
-allow ccci_mdinit system_data_file:lnk_file read;
 
 #=============allow ccci_mdinit to access ccci config==============
 allow ccci_mdinit protect_f_data_file:dir rw_dir_perms;

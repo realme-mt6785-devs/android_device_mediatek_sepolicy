@@ -160,3 +160,71 @@ full_treble_only(`
     } proc:lnk_file ~r_file_perms;
 ')
 
+
+# Do not allow access to the generic system_data_file label. This is
+# too broad.
+# Instead, if access to part of system_data_file is desired, it should
+# have a more specific label.
+# TODO: Remove merged_hal_service and so on once there are no violations.
+#
+#   allow hal_drm system_data_file:file { getattr read };
+#   hal_server_domain(merged_hal_service, hal_drm)
+#
+full_treble_only(`
+  neverallow {
+    domain
+    -coredomain
+    -appdomain
+    -hal_cas_default
+    -hal_drm_clearkey
+    -hal_drm_default
+    -hal_drm_widevine
+    -merged_hal_service
+    -tee
+    } system_data_file:file *;
+
+  neverallow ~{
+    appdomain
+    app_zygote
+    hal_drm_clearkey
+    hal_drm_default
+    hal_drm_widevine
+    init
+    installd
+    iorap_prefetcherd
+    mediadrmserver
+    mediaextractor
+    mediaserver
+    merged_hal_service
+    system_server
+    tee
+    toolbox
+    vold
+    vold_prepare_subdirs
+    } system_data_file:file ~r_file_perms;
+
+  neverallow { appdomain app_zygote } system_data_file:file ~{ getattr read map };
+
+  neverallow init system_data_file:file ~{ create getattr open read write setattr relabelfrom unlink map getattr relabelto };
+
+  neverallow installd system_data_file:file ~{ getattr relabelfrom unlink };
+
+  neverallow iorap_prefetcherd system_data_file:file ~{ open read };
+
+  neverallow {
+    hal_drm_clearkey
+    hal_drm_default
+    hal_drm_widevine
+    mediadrmserver
+    mediaextractor
+    mediaserver
+    merged_hal_service
+    tee
+    } system_data_file:file ~{ getattr read };
+
+  neverallow system_server system_data_file:file ~{ create_file_perms relabelfrom link };
+
+  neverallow { toolbox vold_prepare_subdirs } system_data_file:file ~{ getattr unlink };
+
+  neverallow vold system_data_file:file ~read;
+')

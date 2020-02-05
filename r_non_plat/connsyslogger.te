@@ -18,7 +18,6 @@ allow connsyslogger fuse:file { create_file_perms };
 allow connsyslogger consyslog_data_file:dir { create_dir_perms relabelto };
 allow connsyslogger consyslog_data_file:fifo_file { create_file_perms };
 allow connsyslogger consyslog_data_file:file { create_file_perms };
-allow connsyslogger system_data_file:dir { create_dir_perms relabelfrom};
 
 #consys logger socket access
 allow connsyslogger property_socket:sock_file write;

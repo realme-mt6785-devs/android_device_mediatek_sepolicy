@@ -12,7 +12,6 @@ allow mdlogger ttyGS_device:chr_file { rw_file_perms};
 allow mdlogger mdlog_data_file:dir { create_dir_perms relabelto};
 allow mdlogger mdlog_data_file:fifo_file { create_file_perms};
 allow mdlogger mdlog_data_file:file { create_file_perms };
-allow mdlogger system_data_file:dir { create_dir_perms relabelfrom};
 
 # modem logger control port access /dev/ttyC1
 allow mdlogger mdlog_device:chr_file { rw_file_perms};

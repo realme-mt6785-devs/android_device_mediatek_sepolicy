@@ -252,12 +252,6 @@ allow mtk_hal_camera gpu_device:chr_file rw_file_perms;
 allow mtk_hal_camera proc_ged:file rw_file_perms;
 allowxperm mtk_hal_camera proc_ged:file ioctl { proc_ged_ioctls };
 
-################################################################################
-# Date : WK17
-# Operation : O Migration
-## Purpose: Allow to call hal_graphics_allocator binder.
-allow mtk_hal_camera system_data_file:lnk_file read;
-
 allow mtk_hal_camera debugfs_tracing:file { write open };
 
 ## Purpose : camera3 IT/CTS
@@ -331,9 +325,6 @@ allow mtk_hal_camera aee_dipdebug_vendor_file:file { create_file_perms };
 
 allow mtk_hal_camera proc_isp_p2:dir search;
 allow mtk_hal_camera proc_isp_p2:file {create_file_perms};
-
-# Purpose : AINR/Thermal Boost
-allow mtk_hal_camera system_data_file:dir { getattr };
 
 # Date: 2019/06/14
 # Operation : Migration

@@ -57,13 +57,6 @@ allow cameraserver mtkcam_prop:file { open read getattr };
 # Purpose : VP/VR
 # allow cameraserver devmap_device:chr_file { ioctl };
 
-# Date : WK14.34
-# Operation : Migration
-# Purpose : Smartcard Service
-### TBD, neverallowxperm on line 177 of system/sepolicy/public/domain.te
-# #allow cameraserver self:netlink_kobject_uevent_socket read;
-# allow cameraserver system_data_file:file open;
-
 # Date : WK14.36
 # Operation : Migration
 # Purpose : media server and bt process communication for A2DP data.and other control flow
@@ -236,14 +229,6 @@ allow cameraserver graphics_device:chr_file rw_file_perms;
 # Purpose : 3A algorithm need to access sensor service
 # allow cameraserver sensorservice_service:service_manager find;
 
-# Date : WK15.34
-# Operation : Migration
-# Purpose: for camera middleware dump image buffer to sdcard & audio frameworks dump
-# allow cameraserver system_data_file:dir write;
-# allow cameraserver storage_file:lnk_file {read write};
-# allow cameraserver mnt_user_file:dir {write read search};
-# allow cameraserver mnt_user_file:lnk_file {read write};
-
 # Date : WK15.35
 # Operation : Migration
 # Purpose: Allow cameraserver to read binder from surfaceflinger
@@ -270,13 +255,6 @@ allow cameraserver tmpfs:dir search;
 allow cameraserver system_file:dir { read open };
 allow cameraserver gpu_device:chr_file rw_file_perms;
 allow cameraserver gpu_device:dir search;
-
-# Date : WK16.30
-# Operation : Migration
-# Purpose :  Use file_type_auto_trans to specify label to avoid violated(never allow)
-# allow cameraserver property_socket:sock_file write;
-# allow cameraserver shell_exec:file { execute read getattr open};
-# allow cameraserver init:unix_stream_socket connectto;
 
 # Date : WK16.32
 # Operation : Migration
@@ -314,9 +292,6 @@ allowxperm cameraserver proc_ged:file ioctl { proc_ged_ioctls };
 # userdebug_or_eng(`
 # allow cameraserver aee_aed:unix_stream_socket connectto;
 # ')
-
-# Purpose: Allow to access debugfs_ion dir.
-allow cameraserver system_data_file:lnk_file read;
 
 # Date : WK17.19
 # Operation : Migration
