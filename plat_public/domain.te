@@ -105,13 +105,41 @@ full_treble_only(`
 ')
 
 
-
-
-
 # Do not allow access to the generic debugfs label. This is too broad.
 # Instead, if access to part of debugfs is desired, it should have a
 # more specific label.
-#neverallow * debugfs:dir_file_class_set *;
+full_treble_only(`
+  neverallow * debugfs:{ chr_file blk_file sock_file fifo_file } *;
+
+  neverallow ~{
+    dumpstate
+    init
+    vendor_init
+} debugfs:file *;
+
+  neverallow dumpstate debugfs:file ~r_file_perms;
+
+  neverallow init debugfs:file ~{ getattr relabelfrom open read setattr relabelto };
+
+  neverallow vendor_init debugfs:file ~{ read setattr open map };
+
+  neverallow ~init debugfs:lnk_file *;
+
+  neverallow init debugfs:lnk_file ~{ getattr relabelfrom relabelto };
+
+  neverallow ~{
+    init
+    vendor_init
+} debugfs:dir ~{ search getattr };
+
+  neverallow init debugfs:dir ~{ search getattr relabelfrom open read setattr relabelto };
+
+  neverallow vendor_init debugfs:dir ~{ search getattr read setattr open };
+
+')
+
+
+
 
 # Do not allow access to the generic system_data_file label. This is
 # too broad.

@@ -15,9 +15,6 @@ allow system_server proc_bootprof:file rw_file_perms;
 # /data/core access.
 allow system_server aee_core_data_file:dir r_dir_perms;
 
-# /sys/kernel/debug/ion/clients access
-allow system_server debugfs:dir r_dir_perms;
-
 # Perform Binder IPC.
 allow system_server zygote:binder impersonate;
 
