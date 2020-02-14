@@ -442,3 +442,5 @@ type sysfs_chipid, fs_type, sysfs_type;
 # Date : 2019/12/12
 # Purpose : allow media sources to access /sys/bus/platform/drivers/mem_bw_ctrl/*
 type sysfs_concurrency_scenario, fs_type, sysfs_type;
+
+type proc_wmt_aee, fs_type, proc_type;
