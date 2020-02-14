@@ -417,3 +417,8 @@ allow meta_tst adsp_device:chr_file rw_file_perms;
 # Operation: P migration
 # Purpose : audio scp recovery
 allow meta_tst audio_scp_device:chr_file r_file_perms;
+
+# Date : WK20.07
+# Operation: R migration
+# Purpose : Add permission for new device node.
+allow meta_tst sysfs_boot_info:file r_file_perms;
