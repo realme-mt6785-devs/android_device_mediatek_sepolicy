@@ -255,3 +255,9 @@ genfscon sysfs /firmware/devicetree/base/model u:object_r:sysfs_device_tree_mode
 # Date : 2019/12/12
 # Purpose : allow media sources to access /sys/bus/platform/drivers/mem_bw_ctrl/*
 genfscon sysfs /bus/platform/drivers/mem_bw_ctrl/concurrency_scenario u:object_r:sysfs_concurrency_scenario:s0
+
+# Date : WK20.07
+# Operation: R migration
+# Purpose : Add permission for new device node.
+genfscon sysfs /firmware/devicetree/base/chosen/atag,meta u:object_r:sysfs_meta_info:s0
+

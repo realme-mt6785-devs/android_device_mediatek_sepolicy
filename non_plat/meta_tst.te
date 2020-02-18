@@ -422,3 +422,5 @@ allow meta_tst audio_scp_device:chr_file r_file_perms;
 # Operation: R migration
 # Purpose : Add permission for new device node.
 allow meta_tst sysfs_boot_info:file r_file_perms;
+allow meta_tst proc_bootprof:file getattr;
+allow meta_tst sysfs_meta_info:file r_file_perms;

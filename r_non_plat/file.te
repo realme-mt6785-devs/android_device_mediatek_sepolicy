@@ -416,3 +416,9 @@ type sysfs_mrdump_lbaooo, fs_type, sysfs_type;
 type sysfs_concurrency_scenario, fs_type, sysfs_type;
 
 type proc_wmt_aee, fs_type, proc_type;
+
+# Date : WK20.07
+# Operation: R migration
+# Purpose : Add permission for new device node.
+type sysfs_meta_info, fs_type, sysfs_type;
+
