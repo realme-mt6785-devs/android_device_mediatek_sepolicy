@@ -1,0 +1,2 @@
+allow crash_dump aee_exp_data_file:file rw_file_perms;
+allow crash_dump aee_exp_data_file:dir r_dir_perms;

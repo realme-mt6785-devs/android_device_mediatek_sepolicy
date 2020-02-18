@@ -5,8 +5,8 @@
 # MTK Policy Rule
 # ==============================================
 
-allow aee_core_forwarder aee_exp_data_file:dir { write add_name search };
-allow aee_core_forwarder aee_exp_data_file:file { write create open getattr };
+allow aee_core_forwarder aee_exp_data_file:dir rw_dir_perms;
+allow aee_core_forwarder aee_exp_data_file:file create_file_perms;
 get_prop(aee_core_forwarder, hwservicemanager_prop)
 
 # Date: 2019/06/14
