@@ -171,6 +171,7 @@ full_treble_only(`
     -init
     -installd
     -iorap_prefetcherd
+    -iorap_inode2filename
     -system_server
     -toolbox
     -vold
@@ -182,6 +183,8 @@ full_treble_only(`
   neverallow init system_data_file:file ~{ create getattr open read write setattr relabelfrom unlink map getattr relabelto };
 
   neverallow installd system_data_file:file ~{ getattr relabelfrom unlink };
+
+  neverallow iorap_inode2filename system_data_file:file ~{ open read getattr };
 
   neverallow iorap_prefetcherd system_data_file:file ~{ open read };
 
@@ -203,6 +206,7 @@ full_treble_only(`
     init
     installd
     iorap_prefetcherd
+    iorap_inode2filename
     logd
     rs
     runas
@@ -227,6 +231,8 @@ full_treble_only(`
 
   neverallow iorap_prefetcherd system_data_file:lnk_file ~{ read open };
 
+  neverallow iorap_inode2filename system_data_file:lnk_file ~{ read open getattr };
+
   neverallow rs system_data_file:lnk_file ~{ read };
 
   neverallow {
@@ -242,6 +248,7 @@ full_treble_only(`
     init
     installd
     iorap_prefetcherd
+    iorap_inode2filename
     system_server
     toolbox
     traced_probes
@@ -263,6 +270,7 @@ full_treble_only(`
 
   neverallow {
     iorap_prefetcherd
+    iorap_inode2filename
     traced_probes
     } system_data_file:dir ~{ open read search getattr };
 
