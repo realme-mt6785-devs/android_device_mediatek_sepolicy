@@ -15,6 +15,7 @@ define(`GED_BRIDGE_IO_WAIT_HW_VSYNC', `0x670a')
 define(`GED_BRIDGE_IO_QUERY_TARGET_FPS', `0x670b')
 define(`GED_BRIDGE_IO_VSYNC_WAIT', `0x670c')
 define(`GED_BRIDGE_IO_GPU_HINT_TO_CPU', `0x670d')
+define(`GED_BRIDGE_IO_HINT_FORCE_MDP', `0x670e')
 
 define(`GED_BRIDGE_IO_GE_ALLOC', `0x6764')
 define(`GED_BRIDGE_IO_GE_GET', `0x6765')
@@ -60,4 +61,10 @@ define(`JPG_BRIDGE_ENC_IO_DEINIT', `0x780e')
 define(`JPG_BRIDGE_ENC_IO_START', `0x780f')
 #####################################
 # m4u_priv.h
+define(`MTK_M4U_T_ALLOC_MVA', `0x6704')
+define(`MTK_M4U_T_DEALLOC_MVA', `0x6705')
+define(`MTK_M4U_T_CONFIG_PORT', `0x670b')
+define(`MTK_M4U_T_DMA_OP', `0x671d')
 define(`MTK_M4U_T_SEC_INIT', `0x6732')
+define(`MTK_M4U_T_CONFIG_PORT_ARRAY', `0x671a')
+define(`MTK_M4U_T_CACHE_SYNC', `0x670a')

@@ -16,9 +16,9 @@ allow recovery self:capability sys_resource;
 allow recovery misc_sd_device:chr_file rw_file_perms;
 allow recovery vfat:dir r_dir_perms;
 allow recovery vfat:file r_file_perms;
-allow recovery sysfs_mmcblk:dir r_dir_perms;
-allow recovery sysfs_mmcblk:file rw_file_perms;
-allow recovery sysfs_mmcblk:lnk_file r_file_perms;
+allow recovery sysfs_devices_block:dir r_dir_perms;
+allow recovery sysfs_devices_block:file rw_file_perms;
+allow recovery sysfs_devices_block:lnk_file r_file_perms;
 
 # Date : WK18.25
 # Operation : UT

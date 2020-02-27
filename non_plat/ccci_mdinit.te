@@ -27,7 +27,7 @@ set_prop(ccci_mdinit, ctl_dualmdlogger_prop)
 set_prop(ccci_mdinit, ctl_gsm0710muxd_prop)
 set_prop(ccci_mdinit, ctl_gsm0710muxd-s_prop)
 set_prop(ccci_mdinit, ctl_gsm0710muxd-d_prop)
-set_prop(ccci_mdinit, ctl_rildaemon_prop)
+#set_prop(ccci_mdinit, ctl_rildaemon_prop)
 set_prop(ccci_mdinit, ctl_ril-daemon-mtk_prop)
 set_prop(ccci_mdinit, ctl_fusion_ril_mtk_prop)
 set_prop(ccci_mdinit, ctl_ril-daemon-s_prop)
@@ -61,7 +61,6 @@ allow ccci_mdinit nvdata_file:lnk_file read;
 allow ccci_mdinit nvdata_file:dir rw_dir_perms;
 allow ccci_mdinit nvdata_file:file create_file_perms;
 allow ccci_mdinit nvram_device:chr_file rw_file_perms;
-allow ccci_mdinit system_data_file:lnk_file read;
 
 #=============allow ccci_mdinit to access ccci config==============
 allow ccci_mdinit protect_f_data_file:dir rw_dir_perms;
@@ -71,15 +70,11 @@ allow ccci_mdinit protect_s_data_file:dir rw_dir_perms;
 allow ccci_mdinit protect_s_data_file:file create_file_perms;
 allow ccci_mdinit nvram_device:blk_file rw_file_perms;
 allow ccci_mdinit nvdata_device:blk_file rw_file_perms;
-allow ccci_mdinit bootdevice_block_device:blk_file rw_file_perms;
 
 set_prop(ccci_mdinit, ril_mux_report_case_prop)
 
 allow ccci_mdinit ccci_cfg_file:dir create_dir_perms;
 allow ccci_mdinit ccci_cfg_file:file create_file_perms;
-allow ccci_mdinit block_device:dir search;
-allow ccci_mdinit preloader_block_device:blk_file r_file_perms;
-allow ccci_mdinit secro_block_device:blk_file r_file_perms;
 #===============security relate ==========================
 allow ccci_mdinit preloader_device:chr_file rw_file_perms;
 allow ccci_mdinit misc_sd_device:chr_file r_file_perms;
@@ -100,7 +95,6 @@ allow ccci_mdinit sysfs_ccci:dir search;
 allow ccci_mdinit sysfs_ccci:file rw_file_perms;
 allow ccci_mdinit sysfs_ssw:dir search;
 allow ccci_mdinit sysfs_ssw:file r_file_perms;
-allow ccci_mdinit sysfs:file r_file_perms;
 allow ccci_mdinit sysfs_boot_mode:file { read open };
 
 # Purpose : Allow ccci_mdinit to open and read/write /proc/bootprof
@@ -111,3 +105,8 @@ allow ccci_mdinit proc_bootprof:file rw_file_perms;
 # Purpose: Allow to search /mnt/vendor/nvdata for fstab when using NVM_Init()
 allow ccci_mdinit mnt_vendor_file:dir search;
 
+# Purpose : Allow ccci_mdinit call sysenv_get and sysenv_set
+allow ccci_mdinit block_device:dir search;
+allow ccci_mdinit metadata_file:dir search;
+allow ccci_mdinit proc_cmdline:file r_file_perms;
+allow ccci_mdinit sysfs_dt_firmware_android:dir search;
