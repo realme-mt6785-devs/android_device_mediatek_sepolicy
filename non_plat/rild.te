@@ -43,7 +43,6 @@ allow rild bluetooth_efs_file:dir r_dir_perms;
 # Violate Android P rule
 allow rild sdcardfs:dir r_dir_perms;
 #allow rild system_file:file x_file_perms;
-allow rild proc:file rw_file_perms;
 allow rild proc_net:file w_file_perms;
 
 # Allow rild to create and use netlink sockets.
@@ -58,14 +57,14 @@ allow rild mtd_device:dir search;
 allow rild tty_device:chr_file rw_file_perms;
 allow rild eemcs_device:chr_file { rw_file_perms };
 
-allow rild Vcodec_device:chr_file { rw_file_perms };
+#allow rild Vcodec_device:chr_file { rw_file_perms };
 allow rild devmap_device:chr_file { r_file_perms };
 allow rild devpts:chr_file { rw_file_perms };
 allow rild ccci_device:chr_file { rw_file_perms };
 allow rild misc_device:chr_file { rw_file_perms };
 allow rild proc_lk_env:file rw_file_perms;
 allow rild sysfs_vcorefs_pwrctrl:file { w_file_perms };
-allow rild bootdevice_block_device:blk_file { rw_file_perms };
+#allow rild bootdevice_block_device:blk_file { rw_file_perms };
 allow rild para_block_device:blk_file { rw_file_perms };
 
 # Allow dir search, fd uses
@@ -100,12 +99,6 @@ allow rild mtk_agpsd:unix_stream_socket connectto;
 #Purpose: allow set MTU size
 #allow rild toolbox_exec:file getattr;
 allow rild mtk_net_ipv6_prop:property_service set;
-
-#Dat: 2017/10/17
-# Allow to use sysenv & persist.radio.multisim.config
-# for dynamic feature switch between ss & dsds
-allow rild sysfs:file open;
-allow rild sysfs:file read;
 
 #Date: 2017/12/6
 #Purpose: allow set the RS times for /proc/sys/net/ipv6/conf/ccmniX/router_solicitations
@@ -155,3 +148,16 @@ allow rild proc_cmdline:file r_file_perms;
 # Operation: AP wifi path
 # Purpose: Allow packet can be filtered by RILD process
 allow rild self:netlink_netfilter_socket { create_socket_perms_no_ioctl };
+
+# Date : 2019/08/29
+# Purpose: Allow rild to access proc/aed/reboot-reason
+allow rild proc_aed_reboot_reason:file rw_file_perms;
+
+# Date : WK19.43
+# Purpose: Allow wfc module from rild read system property from wfc module
+get_prop(rild, mtk_wfc_serv_prop)
+
+# Date: 2019/11/15
+# Operation: RILD init flow
+# Purpose: To handle illegal rild started
+set_prop(rild, gsm0710muxd_prop)

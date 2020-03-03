@@ -1,4 +1,4 @@
-vendor.mediatek.hardware.bluetooth::IMtkBluetoothHci 			u:object_r:mtk_hal_bluetooth_hwservice:s0
+vendor.mediatek.hardware.bluetooth::IMtkBluetoothHci u:object_r:mtk_hal_bluetooth_hwservice:s0
 
 # Date: 2017/05/9
 vendor.mediatek.hardware.mtkradioex::IMtkRadioEx u:object_r:mtk_hal_rild_hwservice:s0
@@ -62,8 +62,16 @@ vendor.mediatek.hardware.modemdbfilter::ICopyDBFilter u:object_r:mtk_hal_md_dbfi
 # Date: 2019/07/04
 vendor.mediatek.hardware.camera.lomoeffect::ILomoEffect u:object_r:hal_camera_hwservice:s0
 vendor.mediatek.hardware.camera.ccap::ICCAPControl u:object_r:hal_camera_hwservice:s0
-vendor.mediatek.hardware.camera.bgservice::IBGService u:object_r:hal_camera_hwservice:s0
+vendor.mediatek.hardware.camera.bgservice::IBGService u:object_r:mtk_hal_bgs_hwservice:s0
+vendor.mediatek.hardware.camera.isphal::IISPModule u:object_r:mtk_hal_bgs_hwservice:s0
+
+# Date : 2019/07/31
+vendor.mediatek.hardware.camera.postproc::IPostDevice u:object_r:mtk_hal_bgs_hwservice:s0
 
 # Date : 2019/07/16
 # HDMI HIDL
 vendor.mediatek.hardware.hdmi::IMtkHdmiService u:object_r:mtk_hal_hdmi_hwservice:s0
+
+#Date: 2019/09/02
+# ATMs hidl
+vendor.mediatek.hardware.camera.atms::IATMs u:object_r:hal_camera_hwservice:s0
