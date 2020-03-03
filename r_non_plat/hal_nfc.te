@@ -1,4 +1,5 @@
 # ==============================================
-# Type Declaration
+# ST NFC HAL rule
 # ==============================================
-type aee_aedv, domain;
+
+allow hal_nfc st21nfc_device:chr_file { read write getattr open ioctl };

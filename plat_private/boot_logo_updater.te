@@ -38,7 +38,4 @@ allow boot_logo_updater sysfs:dir read;
 # for path="/sys/firmware/devicetree/base/firmware/android/fstab" andfor name = "cmdline" and "mtdblock14"
 allow boot_logo_updater mtd_device:blk_file read;
 allow boot_logo_updater sysfs:dir open;
-allow boot_logo_updater system_data_file:dir write;
 allow boot_logo_updater mtd_device:blk_file open;
-
-
