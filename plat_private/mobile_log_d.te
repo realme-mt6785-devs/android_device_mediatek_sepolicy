@@ -84,3 +84,5 @@ allow mobile_log_d debuglog_data_file:file create_file_perms;
 allow mobile_log_d mcupm_device:chr_file r_file_perms;
 allow mobile_log_d sysfs_mcupm:file w_file_perms;
 allow mobile_log_d sysfs_mcupm:dir search;
+
+allow mobile_log_d sysfs_boot_info:file r_file_perms;

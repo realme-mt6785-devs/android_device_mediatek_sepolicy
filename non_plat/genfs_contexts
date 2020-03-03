@@ -19,6 +19,7 @@ genfscon proc /driver/storage_logger u:object_r:proc_slogger:s0
 genfscon proc /driver/icusb u:object_r:proc_icusb:s0
 genfscon proc /mrdump_rst u:object_r:proc_mrdump_rst:s0
 genfscon proc /mtk_battery_cmd u:object_r:proc_battery_cmd:s0
+genfscon proc /mtd u:object_r:proc_mtd:s0
 genfscon proc /ged u:object_r:proc_ged:s0
 genfscon proc /mtk_jpeg u:object_r:proc_mtk_jpeg:s0
 genfscon proc /perfmgr u:object_r:proc_perfmgr:s0
@@ -27,8 +28,7 @@ genfscon proc /zraminfo u:object_r:proc_zraminfo:s0
 genfscon proc /gpulog u:object_r:proc_gpulog:s0
 genfscon proc /cpu/alignment u:object_r:proc_cpu_alignment:s0
 genfscon proc /sched_debug u:object_r:proc_sched_debug:s0
-genfscon proc /chip/hw_ver u:object_r:proc_chip:s0
-genfscon proc /chip/info u:object_r:proc_chip:s0
+genfscon proc /chip u:object_r:proc_chip:s0
 genfscon proc /atf_log u:object_r:proc_atf_log:s0
 genfscon proc /gz_log u:object_r:proc_gz_log:s0
 genfscon proc /last_kmsg u:object_r:proc_last_kmsg:s0
@@ -37,6 +37,7 @@ genfscon proc /pl_lk u:object_r:proc_pl_lk:s0
 genfscon proc /msdc_debug u:object_r:proc_msdc_debug:s0
 genfscon proc /ufs_debug u:object_r:proc_ufs_debug:s0
 genfscon proc /pidmap u:object_r:proc_pidmap:s0
+#genfscon proc /kpageflags u:object_r:proc_kpageflags:s0
 genfscon proc /mtk_memcfg/slabtrace u:object_r:proc_slabtrace:s0
 genfscon proc /mtk_cmdq_debug/status u:object_r:proc_cmdq_debug:s0
 genfscon proc /cpuhvfs/dbg_repo u:object_r:proc_dbg_repo:s0
@@ -88,6 +89,8 @@ genfscon sysfs /devices/platform/charger/Pump_Express u:object_r:sysfs_pump_expr
 genfscon sysfs /devices/platform/battery/Pump_Express u:object_r:sysfs_pump_express:s0
 genfscon sysfs /devices/platform/mt_charger/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/mt-rtc/rtc    u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/rtc u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-rtc/rtc u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/mt-pmic u:object_r:sysfs_pmu:s0
 genfscon sysfs /devices/platform/1000d000.pwrap/mt-pmic u:object_r:sysfs_pmu:s0
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt-pmic u:object_r:sysfs_pmu:s0
@@ -106,7 +109,10 @@ genfscon sysfs /devices/virtual/misc/scp_B  u:object_r:sysfs_scp:s0
 genfscon sysfs /devices/virtual/misc/sspm  u:object_r:sysfs_sspm:s0
 genfscon sysfs /devices/virtual/misc/adsp  u:object_r:sysfs_adsp:s0
 
+# Date : 2019/09/12
 genfscon sysfs /devices/virtual/thermal u:object_r:sysfs_therm:s0
+genfscon sysfs /devices/class/thermal u:object_r:sysfs_therm:s0
+
 genfscon sysfs /devices/virtual/switch/fps u:object_r:sysfs_fps:s0
 
 genfscon sysfs /firmware/devicetree/base/chosen/atag,devinfo u:object_r:sysfs_devinfo:s0
@@ -124,6 +130,7 @@ genfscon sysfs /power/vcorefs/opp_table    u:object_r:sysfs_vcore_debug:s0
 #Purpose : MTK Vibrator
 genfscon sysfs /devices/virtual/timed_output/vibrator u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/odm/odm:vibrator@0/leds/vibrator u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/soc:regulator_vibrator/leds/vibrator u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/leds-mt65xx/leds u:object_r:sysfs_leds:s0
 # Date : 2018/08/109
 # Purpose : mtk EM Power debug_log setting
@@ -148,17 +155,21 @@ genfscon sysfs /devices/platform/battery/disable_nafg u:object_r:sysfs_dis_nafg:
 
 # Date : 2019/07/03
 # Purpose: SIU update mmcblk access
-genfscon sysfs /devices/platform/bootdevice/mmc_host/mmc0/mmc0:0001/block/mmcblk0 u:object_r:sysfs_mmcblk:s0
-genfscon sysfs /devices/mtk-msdc.0/11230000.msdc0/mmc_host/mmc0/mmc0:0001/block/mmcblk0 u:object_r:sysfs_mmcblk:s0
-genfscon sysfs /devices/platform/mtk-msdc.0/11230000.msdc0/mmc_host/mmc0/mmc0:0001/block/mmcblk0 u:object_r:sysfs_mmcblk:s0
-genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:0/block/sda u:object_r:sysfs_mmcblk:s0
-genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:1/block/sdb u:object_r:sysfs_mmcblk:s0
-genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:2/block/sdc u:object_r:sysfs_mmcblk:s0
+genfscon sysfs /devices/platform/bootdevice/mmc_host/mmc0/mmc0:0001/block/mmcblk0 u:object_r:sysfs_devices_block:s0
+genfscon sysfs /devices/mtk-msdc.0/11230000.msdc0/mmc_host/mmc0/mmc0:0001/block/mmcblk0 u:object_r:sysfs_devices_block:s0
+genfscon sysfs /devices/platform/mtk-msdc.0/11230000.msdc0/mmc_host/mmc0/mmc0:0001/block/mmcblk0 u:object_r:sysfs_devices_block:s0
+genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:0/block/sda u:object_r:sysfs_devices_block:s0
+genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:1/block/sdb u:object_r:sysfs_devices_block:s0
+genfscon sysfs /devices/platform/bootdevice/host0/target0:0:0/0:0:0:2/block/sdc u:object_r:sysfs_devices_block:s0
 
 # Date : 2019/07/12
 # Purpose:dumpstate mmcblk1 access
+genfscon sysfs /devices/platform/externdevice/mmc_host/mmc0 u:object_r:sysfs_devices_block:s0
 genfscon sysfs /devices/platform/externdevice/mmc_host/mmc1 u:object_r:sysfs_devices_block:s0
 
+# Date : 2019/10/22
+# Purpose : mrdump_tool(copy_process by aee_aedv) need to write data to lbaooo
+genfscon sysfs /module/mrdump/parameters/lbaooo u:object_r:sysfs_mrdump_lbaooo:s0
 
 #############################
 # debugfs files
@@ -205,16 +216,66 @@ genfscon debugfs  /eara_thermal/enable u:object_r:debugfs_eara_thermal:s0
 # mtk EM power PMU register
 genfscon debugfs /rt-regmap u:object_r:debugfs_regmap:s0
 
+# 2019/08/15
+genfscon debugfs /smi_mon u:object_r:debugfs_smi_mon:s0
 
 genfscon iso9660 / u:object_r:iso9660:s0
 genfscon rawfs / u:object_r:rawfs:s0
 genfscon fuseblk / u:object_r:fuseblk:s0
 
-# Date: 2019/08/07
-# Purpose:dumpstate debugfs cmdq access
-genfscon debugfs /cmdq/cmdq-status u:object_r:debugfs_cmdq:s0
-genfscon debugfs /cmdq/cmdq-record u:object_r:debugfs_cmdq:s0
-
 # 2019/08/24
 genfscon sysfs /class/sensor u:object_r:sysfs_sensor:s0
 genfscon sysfs /devices/virtual/sensor u:object_r:sysfs_sensor:s0
+
+# MTEE trusty
+genfscon sysfs /devices/platform/trusty u:object_r:mtee_trusty_file:s0
+
+# Date : 2019/08/29
+# Purpose: allow rild to access /proc/aed/reboot-reason
+genfscon proc /aed/reboot-reason u:object_r:proc_aed_reboot_reason:s0
+
+# 2019/09/05
+# Purpose: Allow powerhal to control kernel resources
+genfscon proc /ppm u:object_r:proc_ppm:s0
+genfscon proc /cpufreq u:object_r:proc_cpufreq:s0
+genfscon proc /hps u:object_r:proc_hps:s0
+genfscon proc /cm_mgr u:object_r:proc_cm_mgr:s0
+genfscon proc /fliperfs u:object_r:proc_fliperfs:s0
+genfscon sysfs /module/ged u:object_r:sysfs_ged:s0
+genfscon sysfs /module/fbt_cpu u:object_r:sysfs_fbt_cpu:s0
+genfscon sysfs /module/fbt_fteh u:object_r:sysfs_fbt_fteh:s0
+
+# 2019/09/05
+# Purpose: Allow powerhal to control cache audit
+genfscon sysfs /module/ca_drv u:object_r:sysfs_ca_drv:s0
+genfscon sysfs /module/pftch_qos u:object_r:sysfs_pftch_qos:s0
+
+# Date : WK19.38
+# Purpose: Android Migration for video codec driver
+genfscon sysfs /firmware/devicetree/base/model u:object_r:sysfs_device_tree_model:s0
+
+# Date : 2019/10/11
+# Purpose : allow system_server to access /proc/wlan/status for Q Migration
+genfscon proc /wlan/status u:object_r:proc_wlan_status:s0
+
+# Date : 2019/10/11
+# Purpose : allow system_server to access /sys/kernel/mm/ksm/pages_xxx
+genfscon sysfs /kernel/mm/ksm/pages_shared u:object_r:sysfs_pages_shared:s0
+genfscon sysfs /kernel/mm/ksm/pages_sharing u:object_r:sysfs_pages_sharing:s0
+genfscon sysfs /kernel/mm/ksm/pages_unshared u:object_r:sysfs_pages_unshared:s0
+genfscon sysfs /kernel/mm/ksm/pages_volatile u:object_r:sysfs_pages_volatile:s0
+
+# Date : 2019/10/25
+# Purpose : To avoid using the SELabel of u:object_r:proc:s0 or u:object_r:sysfs:s0
+# to access /proc/device-tree/chosen/atag,chipid or  /sysfs/firmware/devicetree/base/chosen/atag,chipid
+genfscon sysfs /firmware/devicetree/base/chosen/atag,chipid u:object_r:sysfs_chipid:s0
+
+# Date : 2019/10/18
+# Purpose : allow system_server to access rt5509 param and calib node
+genfscon sysfs /devices/platform/rt5509_param.0 u:object_r:sysfs_rt_param:s0
+genfscon sysfs /devices/virtual/rt5509_cal/rt5509.0 u:object_r:sysfs_rt_calib:s0
+genfscon sysfs /devices/platform/11270000.usb3/musb-hdrc/cmode u:object_r:sysfs_usb_cmode:s0
+
+# Date : 2019/12/12
+# Purpose : allow media sources to access /sys/bus/platform/drivers/mem_bw_ctrl/*
+genfscon sysfs /bus/platform/drivers/mem_bw_ctrl/concurrency_scenario u:object_r:sysfs_concurrency_scenario:s0
