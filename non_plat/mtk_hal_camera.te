@@ -23,6 +23,8 @@ init_daemon_domain(mtk_hal_camera)
 # HAL implementation of the specified type over HwBinder.
 hal_server_domain(mtk_hal_camera, hal_camera)
 
+hal_server_domain(mtk_hal_camera, mtk_hal_bgs)
+
 # Allow camerahalserver to use HwBinder and vendor binder IPC.
 hwbinder_use(mtk_hal_camera)
 vndbinder_use(mtk_hal_camera)
@@ -62,7 +64,6 @@ hal_client_domain(mtk_hal_camera, hal_graphics_allocator)
 # -----------------------------------
 # Purpose: Camera-related devices (driver)
 # -----------------------------------
-allow mtk_hal_camera proc:file rw_file_perms;
 allow mtk_hal_camera proc_mtk_jpeg:file r_file_perms;
 allowxperm mtk_hal_camera proc_mtk_jpeg:file ioctl {
      JPG_BRIDGE_ENC_IO_INIT
@@ -71,7 +72,6 @@ allowxperm mtk_hal_camera proc_mtk_jpeg:file ioctl {
      JPG_BRIDGE_ENC_IO_DEINIT
      JPG_BRIDGE_ENC_IO_START
      };
-allow mtk_hal_camera sysfs:file { read write open getattr };
 
 allow mtk_hal_camera camera_sysram_device:chr_file r_file_perms;
 allow mtk_hal_camera camera_pipemgr_device:chr_file r_file_perms;
@@ -252,12 +252,6 @@ allow mtk_hal_camera gpu_device:chr_file rw_file_perms;
 allow mtk_hal_camera proc_ged:file rw_file_perms;
 allowxperm mtk_hal_camera proc_ged:file ioctl { proc_ged_ioctls };
 
-################################################################################
-# Date : WK17
-# Operation : O Migration
-## Purpose: Allow to call hal_graphics_allocator binder.
-allow mtk_hal_camera system_data_file:lnk_file read;
-
 allow mtk_hal_camera debugfs_tracing:file { write open };
 
 ## Purpose : camera3 IT/CTS
@@ -332,9 +326,6 @@ allow mtk_hal_camera aee_dipdebug_vendor_file:file { create_file_perms };
 allow mtk_hal_camera proc_isp_p2:dir search;
 allow mtk_hal_camera proc_isp_p2:file {create_file_perms};
 
-# Purpose : AINR/Thermal Boost
-allow mtk_hal_camera system_data_file:dir { getattr };
-
 # Date: 2019/06/14
 # Operation : Migration
 allow mtk_hal_camera sysfs_dt_firmware_android:dir search;
@@ -342,4 +333,15 @@ allow mtk_hal_camera sysfs_dt_firmware_android:dir search;
 # Date: 2019/07/09
 # Operation : For M4U security
 allow mtk_hal_camera proc_m4u:file r_file_perms;
-allowxperm mtk_hal_camera proc_m4u:file ioctl MTK_M4U_T_SEC_INIT;
+allowxperm mtk_hal_camera proc_m4u:file ioctl{
+MTK_M4U_T_ALLOC_MVA
+MTK_M4U_T_DEALLOC_MVA
+MTK_M4U_T_CONFIG_PORT
+MTK_M4U_T_DMA_OP
+MTK_M4U_T_SEC_INIT
+};
+
+# Date: 2019/08/27
+# Operation : For android Q allowing ioctl
+allow mtk_hal_camera mtk_hal_camera:unix_stream_socket { ioctl };
+allowxperm mtk_hal_camera mtk_hal_camera:unix_stream_socket ioctl IIOCNETAIF;

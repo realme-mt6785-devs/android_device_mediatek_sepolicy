@@ -13,9 +13,6 @@ init_daemon_domain(atci_service)
 allow atci_service block_device:dir search;
 allow atci_service misc2_block_device:blk_file { open read write };
 allow atci_service misc2_device:chr_file { open read write };
-allow atci_service bootdevice_block_device:blk_file { open read write };
-
-allow atci_service self:capability { net_raw chown fsetid sys_nice net_admin fowner sys_admin };
 allow atci_service camera_isp_device:chr_file { read write ioctl open };
 allow atci_service graphics_device:chr_file { read write ioctl open };
 allow atci_service graphics_device:dir search;
@@ -34,15 +31,11 @@ allow atci_service kd_camera_flashlight_device:chr_file { read write ioctl open 
 allow atci_service ccu_device:chr_file { read write ioctl open };
 allow atci_service vpu_device:chr_file { read write ioctl open };
 allow atci_service MTK_SMI_device:chr_file { open read write ioctl };
-#allow atci_service system_server:binder call;
-#allow atci_service system_data_file:dir { write remove_name add_name };
 allow atci_service DW9714AF_device:chr_file { read write ioctl open };
 allow atci_service devmap_device:chr_file { open read write ioctl };
 allow atci_service sdcard_type:dir { search write read open add_name remove_name create getattr setattr };
 allow atci_service sdcard_type:file { setattr read create write getattr unlink open append };
 allow atci_service mediaserver:binder call;
-#allow atci_service sysfs:file write;
-#allow atci_service system_server:unix_stream_socket { read write };
 allow atci_service self:capability sys_boot;
 
 # Date : 2015/09/17
@@ -71,11 +64,9 @@ allow atci_service storage_file:lnk_file read;
 #allow atci_service media_rw_data_file:file { read write create open };
 
 #============= atci_service ==============
-allow atci_service property_socket:sock_file write;
 allow atci_service CAM_CAL_DRV_device:chr_file { read write ioctl open};
 
-allow atci_service init:unix_stream_socket connectto;
-allow atci_service mtk_em_prop:property_service set;
+set_prop(atci_service, mtk_em_prop)
 
 # Date : 2016/03/02
 # Operation : M-Migration
@@ -121,7 +112,6 @@ allow atci_service mtk_hal_power:binder call;
 allow atci_service mtk_hal_power_hwservice:hwservice_manager find;
 allow atci_service sysfs_batteryinfo:dir search;
 allow atci_service sysfs_batteryinfo:file { read getattr open };
-#allow atci_service system_data_file:lnk_file read;
 allow atci_service system_file:dir { read open };
 allow atci_service camera_pipemgr_device:chr_file { read ioctl open };
 #allow atci_service media_rw_data_file:dir { read getattr open };
@@ -133,7 +123,6 @@ allow atci_service debugfs_ion:dir search;
 allow atci_service sysfs_tpd_setting:file { read write open getattr };
 allow atci_service sysfs_vibrator_setting:file { read write open getattr };
 allow atci_service sysfs_leds_setting:file { read write open getattr };
-allow atci_service proc:file getattr;
 allow atci_service vendor_toolbox_exec:file { read getattr open execute execute_no_trans };
 
 # Date : WK18.21

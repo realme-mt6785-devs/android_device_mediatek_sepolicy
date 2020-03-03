@@ -13,6 +13,7 @@ type wpa_supplicant_data_file, file_type, data_file_type;
 type radvd_data_file, file_type, data_file_type;
 type volte_vt_socket, file_type;
 type dfo_socket, file_type;
+type gsmrild_socket, file_type;
 type rild2_socket, file_type;
 type rild3_socket, file_type;
 type rild4_socket, file_type;
@@ -50,6 +51,7 @@ type bt_data_file, file_type, data_file_type;
 type proc_thermal, fs_type, proc_type;
 type proc_mtkcooler, fs_type, proc_type;
 type proc_mtktz, fs_type, proc_type;
+type proc_mtd, fs_type, proc_type;
 type proc_slogger, fs_type, proc_type;
 type proc_lk_env, fs_type, proc_type;
 type proc_ged, fs_type, proc_type;
@@ -69,6 +71,7 @@ type proc_pl_lk, fs_type, proc_type;
 type proc_msdc_debug, fs_type, proc_type;
 type proc_ufs_debug, fs_type, proc_type;
 type proc_pidmap, fs_type, proc_type;
+#type proc_kpageflags, fs_type, proc_type;
 type proc_slabtrace, fs_type, proc_type;
 type proc_cmdq_debug, fs_type, proc_type;
 type proc_isp_p2, fs_type, proc_type;
@@ -87,6 +90,8 @@ type sysfs_vcorefs_pwrctrl, fs_type, sysfs_type;
 type sysfs_md32, fs_type, sysfs_type;
 type sysfs_scp, fs_type, sysfs_type;
 type sysfs_adsp, fs_type, sysfs_type;
+type sysfs_rt_param, fs_type, sysfs_type;
+type sysfs_rt_calib, fs_type, sysfs_type;
 type sysfs_sspm, fs_type, sysfs_type;
 type sysfs_devinfo, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_dcm, fs_type, sysfs_type;
@@ -135,6 +140,7 @@ type sf_rtt_file, file_type, data_file_type, core_data_file_type;
 type rild-dongle_socket, file_type;
 
 type ccci_cfg_file, file_type, data_file_type;
+type ccci_data_md1_file, file_type, data_file_type;
 type c2k_file, file_type, data_file_type;
 #For sensor
 type sensor_data_file, file_type, data_file_type;
@@ -250,9 +256,6 @@ type debugfs_vpu_device_dbg, fs_type, debugfs_type;
 # /sys/kernel/debug/kmemleak
 type debugfs_kmemleak, fs_type, debugfs_type;
 
-# /sys/kernel/debug/cmdq
-type debugfs_cmdq, fs_type, debugfs_type;
-
 ######################################
 # core domain file data
 
@@ -331,6 +334,9 @@ type sysfs_headset, fs_type, sysfs_type;
 # socket between atci_service and audio-daemon
 type atci-audio_socket, file_type;
 
+# socket between atcid and meta_tst
+type meta_atci_socket, file_type;
+
 # ATCI socket types
 type rild_atci_socket, file_type;
 type rilproxy_atci_socket, file_type;
@@ -345,10 +351,10 @@ type debugfs_regmap, fs_type, debugfs_type;
 type sys_usb_rawbulk, fs_type, sysfs_type;
 
 # Backlight brightness file
-type sysfs_vibrator_setting, fs_type, sysfs_type;
+type sysfs_leds_setting, fs_type, sysfs_type;
 
 # Vibrator vibrate file
-type sysfs_leds_setting, fs_type, sysfs_type;
+type sysfs_vibrator_setting, fs_type, sysfs_type;
 
 # Date : 2019/04/09
 # Purpose: mtk EM battery settings
@@ -376,5 +382,63 @@ type netd_socket, file_type, coredomain_socket;
 # Purpose: Android Migration for SVP
 type proc_m4u, fs_type, proc_type;
 
+# Date : 2019/08/15
+type debugfs_smi_mon, fs_type, debugfs_type;
+
+# Date : WK19.34
+# Purpose: Android Migration for video codec driver
+type vcodec_file, file_type, data_file_type;
+
 # Date : 2019/08/24
 type sysfs_sensor, fs_type, sysfs_type;
+
+#MTEE trusty
+type mtee_trusty_file, fs_type, sysfs_type;
+
+# Date : 2019/08/29
+# Purpose: Allow rild access proc/aed/reboot-reason
+type proc_aed_reboot_reason, fs_type, proc_type;
+
+# Date : 2019/09/05
+# Purpose: Allow powerhal to control kernel resources
+type proc_ppm, fs_type, proc_type;
+type proc_cpufreq, fs_type, proc_type;
+type proc_hps, fs_type, proc_type;
+type proc_cm_mgr, fs_type, proc_type;
+type proc_fliperfs, fs_type, proc_type;
+type sysfs_ged, fs_type, sysfs_type;
+type sysfs_fbt_cpu, fs_type, sysfs_type;
+type sysfs_fbt_fteh, fs_type, sysfs_type;
+
+# Date : 2019/09/17
+# Purpose: Allow powerhal to control cache audit
+type sysfs_ca_drv, fs_type, sysfs_type;
+type sysfs_pftch_qos, fs_type, sysfs_type;
+
+# Date : WK19.38
+# Purpose: Android Migration for video codec driver
+type sysfs_device_tree_model, fs_type, sysfs_type;
+
+# Date : 2019/10/11
+# Purpose : allow system_server to access /proc/wlan/status for Q Migration
+type proc_wlan_status, fs_type, proc_type;
+
+# Date : 2019/10/11
+# Purpose : allow system_server to access /sys/kernel/mm/ksm/pages_xxx
+type sysfs_pages_shared, fs_type, sysfs_type;
+type sysfs_pages_sharing, fs_type, sysfs_type;
+type sysfs_pages_unshared, fs_type, sysfs_type;
+type sysfs_pages_volatile, fs_type, sysfs_type;
+
+# Date : 2019/10/22
+# Purpose : allow aee_aedv write /sys/module/mrdump/parameters/lbaooo
+type sysfs_mrdump_lbaooo, fs_type, sysfs_type;
+
+# Date : 2019/10/25
+# Purpose : To avoid using the SELabel of u:object_r:proc:s0 or u:object_r:sysfs:s0
+# to access /proc/device-tree/chosen/atag,chipid or  /sysfs/firmware/devicetree/base/chosen/atag,chipid
+type sysfs_chipid, fs_type, sysfs_type;
+
+# Date : 2019/12/12
+# Purpose : allow media sources to access /sys/bus/platform/drivers/mem_bw_ctrl/*
+type sysfs_concurrency_scenario, fs_type, sysfs_type;
