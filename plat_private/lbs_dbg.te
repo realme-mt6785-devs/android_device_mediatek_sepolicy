@@ -8,7 +8,6 @@ type lbs_dbg, domain;
 # ==============================================
 # MTK Policy Rule
 # ==============================================
-file_type_auto_trans(lbs_dbg, system_data_file, lbs_dbg_data_file);
 type lbs_dbg_exec, system_file_type, exec_type, file_type;
 typeattribute lbs_dbg coredomain;
 
@@ -18,8 +17,6 @@ init_daemon_domain(lbs_dbg)
 allow lbs_dbg storage_file:dir { write create add_name search mounton };
 allow lbs_dbg storage_file:lnk_file read;
 allow lbs_dbg lbs_dbg_data_file:file create_file_perms;
-
-allow lbs_dbg system_data_file:lnk_file read;
 
 #allow lbs_dbg mnld_device:chr_file rw_file_perms;
 
