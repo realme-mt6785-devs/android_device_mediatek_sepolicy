@@ -8,7 +8,6 @@
 # ==============================================
 # MTK Policy Rule
 # ==============================================
-#file_type_auto_trans(factory, system_data_file, factory_data_file)
 type factory, domain;
 type factory_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(factory)
@@ -199,7 +198,6 @@ allow factory camera_wpe_device:chr_file rw_file_perms;
 allow factory camera_owe_device:chr_file rw_file_perms;
 allow factory camera_mfb_device:chr_file rw_file_perms;
 allow factory mtk_hal_power_hwservice:hwservice_manager find;
-allow factory vendor_data_file:file getattr;
 allow factory mtk_hal_power:binder call;
 get_prop(factory,mediatek_prop);
 #Purpose: For FM test and headset test
@@ -338,7 +336,6 @@ allow factory proc_asound:file { read open getattr write };
 allow factory audiohal_prop:property_service set;
 
 # For Accdet data permission
-allow factory sysfs:file { read open };
 allow factory sysfs_headset:file { read open };
 
 # For touch auto test
@@ -362,17 +359,11 @@ allow factory factory:capability { sys_module net_admin net_raw };
 r_dir_file(factory, sysfs_batteryinfo)
 r_dir_file(factory, sysfs_switch)
 
-# Date : WK18.27
-# Operation: P migration
-# Purpose : Allow factory to save test report to /data/vendor
-allow factory vendor_data_file:dir { add_name read write};
-allow factory vendor_data_file:file { create read write open };
-
 # Date : WK18.31
 # Operation: P migration
 # Purpose : Refine policy
-allow factory sysfs_mmcblk:dir { search };
-allow factory sysfs_mmcblk:file { read getattr open };
+allow factory sysfs_devices_block:dir { search };
+allow factory sysfs_devices_block:file { read getattr open };
 
 # Date : WK18.37
 # Operation: P migration
@@ -396,3 +387,15 @@ allow factory vendor_nfc_socket:sock_file { create write unlink setattr };
 # Allow to get AOSP property persist.radio.multisim.config
 get_prop(factory, exported3_radio_prop)
 
+# Date : WK19.38
+# Operation : Q Migration
+# Purpose: Allow clear eMMC
+set_prop(factory, ctl_mdlogger_prop);
+
+# Date : WK19.41
+# Operation : Q Migration
+# Purpose: allow system_server to access rt5509 param and calib node
+allow factory sysfs_rt_param:file rw_file_perms;
+allow factory sysfs_rt_calib:file rw_file_perms;
+allow factory sysfs_rt_param:dir r_dir_perms;
+allow factory sysfs_rt_calib:dir r_dir_perms;
