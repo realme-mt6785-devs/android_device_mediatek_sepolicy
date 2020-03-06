@@ -642,7 +642,7 @@
 
 /vendor/lib(64)?/libtflite_mtk.so u:object_r:same_process_hal_file:s0
 
-/vendor/bin/hw/vendor\.mediatek\.hardware\.log@1\.0-service u:object_r:aee_hal_exec:s0
+/vendor/bin/hw/vendor\.mediatek\.hardware\.aee@1\.0-service u:object_r:aee_hal_exec:s0
 
 /vendor/bin/loghidlvendorservice u:object_r:loghidlvendorservice_exec:s0
 
