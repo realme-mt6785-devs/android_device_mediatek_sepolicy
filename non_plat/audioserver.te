@@ -50,7 +50,7 @@ allow audioserver proc_ged:file rw_file_perms;
 
 # Date : WK16.48
 # Purpose: Allow to trigger AEE dump
-allow audioserver aee_aed:unix_stream_socket connectto;
+allow audioserver crash_dump:unix_stream_socket connectto;
 
 # Date: 2019/06/14
 # Operation : Migration
