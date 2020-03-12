@@ -450,3 +450,4 @@ type proc_wmt_aee, fs_type, proc_type;
 # Purpose : Add permission for new device node.
 type sysfs_meta_info, fs_type, sysfs_type;
 
+type proc_aed, fs_type, proc_type;
