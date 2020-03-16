@@ -234,6 +234,7 @@ type mdp_device, dev_type;
 type mrdump_device, dev_type;
 type kb_block_device,dev_type;
 type dkb_block_device,dev_type;
+type mtk_radio_device, dev_type;
 
 ##########################
 # Sensor common Devices Start
