@@ -37,7 +37,6 @@ allow mnld mnld_data_file:file rw_file_perms;
 allow mnld mnld_data_file:file create_file_perms;
 allow mnld mnld_data_file:fifo_file create_file_perms;
 # Purpose : For init process
-allow mnld init:unix_stream_socket connectto;
 allow mnld init:udp_socket { read write };
 
 # Send the message to the LBS HIDL Service to forward to applications
@@ -47,10 +46,8 @@ allow mnld lbs_hidl_service:unix_dgram_socket sendto;
 allow mnld merged_hal_service:unix_dgram_socket sendto;
 
 # Purpose : For access system data
-allow mnld bootdevice_block_device:blk_file rw_file_perms;
 allow mnld block_device:dir search;
-allow mnld mnld_prop:property_service set;
-allow mnld property_socket:sock_file write;
+set_prop(mnld, mnld_prop);
 allow mnld mdlog_device:chr_file { read write };
 allow mnld self:capability { fsetid };
 allow mnld stpbt_device:chr_file { read write };
@@ -68,12 +65,11 @@ allow mnld tmpfs:lnk_file { read create open };
 allow mnld mtd_device:dir search;
 allow mnld mnt_user_file:lnk_file read;
 allow mnld mnt_user_file:dir search;
-allow mnld gps_data_file:dir { write add_name search remove_name unlink};
+allow mnld gps_data_file:dir { create_dir_perms unlink };
 allow mnld gps_data_file:file { read write open create getattr append setattr unlink lock rename };
 allow mnld gps_data_file:lnk_file read;
 
 allow mnld storage_file:lnk_file read;
-allow mnld nvcfg_file:dir search;
 
 # Date : WK15.30
 # Operation : Migration
@@ -100,3 +96,12 @@ allow mnld atci_service:unix_dgram_socket sendto;
 allow mnld sysfs_boot_mode:file { read open };
 
 set_prop(mnld, vendor_radio_prop);
+
+allow mnld proc_cmdline:file r_file_perms;
+allow mnld sysfs_dt_firmware_android:dir search;
+allow mnld sysfs_dt_firmware_android:file r_file_perms;
+allow mnld metadata_file:dir search;
+
+#Add for /nvcfg/almanac.dat
+allow mnld nvcfg_file:dir w_dir_perms;
+allow mnld nvcfg_file:file create_file_perms;
