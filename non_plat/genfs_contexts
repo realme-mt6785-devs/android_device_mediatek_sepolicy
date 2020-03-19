@@ -115,6 +115,8 @@ genfscon sysfs /devices/virtual/misc/scp  u:object_r:sysfs_scp:s0
 genfscon sysfs /devices/virtual/misc/scp_B  u:object_r:sysfs_scp:s0
 genfscon sysfs /devices/virtual/misc/sspm  u:object_r:sysfs_sspm:s0
 genfscon sysfs /devices/virtual/misc/adsp  u:object_r:sysfs_adsp:s0
+genfscon sysfs /devices/virtual/misc/adsp_0  u:object_r:sysfs_adsp:s0
+genfscon sysfs /devices/virtual/misc/adsp_1  u:object_r:sysfs_adsp:s0
 
 # Date : 2019/09/12
 genfscon sysfs /devices/virtual/thermal u:object_r:sysfs_therm:s0
