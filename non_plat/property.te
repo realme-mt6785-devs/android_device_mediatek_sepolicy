@@ -139,7 +139,6 @@ system_internal_prop(mobile_log_prop)
 system_internal_prop(mtk_em_sys_prop)
 system_internal_prop(mtk_em_net_auto_tethering_prop)
 system_internal_prop(mtk_bgdata_disabled)
-system_internal_prop(mtk_telecom_vibrate)
 system_internal_prop(mtk_gprs_attach_type)
 system_internal_prop(mtk_power_off_md_type)
 system_internal_prop(vendor_connsysfw_prop)
@@ -242,7 +241,6 @@ typeattribute mobile_log_prop                extended_core_property_type;
 typeattribute mtk_em_sys_prop                extended_core_property_type;
 typeattribute mtk_em_net_auto_tethering_prop extended_core_property_type;
 typeattribute mtk_bgdata_disabled            extended_core_property_type;
-typeattribute mtk_telecom_vibrate            extended_core_property_type;
 typeattribute mtk_gprs_attach_type           extended_core_property_type;
 typeattribute mtk_power_off_md_type          extended_core_property_type;
 typeattribute vendor_connsysfw_prop          extended_core_property_type;

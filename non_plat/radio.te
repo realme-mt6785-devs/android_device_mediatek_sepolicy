@@ -70,11 +70,6 @@ set_prop(radio, mtk_bgdata_disabled)
 
 # Date : 2018/07/03
 # Operation : DEBUG
-# Purpose : Allow to use mtk_telecom_vibrate
-set_prop(radio, mtk_telecom_vibrate)
-
-# Date : 2018/07/03
-# Operation : DEBUG
 # Purpose : Allow to use mtk_gprs_attach_type
 set_prop(radio, mtk_gprs_attach_type)
 
