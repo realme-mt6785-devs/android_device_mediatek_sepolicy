@@ -418,6 +418,10 @@ allow meta_tst adsp_device:chr_file rw_file_perms;
 # Purpose : audio scp recovery
 allow meta_tst audio_scp_device:chr_file r_file_perms;
 
+# Date : WK19.50
+# Purpose: Allow bt process or tool to control bt_dbg
+allow meta_tst proc_btdbg:file rw_file_perms;
+
 # Date : WK20.07
 # Operation: R migration
 # Purpose : Add permission for new device node.
