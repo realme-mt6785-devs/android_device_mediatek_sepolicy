@@ -342,6 +342,9 @@ allow factory sysfs_headset:file { read open };
 allow factory sysfs_tpd_setting:dir search;
 allow factory sysfs_tpd_setting:file { read getattr open };
 
+# For fingerprinto test
+allow factory sysfs_gf_spi_tee:dir search;
+allow factory sysfs_gf_spi_tee:file r_file_perms;
 # Date : WK18.23
 # Operation: P migration
 # Purpose : Allow factory to unmount partition, stop service, and then erase partition
