@@ -24,3 +24,7 @@ attribute mtk_hal_md_dbfilter_client;
 attribute mtk_hal_em;
 attribute mtk_hal_em_client;
 attribute mtk_hal_em_server;
+
+# Date: 2018/07/02
+# MDP HIDL
+hal_attribute(mms)
