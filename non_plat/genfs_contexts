@@ -299,3 +299,7 @@ genfscon sysfs /bus/platform/drivers/mem_bw_ctrl/concurrency_scenario u:object_r
 # Purpose : Add permission for new device node.
 genfscon sysfs /firmware/devicetree/base/chosen/atag,meta u:object_r:sysfs_meta_info:s0
 
+# Date : WK20.03
+# Purpose: Allow mtk_hal_neuralnetworks to read chip id and segment code
+# /proc/device-tree/chosen/atag,chipid is linked to
+genfscon proc /device-tree/chosen/atag,devinfo u:object_r:proc_devinfo:s0
