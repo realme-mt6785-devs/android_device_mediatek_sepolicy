@@ -50,6 +50,7 @@ allow rild proc_net:file w_file_perms;
 allow rild self:netlink_route_socket nlmsg_write;
 
 # Allow read/write to devices/files
+allow rild mtk_radio_device:dir search;
 allow rild radio_device:chr_file rw_file_perms;
 allow rild radio_device:blk_file r_file_perms;
 allow rild mtd_device:dir search;
