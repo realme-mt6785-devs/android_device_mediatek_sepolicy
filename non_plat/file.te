@@ -331,6 +331,10 @@ type sysfs_spm, fs_type, sysfs_type;
 # Purpose : mtk EM Audio headset detect
 type sysfs_headset, fs_type, sysfs_type;
 
+# Date : 2019/09/17
+# Purpose : mtk factory fingerprint settings
+type sysfs_gf_spi_tee, fs_type, sysfs_type;
+
 # socket between atci_service and audio-daemon
 type atci-audio_socket, file_type;
 
