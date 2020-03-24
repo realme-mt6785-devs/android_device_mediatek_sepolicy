@@ -85,3 +85,6 @@ allow kernel mtk_audiohal_data_file:file write;
 
 # TEE
 allow kernel teei_client_device:chr_file rw_file_perms;
+
+# debugfs
+allow kernel debugfs_mmc:dir search;
