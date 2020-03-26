@@ -210,10 +210,6 @@ get_prop(system_server, vendor_default_prop)
 allow system_server mtk_hal_hdmi_hwservice:hwservice_manager find;
 allow system_server mtk_hal_hdmi:binder call;
 
-#Date:2019/10/08
-#Operation:Q Migration
-allow system_server proc_battery_cmd:dir search;
-
 #Date:2019/10/09
 #Operation:Q Migration
 get_prop(system_server, debug_mtk_aee_prop)
@@ -222,7 +218,6 @@ get_prop(system_server, debug_mtk_aee_prop)
 #Operation:Q Migration
 get_prop(system_server, debug_bq_dump_prop)
 allow system_server proc_cmdq_debug:file getattr;
-allow system_server proc_freqhop:file getattr;
 allow system_server proc_last_kmsg:file r_file_perms;
 allow system_server proc_cm_mgr:dir search;
 allow system_server proc_isp_p2:dir search;
