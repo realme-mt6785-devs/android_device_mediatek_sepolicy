@@ -28,7 +28,6 @@ allow boot_logo_updater graphics_device:dir search;
 allow boot_logo_updater mtd_device:chr_file r_file_perms;
 allow boot_logo_updater mtd_device:dir search;
 #To access the file at   /dev/kmsg
-allow boot_logo_updater device:dir write;
 allow boot_logo_updater kmsg_device:chr_file w_file_perms;
 #To the access /fstab mount point
 allow boot_logo_updater rootfs:file r_file_perms;

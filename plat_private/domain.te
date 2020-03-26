@@ -115,3 +115,46 @@ full_treble_only(`
 
   neverallow system_server system_data_file:lnk_file ~create_file_perms;
 ')
+
+# Do not allow access to the generic device label. This is too broad.
+# Instead, if access to part of device is desired, it should have a
+# more specific label.
+# TODO: Remove hal_camera and so on once there are no violations.
+#
+#   allow hal_camera device:dir r_dir_perms;
+#   hal_client_domain(cameraserver, hal_camera)
+#
+full_treble_only(`
+    neverallow {
+    coredomain
+    -cameraserver
+    -fastbootd
+    -hal_camera
+    -init
+    -recovery
+    -shell
+    -slideshow
+    -system_server
+    -vendor_init
+    -vold
+    -ueventd
+    } device:dir ~{ search getattr };
+
+  neverallow init device:dir ~{ create_dir_perms mounton relabelto };
+
+  neverallow {
+    cameraserver
+    fastbootd
+    hal_camera
+    system_server
+    shell
+    slideshow
+    recovery
+    } device:dir ~r_dir_perms;
+
+  neverallow vendor_init device:dir ~{ create_dir_perms mounton };
+
+  neverallow vold device:dir ~{ search getattr write };
+
+  neverallow ueventd device:dir ~create_dir_perms;
+')

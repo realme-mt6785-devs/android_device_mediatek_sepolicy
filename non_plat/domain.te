@@ -228,3 +228,49 @@ full_treble_only(`
 
   neverallow vold system_data_file:file ~read;
 ')
+
+# Do not allow access to the generic device label. This is too broad.
+# Instead, if access to part of device is desired, it should have a
+# more specific label.
+# TODO: Remove hal_camera and so on once there are no violations.
+#
+#   allow hal_camera device:dir r_dir_perms;
+#   hal_client_domain(cameraserver, hal_camera)
+#
+full_treble_only(`
+  neverallow ~{
+    cameraserver
+    fastbootd
+    hal_camera
+    hal_camera_default
+    init
+    mtk_hal_camera
+    recovery
+    shell
+    slideshow
+    system_server
+    vendor_init
+    vold
+    ueventd
+    } device:dir ~{ search getattr };
+
+  neverallow {
+    cameraserver
+    fastbootd
+    hal_camera
+    hal_camera_default
+    mtk_hal_camera
+    system_server
+    shell
+    slideshow
+    recovery
+    } device:dir ~r_dir_perms;
+
+  neverallow init device:dir ~{ create_dir_perms mounton relabelto };
+
+  neverallow vendor_init device:dir ~{ create_dir_perms mounton };
+
+  neverallow vold device:dir ~{ search getattr write };
+
+  neverallow ueventd device:dir ~create_dir_perms;
+')

@@ -154,7 +154,7 @@ full_treble_only(`
     system_server
     } system_data_file:{ chr_file blk_file sock_file fifo_file } *;
 
-  neverallow init system_data_file:{ chr_file blk_file } ~{ relabelto };;
+  neverallow init system_data_file:{ chr_file blk_file } ~{ relabelto };
 
   neverallow init system_data_file:{ sock_file fifo_file } ~{ create getattr open read setattr relabelfrom unlink relabelto };
 
@@ -336,37 +336,150 @@ full_treble_only(`
 # Do not allow access to the generic app_data_file label. This is too broad.
 # Instead, if access to part of app_data_file is desired, it should have a
 # more specific label.
-#neverallow * app_data_file:dir_file_class_set *;
+#full_treble_only(`
+#  neverallow * app_data_file:dir_file_class_set *;
+#')
 
 # Do not allow access to the generic default_prop label. This is too broad.
 # Instead, if access to part of default_prop is desired, it should have a
 # more specific label.
-#neverallow * default_prop:dir_file_class_set *;
+#full_treble_only(`
+#  neverallow * default_prop:dir_file_class_set *;
+#')
 
 # Do not allow access to the generic vendor_default_prop label. This is
 # too broad.
 # Instead, if access to part of vendor_default_prop is desired, it should
 # have a more specific label.
-#neverallow * vendor_default_prop:dir_file_class_set *;
+#full_treble_only(`
+#  neverallow * vendor_default_prop:dir_file_class_set *;
+#')
 
 # Do not allow access to the generic device label. This is too broad.
 # Instead, if access to part of device is desired, it should have a
 # more specific label.
-#neverallow * device:dir_file_class_set *;
+# TODO: Remove hal_camera and so on once there are no violations.
+#
+#   allow hal_camera device:dir r_dir_perms;
+#   hal_client_domain(cameraserver, hal_camera)
+#
+full_treble_only(`
+  neverallow * device:{ sock_file fifo_file } *;
+
+  neverallow ~{
+    init
+    shell
+    ueventd
+    vendor_init
+    } device:chr_file *;
+
+  neverallow { init vendor_init } device:chr_file ~setattr;
+
+  neverallow shell device:chr_file ~getattr;
+
+  neverallow ueventd device:chr_file ~{ getattr create setattr unlink };
+
+  neverallow ~{
+    dumpstate
+    e2fs
+    fsck
+    fsck_untrusted
+    init
+    recovery
+    shell
+    ueventd
+    vendor_init
+    } device:blk_file *;
+
+  neverallow {
+    dumpstate
+    e2fs
+    fsck
+    fsck_untrusted
+    shell
+    vendor_init
+    } device:blk_file ~getattr;
+
+  neverallow init device:blk_file ~r_file_perms;
+
+  neverallow recovery device:blk_file ~rw_file_perms;
+
+  neverallow ueventd device:blk_file ~{ getattr relabelfrom relabelto create setattr unlink };
+
+  neverallow ~{
+    init
+    vendor_init
+    ueventd
+    } device:file *;
+
+  neverallow init device:file ~{ create_file_perms relabelfrom };
+
+  neverallow ueventd device:file ~create_file_perms;
+
+  neverallow vendor_init device:file ~{ read setattr map open getattr };
+
+  neverallow ~{
+    init
+    vendor_init
+    ueventd
+    } device:lnk_file ~r_file_perms;
+
+  neverallow { init vendor_init } device:lnk_file ~{ r_file_perms create };
+
+  neverallow ueventd device:lnk_file ~{ r_file_perms create unlink };
+
+  neverallow {
+    coredomain
+    -cameraserver
+    -fastbootd
+    -hal_camera
+    -init
+    -recovery
+    -shell
+    -slideshow
+    -system_server
+    -vendor_init
+    -vold
+    -ueventd
+    } device:dir ~{ search getattr };
+
+  neverallow {
+    cameraserver
+    fastbootd
+    hal_camera
+    system_server
+    shell
+    slideshow
+    recovery
+    } device:dir ~r_dir_perms;
+
+  neverallow init device:dir ~{ create_dir_perms mounton relabelto };
+
+  neverallow vendor_init device:dir ~{ create_dir_perms mounton };
+
+  neverallow vold device:dir ~{ search getattr write };
+
+  neverallow ueventd device:dir ~create_dir_perms;
+')
 
 # Do not allow access to the generic socket_device label. This is too broad.
 # Instead, if access to part of socket_device is desired, it should have a
 # more specific label.
-#neverallow * socket_device:dir_file_class_set *;
+#full_treble_only(`
+#  neverallow * socket_device:dir_file_class_set *;
+#')
 
 # Do not allow access to the generic block_device label. This is too broad.
 # Instead, if access to part of block_device is desired, it should have a
 # more specific label.
-#neverallow * block_device:dir_file_class_set *;
+#full_treble_only(`
+#  neverallow * block_device:dir_file_class_set *;
+#')
 
 # Do not allow access to the generic bootdevice_block_device label. This is
 # too broad.
 # Instead, if access to part of bootdevice_block_device is desired, it should
 # have a more specific label.
-#neverallow * bootdevice_block_device:dir_file_class_set *;
-
+#full_treble_only(`
+#  neverallow * bootdevice_block_device:dir_file_class_set *;
+#')
