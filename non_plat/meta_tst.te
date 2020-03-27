@@ -77,13 +77,6 @@ set_prop(meta_tst, audiohal_prop);
 allow meta_tst rtc_device:chr_file r_file_perms;
 allow meta_tst MT_pmic_adc_cali_device:chr_file rw_file_perms;
 
-# Date: WK14.45
-# Operation : Migration
-# Purpose : HDCP
-allow meta_tst persist_data_file:dir create_dir_perms;
-allow meta_tst persist_data_file:file create_file_perms;
-
-
 # Date: WK14.46
 # Operation : Migration
 # Purpose : Camera
