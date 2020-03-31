@@ -87,6 +87,9 @@
 /mnt/vendor/nvdata(/.*)? u:object_r:nvdata_file:s0
 /mnt/vendor/nvcfg(/.*)? u:object_r:nvcfg_file:s0
 
+# Flash
+/data/vendor/flash(/.*)? u:object_r:data_vendor_flash_file:s0
+
 # protected data file
 /mnt/vendor/protect_f(/.*)?         u:object_r:protect_f_data_file:s0
 /mnt/vendor/protect_s(/.*)?         u:object_r:protect_s_data_file:s0
