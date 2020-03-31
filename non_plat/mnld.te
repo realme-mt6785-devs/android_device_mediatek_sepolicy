@@ -88,6 +88,9 @@ allow mnld debugfs_tracing:file { open write };
 
 allow mnld mnt_vendor_file:dir search;
 
+#get waks_alarm timer create prop
+allow mnld mnld:capability2 wake_alarm;
+
 # Date : WK18.26
 # Purpose : for atci gps test
 allow mnld atci_service:unix_dgram_socket sendto;
