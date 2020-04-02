@@ -61,3 +61,5 @@ type mtk_hal_hdmi_hwservice, hwservice_manager_type;
 # Date: 2019/09/06
 # BGService HIDL
 type mtk_hal_bgs_hwservice, hwservice_manager_type;
+
+type mtk_hal_aee_hwservice, hwservice_manager_type;

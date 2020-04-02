@@ -5,7 +5,7 @@ type aee_hal,domain;
 type aee_hal_exec, exec_type, file_type, vendor_file_type;
 typeattribute aee_hal mlstrustedsubject;
 # Purpose : for create hidl server
-hal_server_domain(aee_hal, mtk_hal_log)
+hal_server_domain(aee_hal, mtk_hal_aee)
 # ==============================================
 # MTK Policy Rule
 # ==============================================

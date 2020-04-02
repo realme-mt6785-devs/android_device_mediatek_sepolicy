@@ -97,4 +97,4 @@ allow aee_core_forwarder self:capability sys_nice;
 get_prop(aee_core_forwarder, hwservicemanager_prop)
 
 # Purpose : allow aee_core_forwarder to connect aee_aed socket
-allow aee_core_forwarder aee_aed:unix_stream_socket connectto;
+allow aee_core_forwarder crash_dump:unix_stream_socket connectto;

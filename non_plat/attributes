@@ -52,12 +52,6 @@ attribute mtk_hal_log;
 attribute mtk_hal_log_client;
 attribute mtk_hal_log_server;
 
-# Date: 2018/06/26
-# em hidl
-attribute mtk_hal_em;
-attribute mtk_hal_em_client;
-attribute mtk_hal_em_server;
-
 # Date: 2018/07/02
 # MDP HIDL
 attribute hal_mms;
@@ -87,4 +81,6 @@ attribute mtk_hal_bgs;
 attribute mtk_hal_bgs_client;
 attribute mtk_hal_bgs_server;
 
-
+attribute mtk_hal_aee;
+attribute mtk_hal_aee_client;
+attribute mtk_hal_aee_server;
