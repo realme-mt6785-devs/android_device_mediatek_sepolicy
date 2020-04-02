@@ -75,7 +75,7 @@ allow emdlogger media_rw_data_file:dir { create_dir_perms };
 #avc: denied { connectto } for path=006165653A72747464 scontext=u:r:emdlogger:s0
 #tcontext=u:object_r:aee_aed_socket:s0 tclass=unix_stream_socket permissive=0
 #security issue control
-allow emdlogger aee_aed:unix_stream_socket connectto;
+allow emdlogger crash_dump:unix_stream_socket connectto;
 
 # For dynamic CCB buffer feature
 #avc: denied { read write } for name="lk_env" dev="proc" ino=4026532192

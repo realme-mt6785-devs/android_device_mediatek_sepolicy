@@ -23,8 +23,8 @@
 /system/bin/loghidlsysservice u:object_r:loghidlsysservice_exec:s0
 /system/bin/cmddumper u:object_r:cmddumper_exec:s0
 /system/bin/em_svr u:object_r:em_svr_exec:s0
-/system/bin/aee_aed u:object_r:aee_aed_exec:s0
-/system/bin/aee_aed64 u:object_r:aee_aed_exec:s0
+/system/bin/aee_aed u:object_r:crash_dump_exec:s0
+/system/bin/aee_aed64 u:object_r:crash_dump_exec:s0
 /system/bin/aee_dumpstate u:object_r:dumpstate_exec:s0
 /system/bin/lbs_dbg u:object_r:lbs_dbg_exec:s0
 /system/bin/connsyslogger u:object_r:connsyslogger_exec:s0
