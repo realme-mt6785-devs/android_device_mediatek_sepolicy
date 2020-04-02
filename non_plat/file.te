@@ -128,7 +128,7 @@ type aee_core_data_file, file_type, data_file_type, core_data_file_type;
 type aee_core_vendor_file, file_type, data_file_type;
 
 # AEE exp
-type aee_exp_data_file, file_type, data_file_type, core_data_file_type;
+type aee_exp_data_file, file_type, data_file_type, core_data_file_type, mlstrustedobject;
 type aee_exp_vendor_file, file_type, data_file_type;
 type aee_dumpsys_data_file, file_type, data_file_type, core_data_file_type;
 type aee_dumpsys_vendor_file, file_type, data_file_type;
@@ -442,3 +442,11 @@ type sysfs_chipid, fs_type, sysfs_type;
 # Date : 2019/12/12
 # Purpose : allow media sources to access /sys/bus/platform/drivers/mem_bw_ctrl/*
 type sysfs_concurrency_scenario, fs_type, sysfs_type;
+
+type proc_wmt_aee, fs_type, proc_type;
+
+# Date : WK20.07
+# Operation: R migration
+# Purpose : Add permission for new device node.
+type sysfs_meta_info, fs_type, sysfs_type;
+
