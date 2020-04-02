@@ -88,7 +88,7 @@ allow mtk_hal_audio sdcard_type:file append;
 # Data : WK14.39
 # Operation : Migration
 # Purpose : dump for debug
-allow mtk_hal_audio audiohal_prop:property_service set;
+set_prop(mtk_hal_audio, vendor_mtk_audiohal_prop)
 
 # Date : WK14.40
 # Operation : Migration
@@ -172,9 +172,7 @@ allow mtk_hal_audio tmpfs:dir search;
 # Purpose: Dump debug info
 allow mtk_hal_audio debugfs_binder:dir search;
 allow mtk_hal_audio kmsg_device:chr_file { open write };
-allow mtk_hal_audio property_socket:sock_file write;
 allow mtk_hal_audio fuse:file rw_file_perms;
-allow mtk_hal_audio init:unix_stream_socket connectto;
 
 # Date : WK16.27
 # Operation : Migration
@@ -192,7 +190,7 @@ allow mtk_hal_audio sdcard_type:file { create_file_perms };
 # Purpose: Allow to access ged for gralloc_extra functions
 allow mtk_hal_audio proc_ged:file rw_file_perms;
 
-set_prop(mtk_hal_audio,hwservicemanager_prop);
+set_prop(mtk_hal_audio, hwservicemanager_prop)
 allow mtk_hal_audio storage_file:dir search;
 
 # Fix bootup violation

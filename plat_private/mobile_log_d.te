@@ -63,9 +63,9 @@ allow mobile_log_d toolbox_exec:file rx_file_perms;
 allow mobile_log_d rootfs:file r_file_perms;
 
 #dev/__properties__ access
-allow mobile_log_d device_logging_prop:file { getattr open };
-allow mobile_log_d mmc_prop:file { getattr open };
-allow mobile_log_d safemode_prop:file { getattr open };
+get_prop(mobile_log_d, device_logging_prop)
+get_prop(mobile_log_d, mmc_prop)
+get_prop(mobile_log_d, safemode_prop)
 
 # purpose: allow MobileLog to access storage in N version
 allow mobile_log_d media_rw_data_file:file  create_file_perms;
@@ -97,5 +97,5 @@ userdebug_or_eng(`
   allow mobile_log_d netd:unix_stream_socket connectto;
   allow mobile_log_d self:tcp_socket getopt;
   allow mobile_log_d fwmarkd_socket:sock_file write;
-  set_prop(mobile_log_d, mobile_log_post_prop)
+  set_prop(mobile_log_d, system_mtk_mobile_log_post_prop)
 ')

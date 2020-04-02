@@ -17,8 +17,6 @@ allow emdlogger sdcard_type:file { create_file_perms };
 
 
 # modem logger socket access
-#allow emdlogger property_socket:sock_file write;
-#allow emdlogger init:unix_stream_socket connectto;
 allow emdlogger platform_app:unix_stream_socket connectto;
 allow emdlogger shell_exec:file { rx_file_perms };
 allow emdlogger system_file:file execute_no_trans;
@@ -72,7 +70,7 @@ allow emdlogger sysfs_dt_firmware_android:dir { read open search };
 allow emdlogger tmpfs:dir write;
 allow emdlogger sysfs_dt_firmware_android:file { read open getattr };
 allow emdlogger system_file:dir open;
-allow emdlogger vendor_default_prop:file { read getattr open };
+get_prop(emdlogger, vendor_default_prop)
 
 ## Android Q migration
 ## purpose:  read modem db and filter folder and file

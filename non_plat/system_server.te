@@ -19,7 +19,7 @@ allow system_server aee_core_data_file:dir r_dir_perms;
 allow system_server zygote:binder impersonate;
 
 # Property service.
-allow system_server ctl_bootanim_prop:property_service set;
+set_prop(system_server, ctl_bootanim_prop)
 
 # For dumpsys.
 allow system_server aee_dumpsys_data_file:file w_file_perms;
@@ -41,7 +41,7 @@ allow system_server sysfs_dcm:file rw_file_perms;
 
 # Date : WK16.36
 # Purpose: Allow to set property log.tag.WifiHW to control log level of WifiHW
-allow system_server log_tag_prop:property_service set;
+set_prop(system_server, log_tag_prop)
 
 # Data : WK16.42
 # Operator: Whitney bring up
@@ -103,7 +103,7 @@ allow system_server vendor_framework_file:dir r_file_perms;
 
 # Fix bootup violation
 allow system_server vendor_framework_file:file getattr;
-allow system_server wifi_prop:file { read getattr open };
+get_prop(system_server, wifi_prop)
 
 # Date:W17.22
 # Operation : add aee_aed socket rule
@@ -116,7 +116,7 @@ allow system_server crash_dump:unix_stream_socket connectto;
 
 #Dat: 2017/02/14
 #Purpose: allow get telephony Sensitive property
-get_prop(system_server, mtk_telephony_sensitive_prop)
+get_prop(system_server, vendor_mtk_telephony_sensitive_prop)
 
 # Date: W17.22
 # Operation : New Feature
@@ -161,8 +161,7 @@ hal_client_domain(system_server, mtk_hal_lbs)
 # Date : WK17.12
 # Operation : MT6799 SQC
 # Purpose : Change thermal config
-allow system_server mtk_thermal_config_prop:file { getattr open read };
-
+get_prop(system_server, vendor_mtk_thermal_config_prop)
 
 # Date : WK17.43
 # Operation : Migration
@@ -185,10 +184,10 @@ binder_call(system_server, mtk_hal_wifi)
 # Date : WK18.33
 # Purpose : type=1400 audit(0.0:1592): avc: denied { read }
 #           for comm=4572726F722064756D703A20646174 name=
-#           "u:object_r:persist_mtk_aee_prop:s0" dev="tmpfs"
+#           "u:object_r:system_mtk_persist_mtk_aee_prop:s0" dev="tmpfs"
 #           ino=10312 scontext=u:r:system_server:s0 tcontext=
-#           u:object_r:persist_mtk_aee_prop:s0 tclass=file permissive=0
-get_prop(system_server, persist_mtk_aee_prop);
+#           u:object_r:system_mtk_persist_mtk_aee_prop:s0 tclass=file permissive=0
+get_prop(system_server, system_mtk_persist_mtk_aee_prop)
 
 # Date : W19.15
 # Operation : alarm device permission
@@ -212,11 +211,11 @@ allow system_server mtk_hal_hdmi:binder call;
 
 #Date:2019/10/09
 #Operation:Q Migration
-get_prop(system_server, debug_mtk_aee_prop)
+get_prop(system_server, system_mtk_debug_mtk_aee_prop)
 
 #Date:2019/10/09
 #Operation:Q Migration
-get_prop(system_server, debug_bq_dump_prop)
+get_prop(system_server, system_mtk_debug_bq_dump_prop)
 allow system_server proc_cmdq_debug:file getattr;
 allow system_server proc_last_kmsg:file r_file_perms;
 allow system_server proc_cm_mgr:dir search;

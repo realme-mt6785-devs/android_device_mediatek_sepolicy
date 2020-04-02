@@ -73,7 +73,7 @@ allow factory storage_file:dir { write create add_name search mounton };
 
 # Date: WK15.44
 # Purpose: factory idle current status
-allow factory vendor_factory_idle_state_prop:property_service set;
+set_prop(factory, vendor_mtk_factory_idle_state_prop)
 
 # Date: WK15.46
 # Purpose: gps factory mode
@@ -119,7 +119,7 @@ allow factory seninf_device:chr_file rw_file_perms;
 allow factory CAM_CAL_DRV_device:chr_file rw_file_perms;
 
 #Purpose: For reboot the target
-allow factory powerctl_prop:property_service set;
+set_prop(factory, powerctl_prop)
 
 #Purpose: For memory card test
 allow factory misc_sd_device:chr_file r_file_perms;
@@ -199,7 +199,8 @@ allow factory camera_owe_device:chr_file rw_file_perms;
 allow factory camera_mfb_device:chr_file rw_file_perms;
 allow factory mtk_hal_power_hwservice:hwservice_manager find;
 allow factory mtk_hal_power:binder call;
-get_prop(factory,mediatek_prop);
+get_prop(factory, vendor_mtk_mediatek_prop)
+
 #Purpose: For FM test and headset test
 allow factory accdet_device:chr_file r_file_perms;
 allow factory fm_device:chr_file rw_file_perms;
@@ -207,7 +208,7 @@ allow factory fm_device:chr_file rw_file_perms;
 #Purpose: For audio test
 allow factory audio_device:chr_file rw_file_perms;
 allow factory audio_device:dir w_dir_perms;
-allow factory audiohal_prop:property_service set;
+set_prop(factory, vendor_mtk_audiohal_prop)
 allow factory audio_ipi_device:chr_file { read write ioctl open };
 allow factory audio_scp_device:chr_file r_file_perms;
 
@@ -237,12 +238,12 @@ not_full_treble(`
 
 # Date: WK16.31
 #Purpose: For gps test
-allow factory mnld_prop:property_service set;
+set_prop(factory, vendor_mtk_mnld_prop)
 
 # Date: WK16.33
 #Purpose: for unmount sdcardfs and stop services which are using data partition
 allow factory sdcard_type:filesystem unmount;
-allow factory ctl_default_prop:property_service set;
+set_prop(factory, ctl_default_prop)
 
 # Date : WK16.35
 # Operation : Migration
@@ -252,7 +253,7 @@ allow factory flashlight_device:chr_file rw_file_perms;
 
 # Date: WK15.25
 #Purpose: for unmount sdcardfs and stop services which are using data partition
-allow factory ctl_emdlogger1_prop:property_service set;
+set_prop(factory, vendor_mtk_ctl_emdlogger1_prop)
 # Date: WK17.07
 # Purpose: Clear bootdevice (eMMC/UFS) may need to unmount tmpfs
 allow factory tmpfs:filesystem unmount;
@@ -270,7 +271,7 @@ allow factory debugfs_ion:dir search;
 # Date: WK17.27
 # Purpose: STMicro NFC solution integration
 allow factory st21nfc_device:chr_file { open read getattr write ioctl };
-set_prop(factory,hwservicemanager_prop);
+set_prop(factory, hwservicemanager_prop)
 hwbinder_use(factory);
 hal_client_domain(factory, hal_nfc);
 
@@ -283,7 +284,7 @@ allow factory sw_sync_device:chr_file rw_file_perms;
 
 # Date: WK1733
 # Purpose: add selinux policy to stop 'ccci_fsd' for clear emmc in factory mode
-set_prop(factory,ctl_ccci_fsd_prop);
+set_prop(factory, vendor_mtk_ctl_ccci_fsd_prop)
 
 # Date : WK17.38
 # Operation : O Migration
@@ -301,8 +302,6 @@ allow factory sysfs_uart_info:file rw_file_perms;
 
 
 # from private
-allow factory property_socket:sock_file write;
-allow factory init:unix_stream_socket connectto;
 allow factory kernel:system module_request;
 allow factory node:tcp_socket node_bind;
 allow factory userdata_block_device:blk_file rw_file_perms;
@@ -333,7 +332,6 @@ allow factory sysfs_vibrator:dir search;
 # For Audio device permission
 allow factory proc_asound:dir { read search open };
 allow factory proc_asound:file { read open getattr write };
-allow factory audiohal_prop:property_service set;
 
 # For Accdet data permission
 allow factory sysfs_headset:file { read open };
@@ -393,7 +391,7 @@ get_prop(factory, exported3_radio_prop)
 # Date : WK19.38
 # Operation : Q Migration
 # Purpose: Allow clear eMMC
-set_prop(factory, ctl_mdlogger_prop);
+set_prop(factory, vendor_mtk_ctl_mdlogger_prop)
 
 # Date : WK19.41
 # Operation : Q Migration

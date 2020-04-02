@@ -46,5 +46,5 @@ allowxperm appdomain appdomain:fifo_file ioctl SNDCTL_TMR_START;
 
 # Date: 2019/06/17
 # Operation : Migration
-# Purpose : appdomain need get mtk_amslog_prop
-get_prop(appdomain, mtk_amslog_prop)
+# Purpose : appdomain need get system_mtk_amslog_prop
+get_prop(appdomain, system_mtk_amslog_prop)

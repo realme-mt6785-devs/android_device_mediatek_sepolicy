@@ -36,7 +36,7 @@ allow lbs_dbg self:netlink_route_socket { bind create getattr write nlmsg_read r
 allow lbs_dbg self:tcp_socket create_stream_socket_perms;
 allow lbs_dbg self:udp_socket create_socket_perms;
 
-allow lbs_dbg hwservicemanager_prop:file read;
+get_prop(lbs_dbg, hwservicemanager_prop)
 hal_client_domain(lbs_dbg, mtk_hal_lbs)
 
 

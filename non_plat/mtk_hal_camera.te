@@ -29,7 +29,7 @@ hal_server_domain(mtk_hal_camera, mtk_hal_bgs)
 hwbinder_use(mtk_hal_camera)
 vndbinder_use(mtk_hal_camera)
 
-allow mtk_hal_camera hwservicemanager_prop:file { open read getattr };
+get_prop(mtk_hal_camera, hwservicemanager_prop)
 
 # -----------------------------------
 # Purpose: Allow camerahalserver to perform binder IPC to servers and callbacks.
@@ -160,11 +160,6 @@ allow mtk_hal_camera sdcard_type:dir { write add_name create };
 allow mtk_hal_camera sdcard_type:file { append create getattr };
 
 # -----------------------------------
-# Purpose: property access
-# -----------------------------------
-allow mtk_hal_camera mtkcam_prop:file { open read getattr };
-
-# -----------------------------------
 # Android O
 # Purpose: Shell Debugging
 # -----------------------------------
@@ -257,7 +252,6 @@ allow mtk_hal_camera debugfs_tracing:file { write open };
 ## Purpose : camera3 IT/CTS
 allow mtk_hal_camera debugfs_ion:dir search;
 allow mtk_hal_camera hal_graphics_composer_default:fd use;
-allow mtk_hal_camera property_socket:sock_file write;
 
 # Date : WK17.30
 # Operation : O Migration
@@ -274,7 +268,7 @@ allow mtk_hal_camera sysfs_batteryinfo:file { getattr open read };
 # Date : WK17.39
 # Operation : O Migration
 # Purpose: Change thermal config
-allow mtk_hal_camera mtk_thermal_config_prop:property_service set;
+set_prop(mtk_hal_camera, vendor_mtk_thermal_config_prop)
 
 # Date : WK18.31
 # Stage: P Migration
@@ -298,7 +292,7 @@ allow mtk_hal_camera aee_aedv:unix_stream_socket connectto;
 # Date : WK18.02
 # Stage: O Migration
 # Purpose: ISP tuning remapping
-allow mtk_hal_camera mediatek_prop:property_service set;
+set_prop(mtk_hal_camera, vendor_mtk_mediatek_prop)
 
 # Date : WK18.22
 # Stage: p Migration

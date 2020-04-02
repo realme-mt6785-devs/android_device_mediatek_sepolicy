@@ -72,7 +72,7 @@ allow mtk_hal_power proc_net:file w_file_perms;
 allow mtk_hal_power mediacodec:dir r_dir_perms;
 allow mtk_hal_power mediacodec:file r_file_perms;
 
-set_prop(mtk_hal_power, mtk_thermal_config_prop)
+set_prop(mtk_hal_power, vendor_mtk_thermal_config_prop)
 
 # Date : 2018/03/16
 # Operation: SQC
@@ -127,7 +127,7 @@ allow mtk_hal_power debugfs_eara_thermal:file { getattr open write read };
 # Date : 2019/05/22
 # Operation: SQC
 # Purpose : Allow powerHAL to access prop
-set_prop(mtk_hal_power, mtk_powerhal_prop)
+set_prop(mtk_hal_power, vendor_mtk_powerhal_prop)
 
 # Date : 2019/05/29
 # Operation: SQC
@@ -140,7 +140,7 @@ allowxperm mtk_hal_power self:udp_socket ioctl priv_sock_ioctls;
 # Date : W19.20
 # Operation : MTK power hal migration
 # Purpose : MTK power hal interface permission
-set_prop(mtk_hal_power, mtk_powerhal_prop)
+set_prop(mtk_hal_power, vendor_mtk_powerhal_prop)
 
 # Date : 2019/09/05
 # Operation: SQC

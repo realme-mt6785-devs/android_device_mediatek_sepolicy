@@ -66,7 +66,7 @@ allow atci_service storage_file:lnk_file read;
 #============= atci_service ==============
 allow atci_service CAM_CAL_DRV_device:chr_file { read write ioctl open};
 
-set_prop(atci_service, mtk_em_prop)
+set_prop(atci_service, vendor_mtk_em_prop)
 
 # Date : 2016/03/02
 # Operation : M-Migration
@@ -114,7 +114,6 @@ allow atci_service sysfs_batteryinfo:dir search;
 allow atci_service sysfs_batteryinfo:file { read getattr open };
 allow atci_service system_file:dir { read open };
 allow atci_service camera_pipemgr_device:chr_file { read ioctl open };
-allow atci_service mtkcam_prop:file { read getattr open };
 allow atci_service mtk_hal_camera:binder call;
 allow atci_service debugfs_ion:dir search;
 allow atci_service sysfs_tpd_setting:file { read write open getattr };

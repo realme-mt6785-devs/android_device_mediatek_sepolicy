@@ -58,10 +58,10 @@ allow netdiag network_management_service:service_manager find;
 allow netdiag settings_service:service_manager find;
 
 # Purpose : for acess /system/bin/toybox, mmc_prop,proc_net and safemode_prop
-allow netdiag device_logging_prop:file { getattr open };
-allow netdiag mmc_prop:file { getattr open };
+get_prop(netdiag, device_logging_prop)
+get_prop(netdiag, mmc_prop)
 allow netdiag proc_net:dir { read open };
-allow netdiag safemode_prop:file { getattr open };
+get_prop(netdiag, safemode_prop)
 allow netdiag toolbox_exec:file rx_file_perms;
 
 # purpose: allow netdiag to access storage in new version
@@ -86,12 +86,11 @@ allow netdiag self:rawip_socket { getopt create };
 allow netdiag self:udp_socket { ioctl create };
 
 ## Android P migration
-#avc: denied { open } for path="/dev/__properties__/u:object_r:atm_ipaddr_prop:s0"
-#avc: denied { getattr } for path="/dev/__properties__/u:object_r:atm_ipaddr_prop:s0"
-#avc: denied { open } for path="/dev/__properties__/u:object_r:atm_mdmode_prop:s0"
+#avc: denied { open } for path="/dev/__properties__/u:object_r:vendor_mtk_atm_ipaddr_prop:s0"
+#avc: denied { getattr } for path="/dev/__properties__/u:object_r:vendor_mtk_atm_ipaddr_prop:s0"
+#avc: denied { open } for path="/dev/__properties__/u:object_r:vendor_mtk_atm_mdmode_prop:s0"
 allow netdiag proc_qtaguid_stat:dir { read open search };
 allow netdiag proc_qtaguid_stat:file { read getattr open };
-#allow netdiag vendor_default_prop:file  { read getattr open map };
 get_prop(netdiag, vendor_default_prop)
 allow netdiag proc_net_tcp_udp:file getattr;
 allow netdiag netd:binder call;

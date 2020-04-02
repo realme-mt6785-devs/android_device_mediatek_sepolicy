@@ -47,7 +47,7 @@ allow mnld merged_hal_service:unix_dgram_socket sendto;
 
 # Purpose : For access system data
 allow mnld block_device:dir search;
-set_prop(mnld, mnld_prop);
+set_prop(mnld, vendor_mtk_mnld_prop)
 allow mnld mdlog_device:chr_file { read write };
 allow mnld self:capability { fsetid };
 allow mnld stpbt_device:chr_file { read write };
@@ -83,8 +83,7 @@ allow mnld mtk_hal_gnss:unix_dgram_socket sendto;
 hwbinder_use(mnld);
 binder_call(mnld, system_server)
 allow mnld fwk_sensor_hwservice:hwservice_manager find;
-#allow mnld hwservicemanager_prop:file { read open getattr };
-get_prop(mnld, hwservicemanager_prop);
+get_prop(mnld, hwservicemanager_prop)
 allow mnld debugfs_tracing:file { open write };
 
 allow mnld mnt_vendor_file:dir search;
@@ -95,7 +94,7 @@ allow mnld atci_service:unix_dgram_socket sendto;
 
 allow mnld sysfs_boot_mode:file { read open };
 
-set_prop(mnld, vendor_radio_prop);
+set_prop(mnld, vendor_mtk_radio_prop)
 
 allow mnld proc_cmdline:file r_file_perms;
 allow mnld sysfs_dt_firmware_android:dir search;

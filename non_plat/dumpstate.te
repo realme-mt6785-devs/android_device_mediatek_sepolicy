@@ -3,7 +3,7 @@
 # ==============================================
 
 # Purpose: aee_dumpstate set surfaceflinger property
-set_prop(dumpstate, debug_bq_dump_prop);
+set_prop(dumpstate, system_mtk_debug_bq_dump_prop)
 
 # Purpose: access dev/aed0
 allow dumpstate aed_device:chr_file { read getattr };

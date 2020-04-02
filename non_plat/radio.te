@@ -34,7 +34,7 @@ binder_call(radio, hal_telephony)
 
 #Dat: 2017/02/14
 #Purpose: allow get telephony Sensitive property
-get_prop(radio, mtk_telephony_sensitive_prop)
+get_prop(radio, vendor_mtk_telephony_sensitive_prop)
 
 # Date : WK17.26
 # Operation : O Migration
@@ -53,27 +53,27 @@ binder_call(radio,mtk_hal_audio)
 
 # Date : WK18.16
 # Operation: P migration
-# Purpose: Allow radio to get tel_switch_prop
-get_prop(radio, tel_switch_prop)
+# Purpose: Allow radio to get vendor_mtk_tel_switch_prop
+get_prop(radio, vendor_mtk_tel_switch_prop)
 
 # Date : 2018/07/03
 # Purpose : Allow sim system to set prop
-set_prop(radio, vendor_sim_system_prop)
+set_prop(radio, system_mtk_sim_system_prop)
 
 # Date : 2018/07/03
 # Purpose : Allow Mwi to get vendor default properties (ro.vendor.*)
 get_prop(radio, vendor_default_prop)
 
 # Operation : DEBUG
-# Purpose : Allow to use mtk_bgdata_disabled
-set_prop(radio, mtk_bgdata_disabled)
+# Purpose : Allow to use system_mtk_bgdata_disabled_prop
+set_prop(radio, system_mtk_bgdata_disabled_prop)
 
 # Date : 2018/07/03
 # Operation : DEBUG
-# Purpose : Allow to use mtk_gprs_attach_type
-set_prop(radio, mtk_gprs_attach_type)
+# Purpose : Allow to use system_mtk_gprs_attach_type_prop
+set_prop(radio, system_mtk_gprs_attach_type_prop)
 
 #Date : 2018/11/02
-# Operation : Allow radio persist_xcap_rawurl_prop:property_service set;
+# Operation : Allow radio set system_mtk_persist_xcap_rawurl_prop
 # Purpose : for set telephony xcap use raw url property in IMS SS
-set_prop(radio, persist_xcap_rawurl_prop)
+set_prop(radio, system_mtk_persist_xcap_rawurl_prop)

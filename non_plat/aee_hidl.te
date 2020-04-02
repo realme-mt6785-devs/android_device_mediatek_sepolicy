@@ -11,7 +11,7 @@ hal_server_domain(aee_hal, mtk_hal_aee)
 # ==============================================
 init_daemon_domain(aee_hal)
 
-set_prop(aee_hal, persist_mtk_aeev_prop);
-set_prop(aee_hal, persist_aeev_prop);
-set_prop(aee_hal, debug_mtk_aeev_prop);
+set_prop(aee_hal, vendor_mtk_persist_mtk_aeev_prop)
+set_prop(aee_hal, vendor_mtk_persist_aeev_prop)
+set_prop(aee_hal, vendor_mtk_debug_mtk_aeev_prop)
 

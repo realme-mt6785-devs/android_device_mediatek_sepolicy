@@ -14,15 +14,13 @@ allow audiocmdservice_atci mnt_user_file:dir rw_dir_perms;
 allow audiocmdservice_atci { mnt_user_file storage_file }:lnk_file rw_file_perms;
 allow audiocmdservice_atci bootdevice_block_device:blk_file { read write };
 
-
 # can route /dev/binder traffic to /dev/vndbinder
 vndbinder_use(audiocmdservice_atci)
 binder_call(audiocmdservice_atci,mtk_hal_audio);
 
 #Android O porting
 hwbinder_use(audiocmdservice_atci)
-get_prop(audiocmdservice_atci, hwservicemanager_prop);
-#allow audiocmdservice_atci hal_audio_hwservice:hwservice_manager find;
+get_prop(audiocmdservice_atci, hwservicemanager_prop)
 
 hal_client_domain(audiocmdservice_atci, hal_audio)
 

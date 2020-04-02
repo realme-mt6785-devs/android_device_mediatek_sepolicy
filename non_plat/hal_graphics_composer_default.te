@@ -35,11 +35,10 @@ binder_call(hal_graphics_composer_default, mtk_hal_power)
 # Date : WK17.32
 # Operation : O Migration
 # Purpose: Allow to access property
-set_prop(hal_graphics_composer_default, graphics_hwc_pid_prop)
-get_prop(hal_graphics_composer_default, graphics_hwc_pid_prop)
-set_prop(hal_graphics_composer_default, graphics_hwc_latch_unsignaled_prop)
-set_prop(hal_graphics_composer_default, graphics_hwc_hdr_prop)
-set_prop(hal_graphics_composer_default, vendor_graphics_hwc_validate_separate_prop)
+set_prop(hal_graphics_composer_default, vendor_mtk_graphics_hwc_pid_prop)
+set_prop(hal_graphics_composer_default, vendor_mtk_graphics_hwc_latch_unsignaled_prop)
+set_prop(hal_graphics_composer_default, vendor_mtk_graphics_hwc_hdr_prop)
+set_prop(hal_graphics_composer_default, vendor_mtk_graphics_hwc_validate_separate_prop)
 
 # Date : WK18.03
 # Purpose: Allow to access property dev/mdp_sync
