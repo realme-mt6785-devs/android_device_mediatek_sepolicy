@@ -21,8 +21,8 @@ full_treble_only(`
     -dumpstate
     -init
     -installd
-    -iorap_inode2filename
     -iorap_prefetcherd
+    -iorap_inode2filename
     -logd
     -mediadrmserver
     -mediaextractor
@@ -55,7 +55,7 @@ full_treble_only(`
   neverallow installd system_data_file:file ~{ getattr relabelfrom unlink };
 
   neverallow iorap_prefetcherd system_data_file:file ~{ open read };
-  neverallow iorap_inode2filename system_data_file:file ~{ open read getattr };
+  neverallow iorap_inode2filename system_data_file:file ~getattr;
 
   neverallow {
     mediadrmserver
@@ -75,8 +75,8 @@ full_treble_only(`
     dexoptanalyzer
     init
     installd
-    iorap_inode2filename
     iorap_prefetcherd
+    iorap_inode2filename
     logd
     rs
     runas

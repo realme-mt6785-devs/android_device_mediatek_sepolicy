@@ -18,3 +18,9 @@ attribute mtk_hal_lbs_server;
 # modem db filter hidl
 attribute mtk_hal_md_dbfilter;
 attribute mtk_hal_md_dbfilter_client;
+
+# Date: 2019/11/18
+# em hidl
+attribute mtk_hal_em;
+attribute mtk_hal_em_client;
+attribute mtk_hal_em_server;

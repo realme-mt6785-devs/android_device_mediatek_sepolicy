@@ -42,7 +42,7 @@ allow mdlogger media_rw_data_file:dir { create_dir_perms };
 #avc: denied { connectto } for path=006165653A72747464 scontext=u:r:mdlogger:s0
 #tcontext=u:object_r:aee_aed_socket:s0 tclass=unix_stream_socket permissive=0
 #security issue control
-allow mdlogger aee_aed:unix_stream_socket connectto;
+allow mdlogger crash_dump:unix_stream_socket connectto;
 
 ## purpose: avc: denied { read } for name="plat_file_contexts"
 allow emdlogger file_contexts_file:file { read getattr open};
