@@ -419,3 +419,7 @@ allow meta_tst sysfs_meta_info:file r_file_perms;
 allow meta_tst sysfs_power:file rw_file_perms;
 allow meta_tst sysfs_power:dir r_dir_perms;
 allow meta_tst self:capability2 {block_suspend};
+
+# Date : WK20.14
+# Purpose: Allow meta connect GPS MNLD
+allow meta_tst mnld:unix_stream_socket connectto;
