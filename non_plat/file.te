@@ -235,6 +235,16 @@ type debugfs_vpu_memory, fs_type, debugfs_type;
 # mdla debugfs file
 type debugfs_mdla_power, fs_type, debugfs_type;
 
+# apusys_midware debugfs file
+type debugfs_apusys_midware_queue_vpu, fs_type, debugfs_type;
+type debugfs_apusys_midware_queue_mdla, fs_type, debugfs_type;
+type debugfs_apusys_midware_register_all, fs_type, debugfs_type;
+type debugfs_apusys_mnoc_sta_dump, fs_type, debugfs_type;
+type debugfs_apusys_mdla_memory, fs_type, debugfs_type;
+type debugfs_apusys_power, fs_type, debugfs_type;
+type debugfs_apusys_debug_log, fs_type, debugfs_type;
+type debugfs_apusys_midware_mem, fs_type, debugfs_type;
+
 # memtrack debugfs file
 type debugfs_gpu_mali_midgard, fs_type, debugfs_type;
 type debugfs_gpu_mali_utgard, fs_type, debugfs_type;

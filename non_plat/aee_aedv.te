@@ -140,6 +140,11 @@ allow aee_aedv debugfs_cpuhvfs:file { read open };
 allow aee_aedv debugfs_emi_mbw_buf:file { read open };
 allow aee_aedv debugfs_vpu_device_dbg:file { read open };
 allow aee_aedv debugfs_vpu_memory:file r_file_perms;
+allow aee_aedv debugfs_apusys_midware_register_all:file r_file_perms;
+allow aee_aedv debugfs_apusys_mdla_memory:file r_file_perms;
+allow aee_aedv debugfs_apusys_mnoc_sta_dump:file r_file_perms;
+allow aee_aedv debugfs_apusys_debug_log:file r_file_perms;
+allow aee_aedv debugfs_apusys_midware_mem:file r_file_perms;
 
 # Purpose:
 # 01-01 00:02:46.390  3315  3315 W aee_dumpstatev: type=1400 audit(0.0:4728):
