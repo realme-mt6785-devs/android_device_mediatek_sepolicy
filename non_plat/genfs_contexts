@@ -193,6 +193,17 @@ genfscon debugfs  /vpu/power u:object_r:debugfs_vpu_power:s0
 genfscon debugfs  /mdla/power u:object_r:debugfs_mdla_power:s0
 genfscon debugfs  /vpu/vpu_memory u:object_r:debugfs_vpu_memory:s0
 
+# mtk APUSYS information reading
+genfscon debugfs /apusys_midware/device/vpu/queue u:object_r:debugfs_apusys_midware_queue_vpu:s0
+genfscon debugfs /apusys_midware/device/mdla/queue u:object_r:debugfs_apusys_midware_queue_mdla:s0
+genfscon debugfs /apusys_midware/debug/apusys_reg_all u:object_r:debugfs_apusys_midware_register_all:s0
+genfscon debugfs /apusys_mnoc/mnoc_int_sta_dump u:object_r:debugfs_apusys_mnoc_sta_dump:s0
+genfscon debugfs /mdla/mdla_memory u:object_r:debugfs_apusys_mdla_memory:s0
+genfscon debugfs /apusys/power u:object_r:debugfs_apusys_power:s0
+genfscon debugfs /apusys_debug/log u:object_r:debugfs_apusys_debug_log:s0
+genfscon debugfs /apusys_midware/mem u:object_r:debugfs_apusys_midware_mem:s0
+
+
 # mtk eara thermal reading
 genfscon debugfs  /eara_thermal/enable u:object_r:debugfs_eara_thermal:s0
 
