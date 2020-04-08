@@ -442,3 +442,5 @@ allow aee_aedv proc_wmt_aee:file r_file_perms;
 allow aee_aedv proc_aed:file rw_file_perms;
 allow aee_aedv proc_aed:dir r_dir_perms;
 allow aee_aedv proc_ppm:dir r_dir_perms;
+
+allow aee_aedv proc_modules:file r_file_perms;
