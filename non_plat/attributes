@@ -52,6 +52,11 @@ attribute mtk_hal_log;
 attribute mtk_hal_log_client;
 attribute mtk_hal_log_server;
 
+# Date: 2018/07/02
+# MDP HIDL
+attribute hal_mms;
+attribute hal_mms_client;
+attribute hal_mms_server;
 
 attribute hal_mtkcodecservice_server;
 attribute hal_mtkcodecservice;
