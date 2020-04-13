@@ -419,3 +419,10 @@ allow meta_tst proc_btdbg:file rw_file_perms;
 allow meta_tst sysfs_boot_info:file r_file_perms;
 allow meta_tst proc_bootprof:file getattr;
 allow meta_tst sysfs_meta_info:file r_file_perms;
+
+# Date : WK20.16
+# Operation: R migration
+# Purpose : Allow meta_tst to access /sys/power/*
+allow meta_tst sysfs_power:file rw_file_perms;
+allow meta_tst sysfs_power:dir r_dir_perms;
+allow meta_tst self:capability2 {block_suspend};
