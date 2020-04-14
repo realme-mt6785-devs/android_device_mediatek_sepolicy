@@ -471,6 +471,7 @@
 /dev/block/platform/mtk-\b(msdc|ufs)\b\.0/[0-9]+\.\b(msdc0|ufs0)\b/by-name/sspm(_[ab])?     u:object_r:sspm_block_device:s0
 /dev/block/platform/mtk-\b(msdc|ufs)\b\.0/[0-9]+\.\b(msdc0|ufs0)\b/by-name/spmfw(_[ab])?    u:object_r:spmfw_block_device:s0
 /dev/block/platform/mtk-\b(msdc|ufs)\b\.0/[0-9]+\.\b(msdc0|ufs0)\b/by-name/vbmeta(_system|_vendor)?(_[ab])?    u:object_r:vbmeta_block_device:s0
+/dev/block/platform/mtk-\b(msdc|ufs)\b\.0/[0-9]+\.\b(msdc0|ufs0)\b/by-name/dpm.*            u:object_r:dpm_block_device:s0
 
 /dev/block/platform/bootdevice/by-name/proinfo   u:object_r:nvram_device:s0
 /dev/block/platform/bootdevice/by-name/nvram     u:object_r:nvram_device:s0
@@ -515,6 +516,7 @@
 /dev/block/platform/bootdevice/by-name/mcupmfw(_[ab])?       u:object_r:mcupmfw_block_device:s0
 /dev/block/platform/bootdevice/by-name/loader_ext(_[ab])?    u:object_r:loader_ext_block_device:s0
 /dev/block/platform/bootdevice/by-name/vbmeta(_system|_vendor)?(_[ab])?    u:object_r:vbmeta_block_device:s0
+/dev/block/platform/bootdevice/by-name/dpm.*                 u:object_r:dpm_block_device:s0
 
 # Key manager
 /dev/block/platform/soc/[0-9]+\.mmc/by-name/kb   u:object_r:kb_block_device:s0
