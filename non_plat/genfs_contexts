@@ -69,10 +69,6 @@ genfscon sysfs /power/mtkdcs/mode u:object_r:sysfs_dcs:s0
 genfscon sysfs /power/mtkpasr/execstate u:object_r:sysfs_execstate:s0
 genfscon sysfs /mtk_ssw u:object_r:sysfs_ssw:s0
 
-# Date : 2018/06/15
-# Purpose : mtk Audio headset detect
-genfscon sysfs /bus/platform/drivers/Accdet_Driver/state u:object_r:sysfs_headset:s0
-
 genfscon sysfs /bus/platform/drivers/dev_info/dev_info u:object_r:sysfs_devinfo:s0
 genfscon sysfs /bus/platform/drivers/meta_com_type_info/meta_com_type_info u:object_r:sysfs_comport_type:s0
 genfscon sysfs /bus/platform/drivers/meta_uart_port_info/meta_uart_port_info u:object_r:sysfs_uart_info:s0
