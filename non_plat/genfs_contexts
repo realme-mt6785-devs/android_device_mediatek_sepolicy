@@ -82,6 +82,7 @@ genfscon sysfs /devices/platform/charger/Pump_Express u:object_r:sysfs_pump_expr
 genfscon sysfs /devices/platform/battery/Pump_Express u:object_r:sysfs_pump_express:s0
 genfscon sysfs /devices/platform/mt_charger/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge/power_supply u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6359-gauge/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6370_pmu_charger/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-charger-type-detection/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/mt-rtc/rtc    u:object_r:sysfs_rtc:s0
