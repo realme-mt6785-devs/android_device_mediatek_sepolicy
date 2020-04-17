@@ -176,6 +176,7 @@ full_treble_only(`
     -toolbox
     -vold
     -vold_prepare_subdirs
+    with_asan(`-asan_extract')
     } system_data_file:file ~r_file_perms;
 
   neverallow { appdomain app_zygote } system_data_file:file ~{ getattr read map };
@@ -200,6 +201,10 @@ full_treble_only(`
 
   neverallow vold system_data_file:file ~read;
 
+  with_asan(`
+    neverallow asan_extract system_data_file:file ~{ create_file_perms relabelfrom execute };
+   ')
+
   neverallow ~{
     appdomain
     app_zygote
@@ -215,6 +220,7 @@ full_treble_only(`
     tee
     vold
     webview_zygote
+    with_asan(`asan_extract')
     zygote
     } system_data_file:lnk_file ~getattr;
 
@@ -243,6 +249,10 @@ full_treble_only(`
 
   neverallow system_server system_data_file:lnk_file ~create_file_perms;
 
+  with_asan(`
+    neverallow asan_extract system_data_file:lnk_file ~create_file_perms ;
+   ')
+
   neverallow ~{
     apexd
     init
@@ -254,6 +264,7 @@ full_treble_only(`
     traced_probes
     vold
     vold_prepare_subdirs
+    with_asan(`asan_extract')
     zygote
     } system_data_file:dir ~{ search getattr };
 
@@ -281,6 +292,10 @@ full_treble_only(`
   neverallow vold system_data_file:dir ~{ create rw_dir_perms mounton setattr rmdir };
 
   neverallow vold_prepare_subdirs system_data_file:dir ~{ open read write add_name remove_name rmdir relabelfrom search getattr };
+
+  with_asan(`
+    neverallow asan_extract system_data_file:dir ~{ create_dir_perms relabelfrom };
+   ')
 
   neverallow zygote system_data_file:dir ~{ r_dir_perms mounton relabelto };
 ')

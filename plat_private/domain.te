@@ -35,6 +35,7 @@ full_treble_only(`
     -toolbox
     -vold
     -vold_prepare_subdirs
+    with_asan(`-asan_extract')
     -zygote
     } system_data_file:file *;
 
@@ -85,6 +86,7 @@ full_treble_only(`
     tee
     vold
     webview_zygote
+    with_asan(`asan_extract')
     zygote
     } system_data_file:lnk_file *;
 

@@ -201,6 +201,7 @@ full_treble_only(`
     toolbox
     vold
     vold_prepare_subdirs
+    with_asan(`asan_extract')
     } system_data_file:file ~r_file_perms;
 
   neverallow { appdomain app_zygote } system_data_file:file ~{ getattr read map };
