@@ -620,7 +620,7 @@
 #PQ hal
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.pq@2\.2-service u:object_r:mtk_hal_pq_exec:s0
 #MMS hal
-/(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.4-service u:object_r:mtk_hal_mms_exec:s0
+/(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.5-service u:object_r:mtk_hal_mms_exec:s0
 # Keymaster Attestation Hal
 /(system\/vendor|vendor)/bin/hw/vendor\.mediatek\.hardware\.keymaster_attestation@1\.1-service u:object_r:hal_keymaster_attestation_exec:s0
 #ST NFC 1.2 hidl service
@@ -682,6 +682,7 @@
 /vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@2\.0-impl-2\.1\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl-mediatek\.so u:object_r:same_process_hal_file:s0
 
+/vendor/lib(64)?/vendor\.mediatek\.hardware\.mms@[0-9]\.[0-9]\.so                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libdpframework\.so                                  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libpq_cust_base\.so                                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.mediatek\.hardware\.pq@[0-9]\.[0-9]\.so                 u:object_r:same_process_hal_file:s0

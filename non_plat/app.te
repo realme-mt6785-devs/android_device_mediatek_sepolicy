@@ -17,10 +17,6 @@ allow appdomain surfaceflinger:fifo_file rw_file_perms;
 # Purpose : DRM / DRI GPU driver required
 allow appdomain gpu_device:dir search;
 
-# Date : W17.30
-# Purpose : Allow MDP user access cmdq driver
-allow appdomain mtk_cmdq_device:chr_file {open read ioctl};
-
 # Date : W17.41
 # Operation: SQC
 # Purpose : Allow HWUI to access perfmgr
@@ -32,13 +28,6 @@ allowxperm appdomain proc_perfmgr:file ioctl {
   PERFMGR_FPSGO_QUEUE_CONNECT
   PERFMGR_FPSGO_BQID
 };
-
-# Date : W19.4
-# Purpose : Allow MDP user access mdp driver
-allow appdomain mdp_device:chr_file rw_file_perms;
-allow appdomain mtk_mdp_device:chr_file rw_file_perms;
-allow appdomain mtk_mdp_sync:chr_file rw_file_perms;
-allow appdomain sw_sync_device:chr_file rw_file_perms;
 
 # Date : W19.23
 # Operation : Migration
