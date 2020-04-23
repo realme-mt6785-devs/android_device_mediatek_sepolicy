@@ -442,3 +442,6 @@ type proc_devinfo, fs_type, proc_type;
 # Purpose : Add permission for acess vendor_de.
 type factory_vendor_file, file_type, data_file_type;
 
+type debugfs_apusys_power_fail_log, fs_type, debugfs_type;
+
+type sysfs_cache_status, fs_type, sysfs_type;
