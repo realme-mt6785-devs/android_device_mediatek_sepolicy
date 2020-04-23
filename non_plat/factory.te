@@ -412,3 +412,9 @@ allow factory ashmem_libcutils_device:chr_file execute;
 allow factory sysfs_boot_info:file r_file_perms;
 allow factory proc_bootprof:file getattr;
 allow factory sysfs_meta_info:file r_file_perms;
+
+# Date : WK20.17
+# Operation: R migration
+# Purpose : Add permission for acess vendor_de.
+allow factory factory_vendor_file:file {create_file_perms};
+allow factory factory_vendor_file:dir { w_dir_perms };

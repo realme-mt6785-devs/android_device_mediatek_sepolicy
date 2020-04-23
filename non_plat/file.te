@@ -436,3 +436,9 @@ type proc_aed, fs_type, proc_type;
 # Date : 2020/01/16
 # Purpose: Allow mtk_hal_neuralnetworks to read chip id and segment code
 type proc_devinfo, fs_type, proc_type;
+
+# Date : 2019/04/23
+# Operation: R migration
+# Purpose : Add permission for acess vendor_de.
+type factory_vendor_file, file_type, data_file_type;
+

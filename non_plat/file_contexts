@@ -703,3 +703,9 @@
 /(system\/vendor|vendor)/bin/aee_aedv u:object_r:aee_aedv_exec:s0
 /(system\/vendor|vendor)/bin/aee_aedv64 u:object_r:aee_aedv_exec:s0
 /vendor/bin/aeev  u:object_r:aee_aedv_exec:s0
+
+
+# Date : 2019/04/23
+# Operation: R migration
+# Purpose : Add permission for acess vendor_de.
+/data/vendor_de/factory(/.*)?  u:object_r:factory_vendor_file:s0
