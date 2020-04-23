@@ -1,0 +1,1 @@
+allow radio proc_ccci_lp_mem:file r_file_perms;
