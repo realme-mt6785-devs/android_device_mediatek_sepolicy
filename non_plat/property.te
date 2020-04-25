@@ -20,18 +20,12 @@ vendor_internal_prop(mtk_default_prop)
 vendor_internal_prop(vendor_mtk_ctl_ccci2_fsd_prop)
 vendor_internal_prop(vendor_mtk_ctl_ccci3_fsd_prop)
 vendor_internal_prop(vendor_mtk_ctl_ccci_fsd_prop)
-vendor_internal_prop(vendor_mtk_ctl_emdlogger1_prop)
-vendor_internal_prop(vendor_mtk_ctl_emdlogger2_prop)
-vendor_internal_prop(vendor_mtk_ctl_emdlogger3_prop)
 vendor_internal_prop(vendor_mtk_ctl_fusion_ril_mtk_prop)
 vendor_internal_prop(vendor_mtk_ctl_gsm0710muxd_prop)
-vendor_internal_prop(vendor_mtk_ctl_mdlogger_prop)
 vendor_internal_prop(vendor_mtk_ctl_muxreport-daemon_prop)
 vendor_internal_prop(vendor_mtk_ctl_ril-daemon-mtk_prop)
 vendor_internal_prop(vendor_mtk_ctl_ril-proxy_prop)
 vendor_internal_prop(vendor_mtk_ctl_viarild_prop)
-vendor_internal_prop(vendor_mtk_init_svc_aee_aedv_prop)
-vendor_internal_prop(vendor_mtk_init_svc_emdlogger1_prop)
 vendor_internal_prop(vendor_mtk_powerhal_prop)
 vendor_internal_prop(vendor_mtk_wfc_serv_prop)
 
@@ -112,35 +106,6 @@ vendor_restricted_prop(vendor_mtk_volte_prop)
 vendor_restricted_prop(vendor_mtk_wifi_hotspot_prop)
 vendor_restricted_prop(vendor_mtk_wmt_prop)
 
-# Properties used only in /system
-system_internal_prop(system_mtk_bgdata_disabled_prop)
-system_internal_prop(system_mtk_bootani_prop)
-system_internal_prop(system_mtk_connsysfw_prop)
-system_internal_prop(system_mtk_debug_bq_dump_prop)
-system_internal_prop(system_mtk_debug_mdlogger_prop)
-system_internal_prop(system_mtk_debug_mtk_aee_prop)
-system_internal_prop(system_mtk_debug_mtklog_prop)
-system_internal_prop(system_mtk_debug_netlog_prop)
-system_internal_prop(system_mtk_em_net_auto_tethering_prop)
-system_internal_prop(system_mtk_gprs_attach_type_prop)
-system_internal_prop(system_mtk_logmuch_prop)
-system_internal_prop(system_mtk_mdl_prop)
-system_internal_prop(system_mtk_mdl_pulllog_prop)
-system_internal_prop(system_mtk_mdl_start_prop)
-system_internal_prop(system_mtk_mobile_log_prop)
-system_internal_prop(system_mtk_persist_aee_prop)
-system_internal_prop(system_mtk_persist_mdlog_prop)
-system_internal_prop(system_mtk_persist_mtklog_prop)
-system_internal_prop(system_mtk_persist_xcap_rawurl_prop)
-system_internal_prop(system_mtk_power_off_md_prop)
-system_internal_prop(system_mtk_sim_system_prop)
-system_internal_prop(system_mtk_usp_srv_prop)
-system_internal_prop(system_mtk_vendor_bluetooth_prop)
-
-# Properties with no restrictions
-system_public_prop(system_mtk_amslog_prop)
-system_public_prop(system_mtk_persist_mtk_aee_prop)
-
 # Properties with can be read by all domains
 typeattribute vendor_mtk_aal_ro_prop                 mtk_core_property_type;
 typeattribute vendor_mtk_anr_support_prop            mtk_core_property_type;
@@ -206,30 +171,3 @@ typeattribute vendor_mtk_voicerecgnize_prop          mtk_core_property_type;
 typeattribute vendor_mtk_volte_prop                  mtk_core_property_type;
 typeattribute vendor_mtk_wifi_hotspot_prop           mtk_core_property_type;
 typeattribute vendor_mtk_wmt_prop                    mtk_core_property_type;
-
-# Properties with can't be accessed by device-sepcific domains
-typeattribute system_mtk_amslog_prop                extended_core_property_type;
-typeattribute system_mtk_bgdata_disabled_prop       extended_core_property_type;
-typeattribute system_mtk_bootani_prop               extended_core_property_type;
-typeattribute system_mtk_connsysfw_prop             extended_core_property_type;
-typeattribute system_mtk_debug_bq_dump_prop         extended_core_property_type;
-typeattribute system_mtk_debug_mdlogger_prop        extended_core_property_type;
-typeattribute system_mtk_debug_mtk_aee_prop         extended_core_property_type;
-typeattribute system_mtk_debug_mtklog_prop          extended_core_property_type;
-typeattribute system_mtk_debug_netlog_prop          extended_core_property_type;
-typeattribute system_mtk_em_net_auto_tethering_prop extended_core_property_type;
-typeattribute system_mtk_gprs_attach_type_prop      extended_core_property_type;
-typeattribute system_mtk_logmuch_prop               extended_core_property_type;
-typeattribute system_mtk_mdl_prop                   extended_core_property_type;
-typeattribute system_mtk_mdl_pulllog_prop           extended_core_property_type;
-typeattribute system_mtk_mdl_start_prop             extended_core_property_type;
-typeattribute system_mtk_mobile_log_prop            extended_core_property_type;
-typeattribute system_mtk_persist_aee_prop           extended_core_property_type;
-typeattribute system_mtk_persist_mdlog_prop         extended_core_property_type;
-typeattribute system_mtk_persist_mtk_aee_prop       extended_core_property_type;
-typeattribute system_mtk_persist_mtklog_prop        extended_core_property_type;
-typeattribute system_mtk_persist_xcap_rawurl_prop   extended_core_property_type;
-typeattribute system_mtk_power_off_md_prop          extended_core_property_type;
-typeattribute system_mtk_sim_system_prop            extended_core_property_type;
-typeattribute system_mtk_usp_srv_prop               extended_core_property_type;
-typeattribute system_mtk_vendor_bluetooth_prop      extended_core_property_type;

@@ -1,6 +1,6 @@
 # ==============================================
 # MTK Policy Rule
-# ============
+# ==============================================
 
 # Date : WK16.33
 # Purpose: Allow to access ged for gralloc_extra functions
@@ -43,8 +43,3 @@ allow { appdomain -isolated_app } radio_data_file:file rw_file_perms;
 # Operation : Migration
 # Purpose : For app com.tencent.qqpimsecure
 allowxperm appdomain appdomain:fifo_file ioctl SNDCTL_TMR_START;
-
-# Date: 2019/06/17
-# Operation : Migration
-# Purpose : appdomain need get system_mtk_amslog_prop
-get_prop(appdomain, system_mtk_amslog_prop)

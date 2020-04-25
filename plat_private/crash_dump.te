@@ -118,3 +118,8 @@ allow crash_dump packages_list_file:file r_file_perms;
 
 # Purpose: Allow crash_dump to read /proc/*/exe
 allow crash_dump system_file_type:file r_file_perms;
+
+# Purpose: crash_dump set property
+set_prop(crash_dump, system_mtk_persist_mtk_aee_prop)
+set_prop(crash_dump, system_mtk_persist_aee_prop)
+set_prop(crash_dump, system_mtk_debug_mtk_aee_prop)

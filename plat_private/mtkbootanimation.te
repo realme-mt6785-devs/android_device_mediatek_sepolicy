@@ -1,12 +1,17 @@
 # ==============================================
 # MTK Policy Rule
-# ============
+# ==============================================
 
 typeattribute mtkbootanimation coredomain;
 
 init_daemon_domain(mtkbootanimation)
 
 type mtkbootanimation_exec, system_file_type, exec_type, file_type;
+
+# Date : WK14.37
+# Operation : Migration
+# Purpose : for opetator
+set_prop(mtkbootanimation, system_mtk_bootani_prop)
 
 # Date W17.39
 # Operation Migration

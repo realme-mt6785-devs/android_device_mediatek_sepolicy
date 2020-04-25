@@ -55,8 +55,6 @@ allow connsyslogger rootfs:lnk_file getattr;
 allow connsyslogger media_rw_data_file:file  { create_file_perms };
 allow connsyslogger media_rw_data_file:dir { create_dir_perms };
 
-set_prop(connsyslogger, system_mtk_connsysfw_prop)
-
 allow connsyslogger vendor_configs_file:file map;
 #permission to get driver ready status
 get_prop(connsyslogger, vendor_mtk_wmt_prop)
@@ -64,6 +62,7 @@ get_prop(connsyslogger, vendor_mtk_wmt_prop)
 #Date:2019/03/25
 # purpose: allow connsyslogger to access persist.meta.connecttype
 get_prop(connsyslogger, vendor_mtk_meta_connecttype_prop)
+
 
 #Date:2019/03/25
 # purpose: allow emdlogger to create socket
