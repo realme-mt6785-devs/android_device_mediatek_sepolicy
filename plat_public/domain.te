@@ -480,9 +480,79 @@ full_treble_only(`
 # Do not allow access to the generic socket_device label. This is too broad.
 # Instead, if access to part of socket_device is desired, it should have a
 # more specific label.
-#full_treble_only(`
-#  neverallow * socket_device:dir_file_class_set *;
-#')
+full_treble_only(`
+  neverallow * socket_device:{ file sock_file fifo_file } *;
+
+  neverallow ~{
+    init
+    shell
+    ueventd
+    vendor_init
+    } socket_device:chr_file *;
+
+  neverallow {
+    init
+    vendor_init
+    } socket_device:chr_file ~{ setattr };
+
+  neverallow shell socket_device:chr_file ~{ getattr };
+
+  neverallow ueventd socket_device:chr_file ~{ getattr create setattr unlink };
+
+  neverallow ~{
+    dumpstate
+    e2fs
+    fsck
+    fsck_untrusted
+    init
+    recovery
+    shell
+    ueventd
+    vendor_init
+    } socket_device:blk_file *;
+
+  neverallow {
+    dumpstate
+    e2fs
+    fsck
+    fsck_untrusted
+    shell
+    vendor_init
+    } socket_device:blk_file ~getattr;
+
+  neverallow init socket_device:blk_file ~r_file_perms;
+
+  neverallow recovery socket_device:blk_file ~rw_file_perms;
+
+  neverallow ueventd socket_device:blk_file ~{ getattr relabelfrom relabelto create setattr unlink };
+
+  neverallow ~{
+    init
+    ueventd
+    vendor_init
+    } socket_device:lnk_file ~r_file_perms;
+
+  neverallow {
+    init
+    vendor_init
+    } socket_device:lnk_file ~{ r_file_perms create };
+
+  neverallow ueventd socket_device:lnk_file ~{ r_file_perms create unlink };
+
+  neverallow ~{
+    init
+    ueventd
+    vendor_init
+    } socket_device:dir ~r_dir_perms;
+
+  neverallow init socket_device:dir ~{ create_dir_perms relabelto };
+
+  neverallow {
+    ueventd
+    vendor_init
+    } socket_device:dir ~create_dir_perms;
+
+')
 
 # Do not allow access to the generic block_device label. This is too broad.
 # Instead, if access to part of block_device is desired, it should have a
