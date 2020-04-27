@@ -286,3 +286,7 @@ genfscon proc /device-tree/chosen/atag,devinfo u:object_r:proc_devinfo:s0
 genfscon sysfs /bus/platform/drivers/cache_parity/cache_status u:object_r:sysfs_cache_status:s0
 
 genfscon debugfs /apusys/power_dump_fail_log u:object_r:debugfs_apusys_power_fail_log:s0
+
+# Date : WK20.17
+# Purpose: Allow powerhal to control ged hal
+genfscon sysfs /kernel/ged u:object_r:sysfs_ged:s0
