@@ -242,6 +242,7 @@ vendor.met.running                   u:object_r:vendor_mtk_default_prop:s0
 ro.vendor.mtk_disable_cap_switch     u:object_r:vendor_mtk_default_prop:s0
 ro.vendor.mtk_sim_card_onoff         u:object_r:vendor_mtk_default_prop:s0
 ro.vendor.mtk_perf_plus              u:object_r:vendor_mtk_default_prop:s0
+ro.vendor.pref_scale_enable_cfg      u:object_r:vendor_mtk_default_prop:s0
 
 #============mtk emmc=======
 ro.vendor.mtk_emmc_support u:object_r:vendor_mtk_emmc_support_prop:s0
