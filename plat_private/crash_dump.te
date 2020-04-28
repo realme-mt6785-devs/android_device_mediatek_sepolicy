@@ -2,6 +2,12 @@
 # MTK Policy Rule
 # ==============================================
 
+typeattribute crash_dump mlstrustedsubject;
+
+# /porc/pid/
+allow crash_dump appdomain:dir r_dir_perms;
+allow crash_dump coredomain:dir r_dir_perms;
+
 # AED start: /dev/block/expdb
 allow crash_dump block_device:dir search;
 
