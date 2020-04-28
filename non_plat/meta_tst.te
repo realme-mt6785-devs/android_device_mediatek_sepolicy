@@ -142,11 +142,6 @@ allow meta_tst mnld_device:chr_file rw_file_perms;
 allow meta_tst mnld_exec:file rx_file_perms;
 set_prop(meta_tst, vendor_mtk_mnld_prop)
 
-# Date: WK16.12
-# Operation : Migration
-# Purpose : meta mode NFC
-allow meta_tst mt6605_device:chr_file rw_file_perms;
-
 #Date WK14.49
 #Operation : Migration
 #Purpose : DRM key installation
@@ -244,11 +239,9 @@ set_prop(meta_tst, system_mtk_ctl_emdlogger1_prop)
 
 #Date: W17.27
 # Purpose: STMicro NFC solution integration
-allow meta_tst st21nfc_device:chr_file { open read write ioctl };
 allow meta_tst vendor_file:file { getattr execute execute_no_trans read open };
 set_prop(meta_tst, hwservicemanager_prop)
 hwbinder_use(meta_tst);
-hal_client_domain(meta_tst, hal_nfc);
 allow meta_tst debugfs_tracing:file { open write };
 
 # Date: W17.29

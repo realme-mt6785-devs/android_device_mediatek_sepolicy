@@ -105,7 +105,6 @@ type ccci_monitor_device, dev_type;
 type gsm0710muxd_device, dev_type;
 type eemcs_device, dev_type;
 type emd_device, dev_type;
-type mt6605_device, dev_type;
 type st21nfc_device, dev_type;
 type st54spi_device, dev_type;
 type exm0_device, dev_type;

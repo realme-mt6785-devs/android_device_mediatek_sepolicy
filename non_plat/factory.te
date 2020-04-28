@@ -156,9 +156,6 @@ allow factory wmtWifi_device:chr_file rw_file_perms;
 #Purpose: For rtc test
 allow factory rtc_device:chr_file rw_file_perms;
 
-#Purpose: For nfc test
-allow factory mt6605_device:chr_file rwx_file_perms;
-
 #Purpose: For gps test
 allow factory mnld_device:chr_file rw_file_perms;
 allow factory mnld_exec:file rx_file_perms;
