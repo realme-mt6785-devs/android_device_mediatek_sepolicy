@@ -279,7 +279,8 @@ allow aee_aedv debugfs_dynamic_debug:file r_file_perms;
 # [ 241.001976] <1>.(1)[209:logd.auditd]type=1400 audit(1262304586.172:515): avc: denied { read }
 # for pid=1978 comm="aee_aedv64" name="atag,devinfo" dev="sysfs" ino=2349 scontext=u:r:aee_aedv:s0
 # tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
-allow aee_aedv sysfs_mrdump_lbaooo:file w_file_perms;
+allow aee_aedv sysfs_mrdump:file rw_file_perms;
+allow aee_aedv sysfs_memory:file r_file_perms;
 
 # Purpose: Allow aee_aedv to use HwBinder IPC.
 hwbinder_use(aee_aedv)
