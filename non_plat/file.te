@@ -385,6 +385,7 @@ type proc_fliperfs, fs_type, proc_type;
 type sysfs_ged, fs_type, sysfs_type;
 type sysfs_fbt_cpu, fs_type, sysfs_type;
 type sysfs_fbt_fteh, fs_type, sysfs_type;
+type sysfs_fpsgo, fs_type, sysfs_type;
 
 # Date : 2019/09/17
 # Purpose: Allow powerhal to control cache audit

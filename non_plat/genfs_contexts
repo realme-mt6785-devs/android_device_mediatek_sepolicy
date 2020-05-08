@@ -291,3 +291,7 @@ genfscon debugfs /apusys/power_dump_fail_log u:object_r:debugfs_apusys_power_fai
 # Date : WK20.17
 # Purpose: Allow powerhal to control ged hal
 genfscon sysfs /kernel/ged u:object_r:sysfs_ged:s0
+
+# Date : WK20.19
+# Purpose: Allow powerhal to control fpsgo
+genfscon sysfs /kernel/fpsgo u:object_r:sysfs_fpsgo:s0
