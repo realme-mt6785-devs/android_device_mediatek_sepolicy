@@ -105,6 +105,7 @@ vendor_restricted_prop(vendor_mtk_voicerecgnize_prop)
 vendor_restricted_prop(vendor_mtk_volte_prop)
 vendor_restricted_prop(vendor_mtk_wifi_hotspot_prop)
 vendor_restricted_prop(vendor_mtk_wmt_prop)
+vendor_restricted_prop(vendor_mtk_gpu_prop)
 
 # Properties with can be read by all domains
 typeattribute vendor_mtk_aal_ro_prop                 mtk_core_property_type;
@@ -171,3 +172,4 @@ typeattribute vendor_mtk_voicerecgnize_prop          mtk_core_property_type;
 typeattribute vendor_mtk_volte_prop                  mtk_core_property_type;
 typeattribute vendor_mtk_wifi_hotspot_prop           mtk_core_property_type;
 typeattribute vendor_mtk_wmt_prop                    mtk_core_property_type;
+typeattribute vendor_mtk_gpu_prop                    mtk_core_property_type;

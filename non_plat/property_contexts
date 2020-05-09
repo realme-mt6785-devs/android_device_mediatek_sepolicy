@@ -315,3 +315,7 @@ persist.vendor.wfc. u:object_r:vendor_mtk_wfc_serv_prop:s0
 
 #=============config no bt consys chip ====================
 ro.vendor.bluetooth.noconsyschip u:object_r:vendor_mtk_default_prop:s0
+
+#============mtk gpu property===========
+vendor.debug.gpu.  u:object_r:vendor_mtk_gpu_prop:s0
+vendor.debug.gpud. u:object_r:vendor_mtk_gpu_prop:s0
