@@ -415,3 +415,9 @@ allow factory sysfs_meta_info:file r_file_perms;
 # Purpose : Add permission for acess vendor_de.
 allow factory factory_vendor_file:file {create_file_perms};
 allow factory factory_vendor_file:dir { w_dir_perms };
+
+# Date : WK20.20
+# Operation: R migration
+# Purpose : Add permission for health HAL and vbus
+hal_client_domain(factory, hal_health);
+allow factory sysfs_vbus:file r_file_perms;
