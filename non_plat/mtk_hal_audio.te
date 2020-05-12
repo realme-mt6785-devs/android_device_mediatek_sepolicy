@@ -212,9 +212,8 @@ binder_call(mtk_hal_audio,audiocmdservice_atci);
 
 
 # Add for control PowerHAL
-allow mtk_hal_audio mtk_hal_power_hwservice:hwservice_manager find;
-binder_call(mtk_hal_audio, mtk_hal_power)
-binder_call(mtk_hal_audio, merged_hal_service)
+hal_client_domain(mtk_hal_audio, hal_power)
+
 # cm4 smartpa
 allow mtk_hal_audio audio_ipi_device:chr_file { read write ioctl open };
 allow mtk_hal_audio audio_scp_device:chr_file r_file_perms;

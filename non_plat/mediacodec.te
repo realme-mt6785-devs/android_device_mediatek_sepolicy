@@ -125,10 +125,7 @@ allow mediacodec sw_sync_device:chr_file rw_file_perms;
 
 # Date : WK17.30
 # Purpose : For Power Hal
-allow mediacodec mtk_hal_power_hwservice:hwservice_manager find;
-allow mediacodec mtk_hal_power:binder call;
-allow mediacodec mtk_hal_power:unix_stream_socket connectto;
-
+hal_client_domain(mediacodec, hal_power)
 
 # Date : WK17.12
 # Operation : MT6799 SQC

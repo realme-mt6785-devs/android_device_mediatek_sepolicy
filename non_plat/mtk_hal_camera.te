@@ -48,7 +48,7 @@ binder_call(mtk_hal_camera, aee_aedv)
 binder_call(mtk_hal_camera, hal_graphics_allocator)
 
 # call PowerHal
-binder_call(mtk_hal_camera, mtk_hal_power)
+hal_client_domain(mtk_hal_camera, hal_power)
 
 # -----------------------------------
 # Purpose: Allow camerahalserver to find a service from hwservice_manager
@@ -56,7 +56,6 @@ binder_call(mtk_hal_camera, mtk_hal_power)
 allow mtk_hal_camera hal_graphics_mapper_hwservice:hwservice_manager find;
 #allow mtk_hal_camera hal_graphics_allocator_hwservice:hwservice_manager find;
 allow mtk_hal_camera fwk_sensor_hwservice:hwservice_manager find;
-allow mtk_hal_camera mtk_hal_power_hwservice:hwservice_manager find;
 allow mtk_hal_camera nvram_data_file:lnk_file { read write getattr setattr read create open };
 allow mtk_hal_camera nvdata_file:lnk_file { read write getattr setattr read create open };
 hal_client_domain(mtk_hal_camera, hal_graphics_allocator)
