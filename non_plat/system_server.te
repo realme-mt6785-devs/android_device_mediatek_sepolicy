@@ -243,3 +243,7 @@ allow system_server sf_rtt_file:dir rmdir;
 # Date : 2019/11/29
 # Operation : Q Migration
 allow system_server storage_stub_file:dir getattr;
+
+#Date : 2020/05/12
+#Operation : R Migration
+allow system_server proc_ppm:file r_file_perms;
