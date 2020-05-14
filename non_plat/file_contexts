@@ -333,6 +333,7 @@
 /dev/gpsdl1        u:object_r:mnld_device:s0
 /dev/gpsdl1(/.*)? u:object_r:gpsdl_device:s0
 /dev/stpwmt(/.*)? u:object_r:stpwmt_device:s0
+/dev/conninfra_dev(/.*)? u:object_r:conninfra_device:s0
 /dev/sw_sync(/.*)? u:object_r:sw_sync_device:s0
 /dev/tgt(/.*)? u:object_r:tgt_device:s0
 /dev/touch(/.*)? u:object_r:touch_device:s0
@@ -528,6 +529,8 @@
 #
 /(system\/vendor|vendor)/bin/audiocmdservice_atci u:object_r:audiocmdservice_atci_exec:s0
 /(system\/vendor|vendor)/bin/stp_dump3 u:object_r:stp_dump3_exec:s0
+/(system\/vendor|vendor)/bin/wifi_dump u:object_r:wifi_dump_exec:s0
+/(system\/vendor|vendor)/bin/bt_dump u:object_r:bt_dump_exec:s0
 /(system\/vendor|vendor)/bin/wmt_launcher u:object_r:mtk_wmt_launcher_exec:s0
 /(system\/vendor|vendor)/bin/ccci_fsd u:object_r:ccci_fsd_exec:s0
 /(system\/vendor|vendor)/bin/fuelgauged u:object_r:fuelgauged_exec:s0
@@ -556,6 +559,7 @@
 /(system\/vendor|vendor)/bin/spm_loader u:object_r:spm_loader_exec:s0
 /(system\/vendor|vendor)/bin/ccci_mdinit u:object_r:ccci_mdinit_exec:s0
 /(system\/vendor|vendor)/bin/factory u:object_r:factory_exec:s0
+/(system\/vendor|vendor)/bin/conninfra_loader u:object_r:conninfra_loader_exec:s0
 
 /(system\/vendor|vendor)/bin/mnld u:object_r:mnld_exec:s0
 #/system/bin/connsyslogger u:object_r:connsyslogger_exec:s0

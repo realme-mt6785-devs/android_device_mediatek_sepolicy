@@ -8,6 +8,7 @@ type ttyS_device, dev_type;
 type ttySDIO_device, dev_type;
 type vmodem_device, dev_type;
 type stpwmt_device, dev_type;
+type conninfra_device, dev_type;
 type wmtdetect_device, dev_type;
 type wmtWifi_device, dev_type;
 type stpbt_device, dev_type;
