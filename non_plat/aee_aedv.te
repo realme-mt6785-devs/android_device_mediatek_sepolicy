@@ -53,7 +53,7 @@ allow aee_aedv usermodehelper:file r_file_perms;
 # Date: W15.34
 # Operation: Migration
 # Purpose: For pagemap & pageflags information in NE DB
-userdebug_or_eng(`allow aee_aedv self:capability sys_admin;')
+allow aee_aedv self:capability sys_admin;
 
 # Purpose: aee_aedv set property
 set_prop(aee_aedv, vendor_mtk_persist_mtk_aeev_prop)
