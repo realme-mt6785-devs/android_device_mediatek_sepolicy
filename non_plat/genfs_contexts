@@ -32,6 +32,7 @@ genfscon proc /atf_log u:object_r:proc_atf_log:s0
 genfscon proc /gz_log u:object_r:proc_gz_log:s0
 genfscon proc /last_kmsg u:object_r:proc_last_kmsg:s0
 genfscon proc /bootprof u:object_r:proc_bootprof:s0
+genfscon proc /mtprintk u:object_r:proc_mtprintk:s0
 genfscon proc /pl_lk u:object_r:proc_pl_lk:s0
 genfscon proc /msdc_debug u:object_r:proc_msdc_debug:s0
 genfscon proc /ufs_debug u:object_r:proc_ufs_debug:s0
