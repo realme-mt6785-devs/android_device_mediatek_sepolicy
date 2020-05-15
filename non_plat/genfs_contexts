@@ -58,6 +58,7 @@ genfscon proc /m4u u:object_r:proc_m4u:s0
 genfscon proc /driver/wmt_aee u:object_r:proc_wmt_aee:s0
 
 genfscon proc /aed u:object_r:proc_aed:s0
+genfscon proc /ccci_dump u:object_r:proc_ccci_dump:s0
 
 #############################
 # sysfs files

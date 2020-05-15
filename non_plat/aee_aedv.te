@@ -458,5 +458,4 @@ set_prop(aee_aedv, powerctl_prop)
 
 allow aee_aedv debugfs_apusys_power_fail_log:file r_file_perms;
 
-#Purpose: Allow dumpstate to read /sys/bus/platform/drivers/cache_parity/cache_status
-allow dumpstate sysfs_cache_status:file r_file_perms;
+allow aee_aedv proc_ccci_dump:file r_file_perms;
