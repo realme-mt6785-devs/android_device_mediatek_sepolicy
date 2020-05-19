@@ -2,8 +2,6 @@
 # MTK Policy Rule
 # ==============================================
 
-# Rules for all domains.
-
 # Do not allow access to the generic system_data_file label. This is
 # too broad.
 # Instead, if access to part of system_data_file is desired, it should
