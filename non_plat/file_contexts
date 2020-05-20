@@ -14,6 +14,12 @@
 (/vendor)?/custom(/.*)?		u:object_r:custom_file:s0
 /dev/socket/netd    u:object_r:netd_socket:s0
 
+###################################
+# ccci_fsd access vendor/etc/md file
+/vendor/etc/md(/.*)?        u:object_r:vendor_etc_md_file:s0
+
+# ccci_fsd access /data/vendor_de/md file
+/data/vendor_de/md(/.*)?        u:object_r:data_vendor_de_md_file:s0
 
 #############################
 # Data files

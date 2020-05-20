@@ -432,6 +432,14 @@ type sysfs_concurrency_scenario, fs_type, sysfs_type;
 
 type proc_wmt_aee, fs_type, proc_type;
 
+# Date : 2019/12/19
+# Purpose : Allow ccci_fsd read /vendor/etc/md
+type vendor_etc_md_file, vendor_file_type, file_type;
+
+# Date : 2019/12/23
+# Purpose : Allow ccci_fsd read /data/vendor_de/md
+type data_vendor_de_md_file, data_file_type, file_type;
+
 # Date : WK20.07
 # Operation: R migration
 # Purpose : Add permission for new device node.
