@@ -182,3 +182,5 @@ allow dumpstate functionfs:file { getattr };
 
 #Purpose: Allow dumpstate to read /sys/bus/platform/drivers/cache_parity/cache_status
 allow dumpstate sysfs_cache_status:file r_file_perms;
+
+hal_client_domain(dumpstate, hal_light)
