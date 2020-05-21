@@ -59,3 +59,10 @@ allow dumpstate self:capability sys_nice;
 allow dumpstate mobile_log_d:fd use;
 allow dumpstate mobile_log_d:fifo_file write;
 allow dumpstate mobile_log_d:unix_stream_socket { read write };
+
+# Date : 2020/05/21
+# Operation : fix dumpstate dump fail
+# Purpose : type=1400 audit(0.0:24312): avc: denied { sys_admin } for
+#           capability=21 scontext=u:r:dumpstate:s0 tcontext=u:r:dumpstate:s0
+#           tclass=capability permissive=0
+allow dumpstate self:capability sys_admin;
