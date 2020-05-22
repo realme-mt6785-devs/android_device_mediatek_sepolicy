@@ -108,6 +108,7 @@ allow atci_service hidl_memory_hwservice:hwservice_manager find;
 allow atci_service ion_device:chr_file { read ioctl open };
 allow atci_service mtk_cmdq_device:chr_file { read ioctl open };
 allow atci_service mtk_mdp_device:chr_file rw_file_perms;
+allow atci_service mtk_mdp_sync:chr_file rw_file_perms;
 allow atci_service sw_sync_device:chr_file rw_file_perms;
 hal_client_domain(atci_service, hal_power)
 allow atci_service sysfs_batteryinfo:dir search;

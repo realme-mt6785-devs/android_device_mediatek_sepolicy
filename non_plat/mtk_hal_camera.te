@@ -258,6 +258,7 @@ allow mtk_hal_camera hal_graphics_composer_default:fd use;
 # Purpose: Allow to access cmdq driver
 allow mtk_hal_camera mtk_cmdq_device:chr_file { read ioctl open };
 allow mtk_hal_camera mtk_mdp_device:chr_file rw_file_perms;
+allow mtk_hal_camera mtk_mdp_sync:chr_file rw_file_perms;
 
 # Date : WK17.36
 # Operation : O Migration
