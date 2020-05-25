@@ -82,6 +82,7 @@ type proc_isp_p2_kedump, fs_type, proc_type;
 type proc_memory_usage, fs_type, proc_type;
 type proc_mtk_es_reg_dump, fs_type, proc_type;
 type proc_ccci_dump, fs_type, proc_type;
+type proc_log_much, fs_type, proc_type;
 type sysfs_execstate, fs_type, sysfs_type;
 type sysfs_therm, fs_type, sysfs_type;
 type sysfs_fps, fs_type, sysfs_type;
