@@ -92,6 +92,10 @@
 /mnt/vendor/nvdata(/.*)? u:object_r:nvdata_file:s0
 /mnt/vendor/nvcfg(/.*)? u:object_r:nvcfg_file:s0
 
+# AAO
+/data/vendor/aao(/.*)? u:object_r:data_vendor_aao_file:s0
+/data/vendor/aaoHwBuf(/.*)? u:object_r:data_vendor_aaoHwBuf_file:s0
+
 # Flash
 /data/vendor/flash(/.*)? u:object_r:data_vendor_flash_file:s0
 
