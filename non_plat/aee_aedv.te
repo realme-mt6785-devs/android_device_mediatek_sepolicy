@@ -460,3 +460,7 @@ allow aee_aedv debugfs_apusys_power_fail_log:file r_file_perms;
 
 allow aee_aedv proc_ccci_dump:file r_file_perms;
 allow aee_aedv proc_log_much:file r_file_perms;
+
+# Purpose: Allow aee_aedv to read /sys/kernel/tracing/instances/mmstat/trace
+allow aee_aedv debugfs_tracing_instances:dir r_dir_perms;
+allow aee_aedv debugfs_tracing_instances:file r_file_perms;

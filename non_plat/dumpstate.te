@@ -184,3 +184,7 @@ allow dumpstate functionfs:file { getattr };
 allow dumpstate sysfs_cache_status:file r_file_perms;
 
 hal_client_domain(dumpstate, hal_light)
+
+#Purpose: Allow dumpstate to read /sys/kernel/tracing/instances/mmstat/trace
+allow dumpstate debugfs_tracing_instances:dir r_dir_perms;
+allow dumpstate debugfs_tracing_instances:file r_file_perms;
