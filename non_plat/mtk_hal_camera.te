@@ -98,7 +98,13 @@ allow mtk_hal_camera camera_wpe_device:chr_file rw_file_perms;
 allow mtk_hal_camera mtk_jpeg_device:chr_file r_file_perms;
 
 allow mtk_hal_camera ccu_device:chr_file rw_file_perms;
+
+# APUSYS
 allow mtk_hal_camera vpu_device:chr_file rw_file_perms;
+allow mtk_hal_camera mdla_device:chr_file rw_file_perms;
+allow mtk_hal_camera apusys_device:chr_file rw_file_perms;
+allow mtk_hal_camera debugfs_apusys_midware_queue_vpu:file r_file_perms;
+allow mtk_hal_camera debugfs_apusys_midware_queue_mdla:file r_file_perms;
 
 # Purpose: RSC driver
 allow mtk_hal_camera camera_rsc_device:chr_file rw_file_perms;
