@@ -26,8 +26,8 @@ allow factory ccci_device:chr_file rw_file_perms;
 allow factory gsm0710muxd_device:chr_file rw_file_perms;
 
 #Purpose: file system requirement
-allow factory debugfs_usb:file rw_file_perms;
-allow factory debugfs_usb:dir search;
+allow factory debugfs_usb_nonplat:file rw_file_perms;
+allow factory debugfs_usb_nonplat:dir search;
 allow factory devpts:chr_file rw_file_perms;
 allow factory vfat:dir w_dir_perms;
 allow factory labeledfs:filesystem unmount;
@@ -46,6 +46,8 @@ allow factory ttyGS_device:chr_file rw_file_perms;
 # Purpose: OTG
 allow factory usb_device:chr_file rw_file_perms;
 allow factory usb_device:dir r_dir_perms;
+allow factory sysfs_usb_nonplat:file r_file_perms;
+allow factory sysfs_usb_nonplat:dir r_dir_perms;
 
 # Date: WK15.01
 # Purpose : OTG Mount

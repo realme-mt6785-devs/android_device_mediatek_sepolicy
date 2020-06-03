@@ -91,9 +91,13 @@ genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt635
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6397-rtc/rtc u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/soc/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6397-rtc/rtc u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/10026000.pwrap/10026000.pwrap:mt6359-pmic/mt6359-rtc/rtc u:object_r:sysfs_rtc:s0
-genfscon sysfs /devices/platform/mt_usb/musb-hdrc/dual_role_usb u:object_r:sysfs_dual_role:s0
-genfscon sysfs /devices/platform/mt_usb/musb-hdrc/cmode u:object_r:sysfs_usb_cmode:s0
-genfscon sysfs /class/typec u:object_r:sysfs_dual_role:s0
+genfscon sysfs /class/typec u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/mt_usb/musb-hdrc/dual_role_usb u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/mt_usb/musb-hdrc/cmode u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/11270000.usb3/musb-hdrc/cmode u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/soc/usb0/cmode u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/mt_usb/musb-hdrc/usb1 u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/soc/usb0/xhci0/usb1 u:object_r:sysfs_usb_nonplat:s0
 
 genfscon sysfs /devices/virtual/BOOT/BOOT/boot/boot_mode u:object_r:sysfs_boot_mode:s0
 genfscon sysfs /devices/virtual/BOOT/BOOT/boot/boot_type u:object_r:sysfs_boot_type:s0
@@ -189,12 +193,12 @@ genfscon debugfs /mali0/gpu_memory u:object_r:debugfs_gpu_mali_midgard:s0
 genfscon debugfs /mali/gpu_memory u:object_r:debugfs_gpu_mali_utgard:s0
 genfscon debugfs /mtkfb u:object_r:debugfs_fb:s0
 genfscon debugfs /mmprofile u:object_r:debugfs_fb:s0
-genfscon debugfs /musb-hdrc u:object_r:debugfs_usb:s0
+genfscon debugfs /musb-hdrc u:object_r:debugfs_usb_nonplat:s0
 genfscon debugfs /page_owner_slim u:object_r:debugfs_page_owner_slim_debug:s0
 genfscon debugfs /pvr u:object_r:debugfs_gpu_img:s0
 genfscon debugfs /rcu u:object_r:debugfs_rcu:s0
 genfscon debugfs /shrinker u:object_r:debugfs_shrinker_debug:s0
-genfscon debugfs /usb_c u:object_r:debugfs_usb:s0
+genfscon debugfs /usb_c u:object_r:debugfs_usb_nonplat:s0
 genfscon debugfs /vpu/device_dbg u:object_r:debugfs_vpu_device_dbg:s0
 
 # mtk VPU/MDLA power reading
@@ -274,7 +278,6 @@ genfscon sysfs /firmware/devicetree/base/chosen/atag,chipid u:object_r:sysfs_chi
 # Purpose : allow system_server to access rt5509 param and calib node
 genfscon sysfs /devices/platform/rt5509_param.0 u:object_r:sysfs_rt_param:s0
 genfscon sysfs /devices/virtual/rt5509_cal/rt5509.0 u:object_r:sysfs_rt_calib:s0
-genfscon sysfs /devices/platform/11270000.usb3/musb-hdrc/cmode u:object_r:sysfs_usb_cmode:s0
 
 
 # Date : 2019/12/10
