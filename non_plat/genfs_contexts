@@ -344,3 +344,20 @@ genfscon sysfs /class/misc/mali0/device/power_policy u:object_r:sysfs_mali_power
 # Operation: R migration
 # Purpose: Allow powerhal to control displowpower
 genfscon proc /displowpower u:object_r:proc_displowpower:s0
+
+# Date : WK20.25
+# Operation: R migration
+# Purpose : for VTS NetdSELinuxTest.CheckProperMTULabels requirement.
+genfscon sysfs /devices/platform/18000000.wifi/net/wlan0/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/18000000.wifi/net/wlan1/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/soc/18000000.wifi/net/wlan0/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/soc/18000000.wifi/net/wlan1/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/180f0000.wifi/net/wlan0/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/180f0000.wifi/net/wlan1/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/180f0000.wifi/net/p2p0/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/180f0000.wifi/net/p2p1/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/bus/180f0000.WIFI/net/wlan0/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/bus/180f0000.WIFI/net/wlan1/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/bus/180f0000.WIFI/net/p2p0/mtu u:object_r:sysfs_net:s0
+genfscon sysfs /devices/platform/bus/180f0000.WIFI/net/p2p1/mtu u:object_r:sysfs_net:s0
+
