@@ -50,9 +50,6 @@ persist.vendor.bootanim. u:object_r:system_mtk_bootani_prop:s0
 #=============allow mobile log property================
 vendor.MB. u:object_r:system_mtk_mobile_log_prop:s0
 
-#=============allow em set tethering protocol================
-persist.vendor.net.auto.tethering u:object_r:system_mtk_em_net_auto_tethering_prop:s0
-
 #=============allow em to set bgdata disabled property================
 persist.vendor.radio.bgdata.disabled u:object_r:system_mtk_bgdata_disabled_prop:s0
 

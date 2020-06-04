@@ -28,7 +28,6 @@ system_internal_prop(system_mtk_debug_mdlogger_prop)
 system_internal_prop(system_mtk_debug_mtk_aee_prop)
 system_internal_prop(system_mtk_debug_mtklog_prop)
 system_internal_prop(system_mtk_debug_netlog_prop)
-system_internal_prop(system_mtk_em_net_auto_tethering_prop)
 system_internal_prop(system_mtk_gprs_attach_type_prop)
 system_internal_prop(system_mtk_mdl_prop)
 system_internal_prop(system_mtk_mdl_pulllog_prop)
@@ -56,7 +55,6 @@ typeattribute system_mtk_debug_mdlogger_prop        extended_core_property_type;
 typeattribute system_mtk_debug_mtk_aee_prop         extended_core_property_type;
 typeattribute system_mtk_debug_mtklog_prop          extended_core_property_type;
 typeattribute system_mtk_debug_netlog_prop          extended_core_property_type;
-typeattribute system_mtk_em_net_auto_tethering_prop extended_core_property_type;
 typeattribute system_mtk_gprs_attach_type_prop      extended_core_property_type;
 typeattribute system_mtk_mdl_prop                   extended_core_property_type;
 typeattribute system_mtk_mdl_pulllog_prop           extended_core_property_type;
