@@ -249,11 +249,29 @@ genfscon proc /fliperfs u:object_r:proc_fliperfs:s0
 genfscon sysfs /module/ged u:object_r:sysfs_ged:s0
 genfscon sysfs /module/fbt_cpu u:object_r:sysfs_fbt_cpu:s0
 genfscon sysfs /module/fbt_fteh u:object_r:sysfs_fbt_fteh:s0
+genfscon sysfs /module/xgf u:object_r:sysfs_xgf:s0
 
 # 2019/09/05
 # Purpose: Allow powerhal to control cache audit
 genfscon sysfs /module/ca_drv u:object_r:sysfs_ca_drv:s0
 genfscon sysfs /module/pftch_qos u:object_r:sysfs_pftch_qos:s0
+
+# 2019/09/19
+# Purpose: Allow powerhal to trigger task-turbo
+genfscon sysfs /module/task_turbo u:object_r:sysfs_task_turbo:s0
+
+# Date : 2019/09/23
+# Operation: SQC
+# Purpose : Allow powerHAL to control touch boost
+genfscon sysfs /devices/platform/mtk-tpd2.0/change_rate u:object_r:sysfs_change_rate:s0
+
+# Date : 2019/10/16
+# Operation: SQC
+# Purpose : Allow powerHAL to control /sys/fs/ext4/xxx/disable_barrier
+genfscon sysfs /fs/ext4/sdc46/disable_barrier u:object_r:sysfs_ext4_disable_barrier:s0
+genfscon sysfs /fs/ext4/sdc47/disable_barrier u:object_r:sysfs_ext4_disable_barrier:s0
+genfscon sysfs /fs/ext4/sdc48/disable_barrier u:object_r:sysfs_ext4_disable_barrier:s0
+genfscon sysfs /fs/ext4/dm-6/disable_barrier u:object_r:sysfs_ext4_disable_barrier:s0
 
 # Date : WK19.38
 # Purpose: Android Migration for video codec driver
@@ -280,6 +298,9 @@ genfscon sysfs /firmware/devicetree/base/chosen/atag,chipid u:object_r:sysfs_chi
 genfscon sysfs /devices/platform/rt5509_param.0 u:object_r:sysfs_rt_param:s0
 genfscon sysfs /devices/virtual/rt5509_cal/rt5509.0 u:object_r:sysfs_rt_calib:s0
 
+# 2019/11/14
+# Purpose: Allow powerhal to control MCDI
+genfscon proc /cpuidle u:object_r:proc_cpuidle:s0
 
 # Date : 2019/12/10
 # Purpose: Allow bt process or tool to control bt_dbg

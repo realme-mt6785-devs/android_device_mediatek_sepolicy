@@ -79,3 +79,8 @@ allow vendor_init debugfs_tracing_instances:file w_file_perms;
 
 #boot tracer
 allow vendor_init debugfs_tracing_debug:file w_file_perms;
+
+# Date : 2019/11/21
+# Operation: SQC
+# Purpose : Allow vendor_init to control MCDI
+allow vendor_init proc_cpuidle:file rw_file_perms;

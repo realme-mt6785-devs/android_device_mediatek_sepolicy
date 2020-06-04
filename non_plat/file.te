@@ -402,11 +402,28 @@ type sysfs_ged, fs_type, sysfs_type;
 type sysfs_fbt_cpu, fs_type, sysfs_type;
 type sysfs_fbt_fteh, fs_type, sysfs_type;
 type sysfs_fpsgo, fs_type, sysfs_type;
+type sysfs_xgf, fs_type, sysfs_type;
 
 # Date : 2019/09/17
 # Purpose: Allow powerhal to control cache audit
 type sysfs_ca_drv, fs_type, sysfs_type;
 type sysfs_pftch_qos, fs_type, sysfs_type;
+
+# Date : 2019/09/19
+# Purpose: Allow powerhal to trigger task-turbo
+type sysfs_task_turbo, fs_type, sysfs_type;
+
+# Date : 2019/09/23
+# Purpose: Define change_rate fs_type
+type sysfs_change_rate, fs_type, sysfs_type;
+
+# Date : 2019/10/16
+# Purpose: Define sysfs_ext4_disable_barrier fs_type
+type sysfs_ext4_disable_barrier, fs_type, sysfs_type;
+
+# Date : 2019/11/14
+# Purpose: Allow powerhal to control MCDI
+type proc_cpuidle, fs_type, proc_type;
 
 # Date : WK19.38
 # Purpose: Android Migration for video codec driver
