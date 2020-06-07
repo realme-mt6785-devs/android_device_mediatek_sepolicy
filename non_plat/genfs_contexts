@@ -164,7 +164,7 @@ genfscon sysfs /module/gf_spi_tee u:object_r:sysfs_gf_spi_tee:s0
 # Date : 2019/10/22
 # Purpose : mrdump_tool(copy_process by aee_aedv) need to write data to lbaooo
 genfscon sysfs /module/mrdump/version u:object_r:sysfs_mrdump:s0
-genfscon sysfs /module/mrdump/parameters/lk u:object_r:sysfs_mrdump:s0
+genfscon sysfs /firmware/devicetree/base/chosen/mrdump,lk u:object_r:sysfs_mrdump:s0
 genfscon sysfs /module/mrdump/parameters/lbaooo u:object_r:sysfs_mrdump:s0
 genfscon sysfs /firmware/devicetree/base/memory/reg u:object_r:sysfs_memory:s0
 genfscon sysfs /firmware/devicetree/base/memory@0x40000000/reg u:object_r:sysfs_memory:s0
