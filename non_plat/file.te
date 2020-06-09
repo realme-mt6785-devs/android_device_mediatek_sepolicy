@@ -403,6 +403,7 @@ type sysfs_fbt_cpu, fs_type, sysfs_type;
 type sysfs_fbt_fteh, fs_type, sysfs_type;
 type sysfs_fpsgo, fs_type, sysfs_type;
 type sysfs_xgf, fs_type, sysfs_type;
+type sysfs_gbe, fs_type, sysfs_type;
 
 # Date : 2019/09/17
 # Purpose: Allow powerhal to control cache audit

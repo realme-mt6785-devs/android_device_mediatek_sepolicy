@@ -331,3 +331,7 @@ genfscon sysfs /kernel/ged u:object_r:sysfs_ged:s0
 # Date : WK20.19
 # Purpose: Allow powerhal to control fpsgo
 genfscon sysfs /kernel/fpsgo u:object_r:sysfs_fpsgo:s0
+
+# Date : WK20.23
+# Purpose: Allow powerhal to control gbe
+genfscon sysfs /kernel/gbe u:object_r:sysfs_gbe:s0
