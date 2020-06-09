@@ -45,9 +45,12 @@ allow atci_service nvram_device:blk_file { open read write };
 allow atci_service input_device:dir { open read search };
 allow atci_service input_device:file { open read write ioctl };
 allow atci_service input_device:chr_file { open read write ioctl };
-allow atci_service MAINAF_device:chr_file { open read write ioctl };
-allow atci_service MAIN2AF_device:chr_file { open read write ioctl };
-allow atci_service SUBAF_device:chr_file { open read write ioctl };
+allow atci_service MAINAF_device:chr_file rw_file_perms;
+allow atci_service MAIN2AF_device:chr_file rw_file_perms;
+allow atci_service MAIN3AF_device:chr_file rw_file_perms;
+allow atci_service MAIN4AF_device:chr_file rw_file_perms;
+allow atci_service SUBAF_device:chr_file rw_file_perms;
+allow atci_service SUB2AF_device:chr_file rw_file_perms;
 allow atci_service tmpfs:lnk_file read;
 allow atci_service self:capability2 block_suspend;
 

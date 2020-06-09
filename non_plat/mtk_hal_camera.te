@@ -115,7 +115,10 @@ allow mtk_hal_camera camera_owe_device:chr_file rw_file_perms;
 # Purpose: AF related
 allow mtk_hal_camera MAINAF_device:chr_file rw_file_perms;
 allow mtk_hal_camera MAIN2AF_device:chr_file rw_file_perms;
+allow mtk_hal_camera MAIN3AF_device:chr_file rw_file_perms;
+allow mtk_hal_camera MAIN4AF_device:chr_file rw_file_perms;
 allow mtk_hal_camera SUBAF_device:chr_file rw_file_perms;
+allow mtk_hal_camera SUB2AF_device:chr_file rw_file_perms;
 allow mtk_hal_camera FM50AF_device:chr_file rw_file_perms;
 allow mtk_hal_camera AD5820AF_device:chr_file rw_file_perms;
 allow mtk_hal_camera DW9714AF_device:chr_file rw_file_perms;

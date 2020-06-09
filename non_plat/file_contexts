@@ -134,7 +134,10 @@
 /dev/BU64745GWZAF(/.*)? u:object_r:BU64745GWZAF_device:s0
 /dev/MAINAF(/.*)? u:object_r:MAINAF_device:s0
 /dev/MAIN2AF(/.*)? u:object_r:MAIN2AF_device:s0
+/dev/MAIN3AF(/.*)? u:object_r:MAIN3AF_device:s0
+/dev/MAIN4AF(/.*)? u:object_r:MAIN4AF_device:s0
 /dev/SUBAF(/.*)? u:object_r:SUBAF_device:s0
+/dev/SUB2AF(/.*)? u:object_r:SUB2AF_device:s0
 /dev/cache(/.*)? u:object_r:cache_device:s0
 /dev/CAM_CAL_DRV(/.*)? u:object_r:CAM_CAL_DRV_device:s0
 /dev/CAM_CAL_DRV1(/.*)? u:object_r:CAM_CAL_DRV1_device:s0

@@ -97,7 +97,10 @@ allow meta_tst DW9718AF_device:chr_file rw_file_perms;
 allow meta_tst BU64745GWZAF_device:chr_file rw_file_perms;
 allow meta_tst MAINAF_device:chr_file rw_file_perms;
 allow meta_tst MAIN2AF_device:chr_file rw_file_perms;
+allow meta_tst MAIN3AF_device:chr_file rw_file_perms;
+allow meta_tst MAIN4AF_device:chr_file rw_file_perms;
 allow meta_tst SUBAF_device:chr_file rw_file_perms;
+allow meta_tst SUB2AF_device:chr_file rw_file_perms;
 
 # Date: WK16.12
 # Operation : Migration
