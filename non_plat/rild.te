@@ -161,3 +161,7 @@ set_prop(rild, vendor_mtk_gsm0710muxd_prop)
 # Purpose: Allow HIDL to set vendor property
 set_prop(rild, vendor_mtk_imstestmode_prop)
 
+# Date : 2020/06/11
+# Operation: R migration
+# Purpose: Allow rild to get system_boot_reason_prop
+get_prop(rild, system_boot_reason_prop)

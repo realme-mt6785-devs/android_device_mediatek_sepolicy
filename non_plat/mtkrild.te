@@ -127,3 +127,7 @@ set_prop(mtkrild, vendor_mtk_ss_vendor_prop)
 # Purpose: Allow wfc module from rild read system property from wfc module
 get_prop(mtkrild, vendor_mtk_wfc_serv_prop)
 
+# Date : 2020/06/11
+# Operation: R migration
+# Purpose: Allow mtkrild to get system_boot_reason_prop
+get_prop(mtkrild, system_boot_reason_prop)
