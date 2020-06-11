@@ -1,7 +1,0 @@
-type mtk_hal_usb_gadget, domain;
-hal_server_domain(mtk_hal_usb_gadget, hal_usb_gadget)
-
-type mtk_hal_usb_gadget_exec, exec_type, file_type, vendor_file_type;
-init_daemon_domain(mtk_hal_usb_gadget)
-
-set_prop(mtk_hal_usb_gadget, vendor_mtk_usb_prop)
