@@ -108,3 +108,6 @@ allow emdlogger vendor_configs_file:file map;
 allow emdlogger kernel:system syslog_read;
 allow emdlogger logcat_exec:file {rx_file_perms};
 allow emdlogger logdr_socket:sock_file write;
+
+# Add permission to access new bootmode file
+allow emdlogger sysfs_boot_info:file r_file_perms;

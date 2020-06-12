@@ -73,3 +73,6 @@ allow connsyslogger node:tcp_socket node_bind;
 #Date:2019/03/25
 # usb device ttyGSx for modem logger usb logging
 allow connsyslogger ttyGS_device:chr_file { rw_file_perms};
+
+# Add permission to access new bootmode file
+allow connsyslogger sysfs_boot_info:file r_file_perms;

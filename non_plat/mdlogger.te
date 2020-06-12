@@ -52,3 +52,6 @@ allow mdlogger sysfs_boot_mode:file { read open };
 
 # avc: denied { open } for path="system/etc/mddb" dev="mmcblk0p21" scontext=u:r:emdlogger:s0 tcontext=u:object_r:system_file:s0 tclass=dir permissive=0
 allow mdlogger system_file:dir { read open };
+
+# Add permission to access new bootmode file
+allow mdlogger sysfs_boot_info:file r_file_perms;
