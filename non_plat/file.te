@@ -486,3 +486,7 @@ type factory_vendor_file, file_type, data_file_type;
 type debugfs_apusys_power_fail_log, fs_type, debugfs_type;
 
 type sysfs_cache_status, fs_type, sysfs_type;
+
+# Date : 2020/06/12
+# Purpose: define sysfs_mali_power_policy fs_type
+type sysfs_mali_power_policy, fs_type, sysfs_type;
