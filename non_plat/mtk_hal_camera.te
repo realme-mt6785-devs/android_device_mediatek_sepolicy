@@ -339,6 +339,10 @@ allow mtk_hal_camera data_vendor_flicker_file:file create_file_perms;
 allow mtk_hal_camera data_vendor_afo_file:dir create_dir_perms;
 allow mtk_hal_camera data_vendor_afo_file:file create_file_perms;
 
+# PDO
+allow mtk_hal_camera data_vendor_pdo_file:dir create_dir_perms;
+allow mtk_hal_camera data_vendor_pdo_file:file create_file_perms;
+
 # Date : WK18.35
 # Purpose: allow mtk_hal_camera to access gz_device node
 allow mtk_hal_camera gz_device:chr_file rw_file_perms;

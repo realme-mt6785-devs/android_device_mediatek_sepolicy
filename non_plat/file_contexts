@@ -106,6 +106,9 @@
 # AFO
 /data/vendor/AFObitTrue(/.*)? u:object_r:data_vendor_afo_file:s0
 
+# PDO
+/data/vendor/pdo(/.*)? u:object_r:data_vendor_pdo_file:s0
+
 # protected data file
 /mnt/vendor/protect_f(/.*)?         u:object_r:protect_f_data_file:s0
 /mnt/vendor/protect_s(/.*)?         u:object_r:protect_s_data_file:s0

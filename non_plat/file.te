@@ -134,6 +134,9 @@ type data_vendor_flicker_file, file_type, data_file_type;
 # AFO
 type data_vendor_afo_file, file_type, data_file_type;
 
+# PDO
+type data_vendor_pdo_file, file_type, data_file_type;
+
 #mobilelog data/misc/mblog
 type logmisc_data_file, file_type, data_file_type, core_data_file_type;
 
