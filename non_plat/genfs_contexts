@@ -339,3 +339,8 @@ genfscon sysfs /kernel/gbe u:object_r:sysfs_gbe:s0
 # Date : 2020/06/12
 # Purpose : Allow powerhal to control mali power policy
 genfscon sysfs /class/misc/mali0/device/power_policy u:object_r:sysfs_mali_power_policy:s0
+
+# 2020/06/12
+# Operation: R migration
+# Purpose: Allow powerhal to control displowpower
+genfscon proc /displowpower u:object_r:proc_displowpower:s0

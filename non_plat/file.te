@@ -493,3 +493,8 @@ type sysfs_cache_status, fs_type, sysfs_type;
 # Date : 2020/06/12
 # Purpose: define sysfs_mali_power_policy fs_type
 type sysfs_mali_power_policy, fs_type, sysfs_type;
+
+# Date : 2020/06/12
+# Operation: R migration
+# Purpose: Allow powerhal to control displowpower
+type proc_displowpower, fs_type, proc_type;
