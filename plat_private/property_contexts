@@ -17,7 +17,6 @@ persist.vendor.MB.logpost u:object_r:system_mtk_mobile_log_post_prop:s0
 
 #=============allow vendor-init/system process access ro.telephony property==============
 ro.telephony.sim.count         u:object_r:exported3_default_prop:s0 exact int
-ro.telephony.max.active.modems u:object_r:exported3_default_prop:s0 exact int
 
 #=============allow netlog==============
 vendor.mtklog         u:object_r:system_mtk_debug_mtklog_prop:s0
