@@ -750,3 +750,8 @@
 # Operation: R migration
 # Purpose : Add permission for acess vendor_de.
 /data/vendor_de/factory(/.*)?  u:object_r:factory_vendor_file:s0
+
+# Date: 2020/06/16
+# Operation: R migration
+# Purpose: Add permission for boot control lazy HAL
+/vendor/bin/hw/android\.hardware\.boot@[0-9]+\.[0-9]+-service-lazy      u:object_r:hal_bootctl_default_exec:s0
