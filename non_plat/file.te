@@ -494,3 +494,8 @@ type sysfs_mali_power_policy, fs_type, sysfs_type;
 # Operation: R migration
 # Purpose: Allow powerhal to control displowpower
 type proc_displowpower, fs_type, proc_type;
+
+# Date : 2020/06/29
+# Operation: R migration
+# Purpose: Add permission for access /proc/ion/*
+type proc_ion, fs_type, proc_type;
