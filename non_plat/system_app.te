@@ -56,3 +56,8 @@ allowxperm system_app proc_mtk_jpeg:file ioctl {
       JPG_BRIDGE_DEC_IO_WAIT
       JPG_BRIDGE_DEC_IO_UNLOCK
 };
+
+# Date: 2020/06/29
+# Purpose: Allow system app to access mtk fpsgo
+allow system_app sysfs_fpsgo:dir search;
+allow system_app sysfs_fpsgo:file r_file_perms;
