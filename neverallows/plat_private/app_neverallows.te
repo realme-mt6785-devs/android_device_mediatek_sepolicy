@@ -65,6 +65,14 @@ neverallow all_untrusted_apps ~{
 # restricted.
 full_treble_only(`
   neverallow all_untrusted_apps {
-  hwservice_manager_type
+    halserverdomain
+    -coredomain
+    -hal_cas_server
+    -hal_codec2_server
+    -hal_configstore_server
+    -hal_drm_server
+    -hal_graphics_allocator_server
+    -hal_neuralnetworks_server
+    -hal_omx_server
 }:binder { call transfer };
 ')
