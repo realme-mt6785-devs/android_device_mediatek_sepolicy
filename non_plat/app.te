@@ -49,3 +49,13 @@ allow { appdomain -isolated_app } radio_data_file:file rw_file_perms;
 # Operation : Migration
 # Purpose : For app com.tencent.qqpimsecure
 allowxperm appdomain appdomain:fifo_file ioctl SNDCTL_TMR_START;
+
+# Date : W20.26
+# Operation : Migration
+# Purpose : For apps other than isolated_app call hidl
+hwbinder_use({ appdomain -isolated_app })
+get_prop({ appdomain -isolated_app }, hwservicemanager_prop)
+allow { appdomain -isolated_app } hidl_manager_hwservice:hwservice_manager find;
+binder_call({ appdomain -isolated_app }, mtk_safe_halserverdomain_type)
+binder_call(mtk_safe_halserverdomain_type, { appdomain -isolated_app })
+allow { appdomain -isolated_app } mtk_safe_hwservice_manager_type:hwservice_manager find;

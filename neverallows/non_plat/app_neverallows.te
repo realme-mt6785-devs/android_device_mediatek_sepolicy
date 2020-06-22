@@ -58,6 +58,7 @@ neverallow all_untrusted_apps ~{
   hidl_manager_hwservice         # coredomain_hwservice. Designed for use by any domain
   hidl_memory_hwservice          # coredomain_hwservice. Designed for use by any domain
   hidl_token_hwservice           # coredomain_hwservice. Designed for use by any domain
+  mtk_safe_hwservice_manager_type
 }:hwservice_manager find;
 
 # Restrict *Binder access from apps to HAL domains. We can only do this on full
@@ -74,5 +75,6 @@ full_treble_only(`
     -hal_graphics_allocator_server
     -hal_neuralnetworks_server
     -hal_omx_server
+    -mtk_safe_halserverdomain_type
 }:binder { call transfer };
 ')
