@@ -347,10 +347,6 @@ type rilproxy_atci_socket, file_type;
 type atci_service_socket, file_type;
 type adb_atci_socket, file_type;
 
-# Date : 2018/11/01
-# Purpose : mtk EM c2k bypass read usb file
-type sys_usb_rawbulk, fs_type, sysfs_type;
-
 # Backlight brightness file
 type sysfs_leds_setting, fs_type, sysfs_type;
 
