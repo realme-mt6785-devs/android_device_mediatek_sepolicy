@@ -23,6 +23,7 @@
 /system/bin/loghidlsysservice u:object_r:loghidlsysservice_exec:s0
 /system/bin/cmddumper u:object_r:cmddumper_exec:s0
 /system/bin/em_svr u:object_r:em_svr_exec:s0
+/system/bin/aee u:object_r:crash_dump_exec:s0
 /(system_ext|system/system_ext)/bin/aee_aed u:object_r:crash_dump_exec:s0
 /(system_ext|system/system_ext)/bin/aee_aed64 u:object_r:crash_dump_exec:s0
 /(system_ext|system/system_ext)/bin/aee_dumpstate u:object_r:dumpstate_exec:s0
