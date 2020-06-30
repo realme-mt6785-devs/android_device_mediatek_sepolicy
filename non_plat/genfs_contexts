@@ -292,8 +292,8 @@ genfscon sysfs /firmware/devicetree/base/chosen/atag,chipid u:object_r:sysfs_chi
 
 # Date : 2019/10/18
 # Purpose : allow system_server to access rt5509 param and calib node
-genfscon sysfs /devices/platform/rt5509_param.0 u:object_r:sysfs_rt_param:s0
-genfscon sysfs /devices/virtual/rt5509_cal/rt5509.0 u:object_r:sysfs_rt_calib:s0
+genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0034/rt5509_param.0 u:object_r:sysfs_rt_param:s0
+genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0034/rt5509_cal/rt5509.0 u:object_r:sysfs_rt_calib:s0
 
 # 2019/11/14
 # Purpose: Allow powerhal to control MCDI

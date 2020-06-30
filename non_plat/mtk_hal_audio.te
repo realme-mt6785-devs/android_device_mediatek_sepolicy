@@ -244,3 +244,4 @@ allow mtk_hal_audio mtk_hal_bluetooth_audio_hwservice:hwservice_manager find;
 # Date : WK20.26
 allow mtk_hal_audio sysfs_dt_firmware_android:file r_file_perms;
 allow mtk_hal_audio metadata_file:dir search;
+allow mtk_hal_audio nvdata_file:dir create_dir_perms;
