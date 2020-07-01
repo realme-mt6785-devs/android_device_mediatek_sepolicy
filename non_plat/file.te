@@ -499,3 +499,8 @@ type proc_displowpower, fs_type, proc_type;
 # Operation: R migration
 # Purpose: Add permission for access /proc/ion/*
 type proc_ion, fs_type, proc_type;
+
+# Date : 2020/07/01
+# Operation: R migration
+# Purpose: Add permission for access /proc/m4u_dbg/*
+type proc_m4u_dbg, fs_type, proc_type;
