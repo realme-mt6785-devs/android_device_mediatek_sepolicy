@@ -193,3 +193,4 @@ allow dumpstate proc_ion:dir r_dir_perms;
 allow dumpstate proc_ion:file r_file_perms;
 allow dumpstate proc_m4u_dbg:dir r_dir_perms;
 allow dumpstate proc_m4u_dbg:file r_file_perms;
+allow dumpstate proc_mtkfb:file r_file_perms;
