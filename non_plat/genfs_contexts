@@ -374,3 +374,8 @@ genfscon proc /m4u_dbg u:object_r:proc_m4u_dbg:s0
 genfscon sysfs /bus/platform/drivers/mtk_nanohub/state u:object_r:sysfs_mtk_nanohub_state:s0
 
 genfscon proc /mtkfb u:object_r:proc_mtkfb:s0
+
+# 2020/07/07
+# Operation: R migration
+# Purpose: Add permission for access /proc/pvr/*
+genfscon proc /pvr u:object_r:procfs_gpu_img:s0
