@@ -321,6 +321,7 @@ type sysfs_usb_nonplat, fs_type, sysfs_type;
 # Date : WK1820
 # Purpose : for charger to access pump_express
 type sysfs_pump_express, fs_type, sysfs_type;
+type sysfs_chg2_present, fs_type, sysfs_type;
 
 # Widevine move data/mediadrm folder from system to vendor
 type mediadrm_vendor_data_file, file_type, data_file_type;

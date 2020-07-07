@@ -428,3 +428,4 @@ allow factory factory_vendor_file:dir { w_dir_perms };
 # Purpose : Add permission for health HAL and vbus
 hal_client_domain(factory, hal_health);
 allow factory sysfs_vbus:file r_file_perms;
+allow factory sysfs_chg2_present:file r_file_perms;
