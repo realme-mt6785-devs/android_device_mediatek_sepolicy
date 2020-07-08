@@ -386,3 +386,7 @@ genfscon proc /mtkfb u:object_r:proc_mtkfb:s0
 # Operation: R migration
 # Purpose: Add permission for access /proc/pvr/*
 genfscon proc /pvr u:object_r:procfs_gpu_img:s0
+
+# Date : 2020/07/08
+# Purpose: add permission for /proc/sys/vm/swappiness
+genfscon proc /sys/vm/swappiness                      u:object_r:proc_swappiness:s0
