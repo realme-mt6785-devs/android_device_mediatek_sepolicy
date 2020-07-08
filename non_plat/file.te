@@ -518,3 +518,5 @@ type proc_mtkfb, fs_type, proc_type;
 # Date : 2020/07/08
 # Purpose: add permission for /proc/sys/vm/swappiness
 type proc_swappiness, fs_type, proc_type;
+
+type debugfs_cmdq, fs_type, debugfs_type;

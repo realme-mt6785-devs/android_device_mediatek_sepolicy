@@ -473,3 +473,5 @@ allow aee_aedv proc_ion:file r_file_perms;
 allow aee_aedv proc_m4u_dbg:dir r_dir_perms;
 allow aee_aedv proc_m4u_dbg:file r_file_perms;
 allow aee_aedv proc_mtkfb:file r_file_perms;
+
+allow aee_aedv debugfs_cmdq:file r_file_perms;

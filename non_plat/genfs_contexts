@@ -40,6 +40,7 @@ genfscon proc /pidmap u:object_r:proc_pidmap:s0
 #genfscon proc /kpageflags u:object_r:proc_kpageflags:s0
 genfscon proc /mtk_memcfg/slabtrace u:object_r:proc_slabtrace:s0
 genfscon proc /mtk_cmdq_debug/status u:object_r:proc_cmdq_debug:s0
+genfscon proc /mtk_cmdq_debug/record u:object_r:proc_cmdq_debug:s0
 genfscon proc /cpuhvfs/dbg_repo u:object_r:proc_dbg_repo:s0
 
 # Purpose dump not exit file
@@ -390,3 +391,6 @@ genfscon proc /pvr u:object_r:procfs_gpu_img:s0
 # Date : 2020/07/08
 # Purpose: add permission for /proc/sys/vm/swappiness
 genfscon proc /sys/vm/swappiness                      u:object_r:proc_swappiness:s0
+
+genfscon debugfs /cmdq/cmdq-status u:object_r:debugfs_cmdq:s0
+genfscon debugfs /cmdq/cmdq-record u:object_r:debugfs_cmdq:s0
