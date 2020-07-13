@@ -396,3 +396,11 @@ genfscon proc /sys/vm/swappiness                      u:object_r:proc_swappiness
 
 genfscon debugfs /cmdq/cmdq-status u:object_r:debugfs_cmdq:s0
 genfscon debugfs /cmdq/cmdq-record u:object_r:debugfs_cmdq:s0
+
+# Date : 2020/07/13
+# Purpose : Add permission for access dvfsrc dbg sysfs
+genfscon sysfs /devices/platform/10012000.dvfsrc/helio-dvfsrc u:object_r:sysfs_dvfsrc_dbg:s0
+genfscon sysfs /devices/platform/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-debug u:object_r:sysfs_dvfsrc_dbg:s0
+genfscon sysfs /devices/platform/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-up u:object_r:sysfs_dvfsrc_dbg:s0
+genfscon sysfs /devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-debug u:object_r:sysfs_dvfsrc_dbg:s0
+genfscon sysfs /devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-up u:object_r:sysfs_dvfsrc_dbg:s0
