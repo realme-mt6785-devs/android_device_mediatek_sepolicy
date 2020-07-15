@@ -102,6 +102,7 @@ genfscon sysfs /devices/platform/11270000.usb3/musb-hdrc/cmode u:object_r:sysfs_
 genfscon sysfs /devices/platform/soc/usb0/cmode u:object_r:sysfs_usb_nonplat:s0
 genfscon sysfs /devices/platform/mt_usb/musb-hdrc/usb1 u:object_r:sysfs_usb_nonplat:s0
 genfscon sysfs /devices/platform/soc/usb0/11200000.xhci0/usb1 u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/usb_xhci/usb1 u:object_r:sysfs_usb_nonplat:s0
 
 genfscon sysfs /devices/virtual/BOOT/BOOT/boot/boot_mode u:object_r:sysfs_boot_mode:s0
 genfscon sysfs /devices/virtual/BOOT/BOOT/boot/boot_type u:object_r:sysfs_boot_type:s0
