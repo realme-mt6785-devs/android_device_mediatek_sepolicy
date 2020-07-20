@@ -203,6 +203,13 @@ allow factory camera_owe_device:chr_file rw_file_perms;
 allow factory camera_mfb_device:chr_file rw_file_perms;
 hal_client_domain(factory, hal_power)
 get_prop(factory, vendor_mtk_mediatek_prop)
+# Date: 2020/07/20
+# Operation : For M4U security
+allow factory proc_m4u:file r_file_perms;
+allowxperm factory proc_m4u:file ioctl {
+     MTK_M4U_T_SEC_INIT
+     MTK_M4U_T_CONFIG_PORT
+};
 
 #Purpose: For FM test and headset test
 allow factory accdet_device:chr_file r_file_perms;
