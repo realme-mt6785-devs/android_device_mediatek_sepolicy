@@ -66,8 +66,3 @@ allow dumpstate mobile_log_d:unix_stream_socket { read write };
 #           capability=21 scontext=u:r:dumpstate:s0 tcontext=u:r:dumpstate:s0
 #           tclass=capability permissive=0
 allow dumpstate self:capability sys_admin;
-
-# Date : 2020/07/13
-# Operation : allow dumpstate to read signals ftrace
-allow dumpstate debugfs_tracing_instances:file rw_file_perms;
-allow dumpstate debugfs_tracing_instances:dir rw_dir_perms;
