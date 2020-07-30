@@ -57,3 +57,6 @@ allowxperm mtk_hal_mms proc_mtk_jpeg:file ioctl {
 allow mtk_hal_mms platform_app:fd use;
 # Purpose : Allow Miravision to set Sharpness
 allow mtk_hal_mms system_app:fd use;
+
+# Purpose : Allow to set property for AIPQ
+allow mtk_hal_mms apusys_device:chr_file rw_file_perms;
