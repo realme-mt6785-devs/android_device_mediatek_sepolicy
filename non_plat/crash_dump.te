@@ -36,11 +36,6 @@ allow crash_dump aee_core_data_file:file create_file_perms;
 allow crash_dump data_tmpfs_log_file:dir create_dir_perms;
 allow crash_dump data_tmpfs_log_file:file create_file_perms;
 
-# Purpose: crash_dump set property
-set_prop(crash_dump, persist_mtk_aee_prop);
-set_prop(crash_dump, persist_aee_prop);
-set_prop(crash_dump, debug_mtk_aee_prop);
-
 # /proc/lk_env
 allow crash_dump proc_lk_env:file rw_file_perms;
 

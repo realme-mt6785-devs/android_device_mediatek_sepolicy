@@ -13,14 +13,13 @@ hal_client_domain(system_app, mtk_hal_lbs)
 
 #Dat: 2017/02/14
 #Purpose: allow set telephony Sensitive property
-get_prop(system_app, mtk_telephony_sensitive_prop)
+get_prop(system_app, vendor_mtk_telephony_sensitive_prop)
 
 
 # Date : WK17.12
 # Operation : MT6799 SQC
 # Purpose : Change thermal config
-allow system_app mtk_thermal_config_prop:file { getattr open read };
-
+get_prop(system_app, vendor_mtk_thermal_config_prop)
 
 # Date : 2017/11/07
 # Operation : Migration
@@ -48,3 +47,12 @@ allow system_app mtk_hal_hdmi:binder call;
 allow system_app self:netlink_kobject_uevent_socket {read bind create setopt };
 # system_app need to read from sysfs /sys/class/switch/hdmi/state
 r_dir_file(system_app, sysfs_switch);
+
+# Date: 2020/06/08
+# Purpose: Allow system app to access mtk jpeg
+allow system_app proc_mtk_jpeg:file rw_file_perms;
+allowxperm system_app proc_mtk_jpeg:file ioctl {
+      JPG_BRIDGE_DEC_IO_LOCK
+      JPG_BRIDGE_DEC_IO_WAIT
+      JPG_BRIDGE_DEC_IO_UNLOCK
+};
