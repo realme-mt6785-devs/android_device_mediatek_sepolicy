@@ -2,7 +2,8 @@
 # MTK Policy Rule 
 # ==============================================
 
-typeattribute platform_app mlstrustedsubject;
+# GOOGLE commented out.  Causes screenshots to fail.  See b/169108544.
+# typeattribute platform_app mlstrustedsubject;
 
 # Date : 2017/07/03
 # Operation : Migration
