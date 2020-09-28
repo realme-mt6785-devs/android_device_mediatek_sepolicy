@@ -55,7 +55,8 @@ allow crash_dump sysfs_leds:dir search;
 allow crash_dump proc_kpageflags:file r_file_perms;
 
 # temp solution
-get_prop(crash_dump, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(crash_dump, vendor_default_prop)
 
 hal_client_domain(crash_dump, mtk_hal_aee)
 
