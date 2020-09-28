@@ -36,7 +36,8 @@ set_prop(ccci_mdinit, vendor_mtk_ctl_ccci_fsd_prop)
 set_prop(ccci_mdinit, vendor_mtk_ctl_ccci2_fsd_prop)
 set_prop(ccci_mdinit, vendor_mtk_ctl_ccci3_fsd_prop)
 
-get_prop(ccci_mdinit, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(ccci_mdinit, vendor_default_prop)
 get_prop(ccci_mdinit, system_mtk_init_svc_emdlogger1_prop)
 get_prop(ccci_mdinit, system_mtk_init_svc_aee_aedv_prop)
 

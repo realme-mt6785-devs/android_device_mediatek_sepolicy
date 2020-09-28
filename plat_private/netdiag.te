@@ -96,7 +96,8 @@ get_prop(netdiag, mmc_prop)
 ## Android P migration
 allow netdiag proc_qtaguid_stat:dir { read open search };
 allow netdiag proc_qtaguid_stat:file { read getattr open };
-get_prop(netdiag, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(netdiag, vendor_default_prop)
 allow netdiag proc_net_tcp_udp:file getattr;
 allow netdiag netd:binder call;
 get_prop(netdiag, apexd_prop)

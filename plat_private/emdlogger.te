@@ -68,7 +68,8 @@ allow emdlogger sysfs_dt_firmware_android:dir { read open search };
 allow emdlogger tmpfs:dir write;
 allow emdlogger sysfs_dt_firmware_android:file { read open getattr };
 allow emdlogger system_file:dir open;
-get_prop(emdlogger, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(emdlogger, vendor_default_prop)
 set_prop(emdlogger, system_mtk_persist_mtklog_prop)
 set_prop(emdlogger, system_mtk_mdl_prop)
 set_prop(emdlogger, system_mtk_mdl_start_prop)

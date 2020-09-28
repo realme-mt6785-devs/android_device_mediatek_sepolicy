@@ -31,7 +31,8 @@ allow system_app aee_exp_data_file:dir r_dir_perms;
 # Date: 2019/06/14
 # Operation : Migration
 # Purpose : system_app need vendor_default_prop
-get_prop(system_app, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(system_app, vendor_default_prop)
 
 # Date: 2019/07/16
 # Operation : Migration
