@@ -32,7 +32,8 @@ get_prop(system_server, wifi_prop)
 
 # Date: 2019/06/14
 # Operation : Migration
-get_prop(system_server, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(system_server, vendor_default_prop)
 
 #Date:2019/10/09
 #Operation:Q Migration
