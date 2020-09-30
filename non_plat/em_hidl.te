@@ -105,7 +105,8 @@ allow em_hidl nvcfg_file:file r_file_perms;
 # Data : 2018/07/06
 # Purpose : EM MCF search vendor dir
 allow em_hidl mnt_vendor_file:dir search;
-get_prop(em_hidl, vendor_default_prop)
+# GOOGLE: Commented out for b/169606103
+#get_prop(em_hidl, vendor_default_prop)
 
 # Data : 2018/08/10
 # Purpose : EM BT usage
