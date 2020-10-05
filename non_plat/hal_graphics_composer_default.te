@@ -25,7 +25,7 @@ allow hal_graphics_composer_default debugfs_tracing:file open;
 # Date : WK17.30
 # Operation : O Migration
 # Purpose: Allow to access cmdq driver
-allow hal_graphics_composer_default mtk_cmdq_device:chr_file { read ioctl open };
+allow hal_graphics_composer_default mtk_cmdq_device:chr_file r_file_perms;
 
 # Date : W17.30
 # Add for control PowerHAL
@@ -41,8 +41,8 @@ set_prop(hal_graphics_composer_default, vendor_mtk_graphics_hwc_validate_separat
 
 # Date : WK18.03
 # Purpose: Allow to access property dev/mdp_sync
-allow hal_graphics_composer_default mtk_mdp_sync:chr_file rw_file_perms;
-allow hal_graphics_composer_default mtk_mdp_device:chr_file rw_file_perms;
+allow hal_graphics_composer_default mtk_mdp_sync:chr_file r_file_perms;
+allow hal_graphics_composer_default mtk_mdp_device:chr_file r_file_perms;
 allow hal_graphics_composer_default mdp_device:chr_file rw_file_perms;
 allow hal_graphics_composer_default tee_device:chr_file rw_file_perms;
 allowxperm hal_graphics_composer_default proc_ged:file ioctl { proc_ged_ioctls };

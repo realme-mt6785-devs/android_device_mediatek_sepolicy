@@ -21,3 +21,6 @@ allow netdiag tmpfs:lnk_file read;
 # purpose: allow netdiag to access storage in new version
 allow netdiag media_rw_data_file:file  { create_file_perms };
 allow netdiag media_rw_data_file:dir { create_dir_perms };
+
+# purpose: read ip address
+allow netdiag self:netlink_route_socket nlmsg_readpriv;

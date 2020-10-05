@@ -71,3 +71,5 @@ define(`MTK_M4U_T_DMA_OP', `0x671d')
 define(`MTK_M4U_T_SEC_INIT', `0x6732')
 define(`MTK_M4U_T_CONFIG_PORT_ARRAY', `0x671a')
 define(`MTK_M4U_T_CACHE_SYNC', `0x670a')
+define(`MTK_M4U_GZ_SEC_INIT', `0x673c')
+

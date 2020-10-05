@@ -99,3 +99,9 @@ attribute hal_atci_server;
 attribute mtk_hal_aee;
 attribute mtk_hal_aee_client;
 attribute mtk_hal_aee_server;
+
+# All types used for mtk's safe hwservice
+attribute mtk_safe_hwservice_manager_type;
+
+# All types used for mtk's safe halserver
+attribute mtk_safe_halserverdomain_type;

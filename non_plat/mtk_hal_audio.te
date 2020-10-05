@@ -240,3 +240,18 @@ allow mtk_hal_audio dri_device:chr_file rw_file_perms;
 allow mtk_hal_audio gpu_device:dir search;
 
 allow mtk_hal_audio mtk_hal_bluetooth_audio_hwservice:hwservice_manager find;
+
+# Date : WK20.26
+allow mtk_hal_audio sysfs_dt_firmware_android:file r_file_perms;
+allow mtk_hal_audio metadata_file:dir search;
+allow mtk_hal_audio nvdata_file:dir create_dir_perms;
+
+# Date : WK20.29
+# Purpose: no trigger avc log when call nvram api
+dontaudit mtk_hal_audio gsi_metadata_file:dir search;
+
+# Date : WK20.29
+# Operation : Migration
+# Purpose : SoundTrigger Hal for tablet
+allow mtk_hal_audio adsp_misc_device:chr_file rw_file_perms;
+allow mtk_hal_audio self:netlink_kobject_uevent_socket getopt;

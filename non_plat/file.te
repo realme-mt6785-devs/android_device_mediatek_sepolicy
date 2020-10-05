@@ -269,6 +269,9 @@ type debugfs_gpu_mali_utgard, fs_type, debugfs_type;
 type debugfs_gpu_img, fs_type, debugfs_type;
 type debugfs_ion, fs_type, debugfs_type;
 
+# memtrack procfs file
+type procfs_gpu_img, fs_type, proc_type;
+
 # /sys/kernel/debug/ion/ion_mm_heap
 type debugfs_ion_mm_heap, fs_type, debugfs_type;
 
@@ -320,6 +323,7 @@ type sysfs_usb_nonplat, fs_type, sysfs_type;
 # Date : WK1820
 # Purpose : for charger to access pump_express
 type sysfs_pump_express, fs_type, sysfs_type;
+type sysfs_chg2_present, fs_type, sysfs_type;
 
 # Widevine move data/mediadrm folder from system to vendor
 type mediadrm_vendor_data_file, file_type, data_file_type;
@@ -345,10 +349,6 @@ type rild_atci_socket, file_type;
 type rilproxy_atci_socket, file_type;
 type atci_service_socket, file_type;
 type adb_atci_socket, file_type;
-
-# Date : 2018/11/01
-# Purpose : mtk EM c2k bypass read usb file
-type sys_usb_rawbulk, fs_type, sysfs_type;
 
 # Backlight brightness file
 type sysfs_leds_setting, fs_type, sysfs_type;
@@ -492,3 +492,34 @@ type sysfs_cache_status, fs_type, sysfs_type;
 # Date : 2020/06/12
 # Purpose: define sysfs_mali_power_policy fs_type
 type sysfs_mali_power_policy, fs_type, sysfs_type;
+
+# Date : 2020/06/12
+# Operation: R migration
+# Purpose: Allow powerhal to control displowpower
+type proc_displowpower, fs_type, proc_type;
+
+# Date : 2020/06/29
+# Operation: R migration
+# Purpose: Add permission for access /proc/ion/*
+type proc_ion, fs_type, proc_type;
+
+# Date : 2020/07/01
+# Operation: R migration
+# Purpose: Add permission for access /proc/m4u_dbg/*
+type proc_m4u_dbg, fs_type, proc_type;
+
+# Date : 20120/07/02
+# Purpose: define sysfs_mtk_nanohub_state fs_type
+type sysfs_mtk_nanohub_state, fs_type, sysfs_type;
+
+type proc_mtkfb, fs_type, proc_type;
+
+# Date : 2020/07/08
+# Purpose: add permission for /proc/sys/vm/swappiness
+type proc_swappiness, fs_type, proc_type;
+
+type debugfs_cmdq, fs_type, debugfs_type;
+
+# Date : 20120/07/13
+# Purpose: define sysfs_dvfsrc_dbg fs_type
+type sysfs_dvfsrc_dbg, fs_type, sysfs_type;

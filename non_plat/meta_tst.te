@@ -426,3 +426,8 @@ allow meta_tst self:capability2 {block_suspend};
 # Date : WK20.14
 # Purpose: Allow meta connect GPS MNLD
 allow meta_tst mnld:unix_stream_socket connectto;
+
+# Date : WK20.25
+# Operation: Android R migration
+# Purpose : for sensor test
+allow meta_tst hf_manager_device:chr_file rw_file_perms;
