@@ -203,3 +203,9 @@ allow mtk_hal_power proc_cpuidle:file rw_file_perms;
 # Operation: SQC
 # Purpose : Allow powerhal to control mali power policy
 allow mtk_hal_power sysfs_mali_power_policy:file rw_file_perms;
+
+# Date : 2020/06/12
+# Operation: SQC
+# Purpose : Allow powerhal to control displowpower
+allow mtk_hal_power proc_displowpower:dir r_dir_perms;
+allow mtk_hal_power proc_displowpower:file rw_file_perms;

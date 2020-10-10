@@ -255,3 +255,11 @@ allowxperm system_server proc_mtk_jpeg:file ioctl {
       JPG_BRIDGE_DEC_IO_WAIT
       JPG_BRIDGE_DEC_IO_UNLOCK
 };
+
+#Date : 2020/06/30
+#Operation : R Migration
+dontaudit system_server kernel:process sigkill;
+
+#Date:2020/07/23
+#Operation:R Migration
+dontaudit system_server iorapd:process setsched;

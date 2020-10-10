@@ -325,3 +325,6 @@ vendor.debug.gpud. u:object_r:vendor_mtk_gpu_prop:s0
 
 #============= sensor set initrc property ==============
 ro.vendor.init.sensor.rc u:object_r:vendor_mtk_sensor_prop:s0
+
+#=============add for bluetooth ldac abr====================
+vendor.bluetooth.ldac.abr u:object_r:vendor_mtk_default_prop:s0
