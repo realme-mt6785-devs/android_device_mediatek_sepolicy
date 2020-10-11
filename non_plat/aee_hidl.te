@@ -5,6 +5,9 @@ type aee_hal,domain;
 type aee_hal_exec, exec_type, file_type, vendor_file_type;
 typeattribute aee_hal mlstrustedsubject;
 # Purpose : for create hidl server
+allow aee_hal aee_exp_vendor_file:dir w_dir_perms;
+allow aee_hal aee_exp_vendor_file:file create_file_perms;
+allow aee_hal aee_exp_data_file:file { read write };
 hal_server_domain(aee_hal, mtk_hal_aee)
 # ==============================================
 # MTK Policy Rule

@@ -118,27 +118,27 @@ allow aee_aedv crash_dump:file r_file_perms;
 allow aee_aedv vendor_file:file execute_no_trans;
 
 # Purpose: debugfs files
-allow aee_aedv debugfs_binder:dir { read open };
-allow aee_aedv debugfs_binder:file { read open };
-allow aee_aedv debugfs_blockio:file { read open };
+allow aee_aedv debugfs_binder:dir r_dir_perms;
+allow aee_aedv debugfs_binder:file r_file_perms;
+allow aee_aedv debugfs_blockio:file r_file_perms;
 allow aee_aedv debugfs_fb:dir search;
-allow aee_aedv debugfs_fb:file { read open };
+allow aee_aedv debugfs_fb:file r_file_perms;
 allow aee_aedv debugfs_fuseio:dir search;
-allow aee_aedv debugfs_fuseio:file { read open };
+allow aee_aedv debugfs_fuseio:file r_file_perms;
 allow aee_aedv debugfs_ged:dir search;
-allow aee_aedv debugfs_ged:file { read open };
+allow aee_aedv debugfs_ged:file r_file_perms;
 allow aee_aedv debugfs_rcu:dir search;
-allow aee_aedv debugfs_shrinker_debug:file { read open };
-allow aee_aedv debugfs_wakeup_sources:file { read open };
-allow aee_aedv debugfs_dmlog_debug:file { read open };
-allow aee_aedv debugfs_page_owner_slim_debug:file { read open };
+allow aee_aedv debugfs_shrinker_debug:file r_file_perms;
+allow aee_aedv debugfs_wakeup_sources:file r_file_perms;
+allow aee_aedv debugfs_dmlog_debug:file r_file_perms;
+allow aee_aedv debugfs_page_owner_slim_debug:file r_file_perms;
 allow aee_aedv debugfs_ion_mm_heap:dir search;
 allow aee_aedv debugfs_ion_mm_heap:file r_file_perms;
 allow aee_aedv debugfs_ion_mm_heap:lnk_file read;
 allow aee_aedv debugfs_cpuhvfs:dir search;
-allow aee_aedv debugfs_cpuhvfs:file { read open };
-allow aee_aedv debugfs_emi_mbw_buf:file { read open };
-allow aee_aedv debugfs_vpu_device_dbg:file { read open };
+allow aee_aedv debugfs_cpuhvfs:file r_file_perms;
+allow aee_aedv debugfs_emi_mbw_buf:file r_file_perms;
+allow aee_aedv debugfs_vpu_device_dbg:file r_file_perms;
 allow aee_aedv debugfs_vpu_memory:file r_file_perms;
 allow aee_aedv debugfs_apusys_midware_register_all:file r_file_perms;
 allow aee_aedv debugfs_apusys_mdla_memory:file r_file_perms;
@@ -465,3 +465,17 @@ allow aee_aedv proc_log_much:file r_file_perms;
 # Purpose: Allow aee_aedv to read /sys/kernel/tracing/instances/mmstat/trace
 allow aee_aedv debugfs_tracing_instances:dir r_dir_perms;
 allow aee_aedv debugfs_tracing_instances:file r_file_perms;
+
+allow aee_aedv binderfs_logs:dir r_dir_perms;
+allow aee_aedv binderfs_logs:file r_file_perms;
+
+allow aee_aedv proc_ion:dir r_dir_perms;
+allow aee_aedv proc_ion:file r_file_perms;
+allow aee_aedv proc_m4u_dbg:dir r_dir_perms;
+allow aee_aedv proc_m4u_dbg:file r_file_perms;
+allow aee_aedv proc_mtkfb:file r_file_perms;
+
+allow aee_aedv debugfs_cmdq:file r_file_perms;
+
+allow aee_aedv sysfs_dvfsrc_dbg:dir r_dir_perms;
+allow aee_aedv sysfs_dvfsrc_dbg:file r_file_perms;

@@ -281,3 +281,8 @@ type m_bio_misc_device, dev_type;
 # Operation : Migration
 # Purpose : Add permission for gpu access
 type dri_device, dev_type, mlstrustedobject;
+
+# Date : 2020/07/16
+# Operation : R Migration
+# Purpose : Add permission for adsp access
+type adsp_misc_device, dev_type;

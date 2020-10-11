@@ -292,9 +292,9 @@ allow mediaserver camera_owe_device:chr_file rw_file_perms;
 # Date : WK17.30
 # Operation : O Migration
 # Purpose: Allow to access cmdq driver
-allow mediaserver mtk_cmdq_device:chr_file { read ioctl open };
-allow mediaserver mtk_mdp_device:chr_file rw_file_perms;
-allow mediaserver mtk_mdp_sync:chr_file rw_file_perms;
+allow mediaserver mtk_cmdq_device:chr_file r_file_perms;
+allow mediaserver mtk_mdp_device:chr_file r_file_perms;
+allow mediaserver mtk_mdp_sync:chr_file r_file_perms;
 
 # Date : WK17.43
 # Operation : Migration

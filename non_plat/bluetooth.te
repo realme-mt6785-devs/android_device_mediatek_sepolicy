@@ -17,3 +17,11 @@ allow bluetooth bluetooth_logs_data_file:fifo_file { create_file_perms };
 
 # Date: 2019/09/19
 allow bluetooth mtk_hal_bluetooth_audio_hwservice:hwservice_manager find;
+
+# Date :  2020/06/11
+# Operation : allow bt native process to access driver debug node and set kernel thread priority
+# Purpose: allow bt native process to access driver debug node and set kernel thread priority
+allow bluetooth proc_btdbg:file rw_file_perms;
+allow bluetooth kernel:process setsched;
+
+

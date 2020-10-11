@@ -101,3 +101,8 @@ allow ccci_mdinit block_device:dir search;
 allow ccci_mdinit metadata_file:dir search;
 allow ccci_mdinit proc_cmdline:file r_file_perms;
 allow ccci_mdinit sysfs_dt_firmware_android:dir search;
+
+# Date : 2020-07-06
+# Purpose: no trigger avc log when call nvram api
+dontaudit ccci_mdinit gsi_metadata_file:dir search;
+
