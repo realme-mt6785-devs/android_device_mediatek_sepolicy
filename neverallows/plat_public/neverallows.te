@@ -291,10 +291,6 @@ full_treble_only(`
 
   neverallow vold system_data_file:dir ~{ create rw_dir_perms mounton setattr rmdir };
 
-
-# GOOGLE commented out. Blocks desired policy change in AOSP. See b/141677108.
-# neverallow vold_prepare_subdirs system_data_file:dir ~{ open read write add_name remove_name rmdir relabelfrom search getattr };
-
   with_asan(`
     neverallow asan_extract system_data_file:dir ~{ create_dir_perms relabelfrom };
    ')
