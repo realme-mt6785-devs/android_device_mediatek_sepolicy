@@ -9,4 +9,5 @@ ro.audio.usb.period_us u:object_r:exported_default_prop:s0 exact int
 persist.adb.nonblocking_ffs u:object_r:exported_default_prop:s0 exact int
 
 #============system fingerprint property===========
-ro.system.build.fingerprint u:object_r:fingerprint_prop:s0 exact string
+# GOOGLE: commented out in favor of aosp/1484898
+#ro.system.build.fingerprint u:object_r:fingerprint_prop:s0 exact string
