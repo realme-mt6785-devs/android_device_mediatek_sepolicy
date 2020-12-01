@@ -9,15 +9,16 @@ ro.audio.usb.period_us u:object_r:exported_default_prop:s0 exact int
 persist.adb.nonblocking_ffs u:object_r:exported_default_prop:s0 exact int
 
 #============system fingerprint property===========
-# GOOGLE: commented out in favor of aosp/1484898
-#ro.system.build.fingerprint u:object_r:fingerprint_prop:s0 exact string
+# exported_fingerprint_prop is removed in Android S
+#ro.system.build.fingerprint u:object_r:exported_fingerprint_prop:s0 exact string
 
 vendor.MB.logpost         u:object_r:system_mtk_mobile_log_post_prop:s0
 vendor.MB.logpost.        u:object_r:system_mtk_mobile_log_post_prop:s0
 persist.vendor.MB.logpost u:object_r:system_mtk_mobile_log_post_prop:s0
 
 #=============allow vendor-init/system process access ro.telephony property==============
-ro.telephony.sim.count         u:object_r:telephony_config_prop:s0 exact int
+# exported3_default_prop is removed in Android S
+#ro.telephony.sim.count         u:object_r:exported3_default_prop:s0 exact int
 
 #=============allow netlog==============
 vendor.mtklog         u:object_r:system_mtk_debug_mtklog_prop:s0
