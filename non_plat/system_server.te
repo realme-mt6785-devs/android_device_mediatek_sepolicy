@@ -263,3 +263,5 @@ dontaudit system_server kernel:process sigkill;
 #Date:2020/07/23
 #Operation:R Migration
 dontaudit system_server iorapd:process setsched;
+
+allow system_server teei_fp_device:chr_file rw_file_perms;
