@@ -521,3 +521,6 @@ type debugfs_cmdq, fs_type, debugfs_type;
 # Date : 20120/07/13
 # Purpose: define sysfs_dvfsrc_dbg fs_type
 type sysfs_dvfsrc_dbg, fs_type, sysfs_type;
+
+# Camera file types
+type camera_vendor_data_file, file_type, data_file_type;

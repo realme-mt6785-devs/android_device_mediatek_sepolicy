@@ -758,3 +758,6 @@
 # Operation: R migration
 # Purpose: Add permission for boot control lazy HAL
 /vendor/bin/hw/android\.hardware\.boot@[0-9]+\.[0-9]+-service-lazy      u:object_r:hal_bootctl_default_exec:s0
+
+# Camera data files
+/data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0

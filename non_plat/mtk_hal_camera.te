@@ -384,3 +384,7 @@ read_fstab(mtk_hal_camera)
 
 # MTK camera property
 set_prop(mtk_hal_camera, mtk_camera_prop)
+
+# Camera data files
+allow mtk_hal_camera camera_vendor_data_file:dir create_dir_perms;
+allow mtk_hal_camera camera_vendor_data_file:file create_file_perms;
