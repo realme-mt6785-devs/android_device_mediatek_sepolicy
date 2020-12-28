@@ -401,3 +401,5 @@ genfscon sysfs /devices/platform/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-debug u:
 genfscon sysfs /devices/platform/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-up u:object_r:sysfs_dvfsrc_dbg:s0
 genfscon sysfs /devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-debug u:object_r:sysfs_dvfsrc_dbg:s0
 genfscon sysfs /devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-up u:object_r:sysfs_dvfsrc_dbg:s0
+
+genfscon sysfs /devices/platform/CONNAC u:object_r:sysfs_net:s0
