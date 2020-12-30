@@ -143,3 +143,6 @@ allow init vbmeta_block_device:lnk_file relabelto;
 
 # Purpose: Allow to write /proc/mtprintk
 allow init proc_mtprintk:file w_file_perms;
+
+# TEE
+allow init teei_client_device:chr_file rw_file_perms;
