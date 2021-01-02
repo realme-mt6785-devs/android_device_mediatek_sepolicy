@@ -38,6 +38,7 @@ vendor_restricted_prop(mtk_camera_prop)
 vendor_restricted_prop(mtk_network_prop)
 vendor_restricted_prop(mtk_wod_prop)
 vendor_restricted_prop(persist_wod_prop)
+vendor_restricted_prop(vendor_ims_xcap_prop)
 vendor_restricted_prop(vendor_mtk_aal_ro_prop)
 vendor_restricted_prop(vendor_mtk_anr_support_prop)
 vendor_restricted_prop(vendor_mtk_antutu_prop)
@@ -188,3 +189,6 @@ typeattribute vendor_mtk_wifi_hotspot_prop           mtk_core_property_type;
 typeattribute vendor_mtk_wmt_prop                    mtk_core_property_type;
 typeattribute vendor_mtk_gpu_prop                    mtk_core_property_type;
 typeattribute vendor_mtk_sensor_prop                 mtk_core_property_type;
+
+# Properties which can't be accessed by device-sepcific domains
+typeattribute vendor_ims_xcap_prop                   extended_core_property_type;
