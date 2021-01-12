@@ -132,7 +132,7 @@ full_treble_only(`
     vendor_init
     } debugfs:dir ~{ search getattr };
 
-  neverallow init debugfs:dir ~{ search getattr relabelfrom open read setattr relabelto };
+  neverallow init debugfs:dir ~{ search getattr relabelfrom open read setattr relabelto userdebug_or_eng(`mounton') };
 
   neverallow vendor_init debugfs:dir ~{ search getattr read setattr open };
 ')
