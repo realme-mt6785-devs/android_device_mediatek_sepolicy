@@ -67,3 +67,6 @@ type mtk_hal_aee_hwservice, hwservice_manager_type;
 # Date: 2019/07/04
 # bluetooth audio hidl
 type mtk_hal_bluetooth_audio_hwservice,hwservice_manager_type;
+
+# vtservice
+type mtk_hal_videotelephony_hwservice, hwservice_manager_type;
