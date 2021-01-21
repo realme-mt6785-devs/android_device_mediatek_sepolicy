@@ -69,3 +69,7 @@ userdebug_or_eng(`
 
 allow netd mtkimsmddomain:fd use;
 allow netd mtkimsmddomain:{ tcp_socket udp_socket} { read write getopt setopt };
+
+# Acquire advisory lock on /system/etc/xtables.lock. If this file doesn't
+# exist, suppress the denial.
+dontaudit netd system_file:dir write;
