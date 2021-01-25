@@ -65,3 +65,6 @@ allow system_app mtk_cmdq_device:chr_file ioctl;
 allow system_app mtk_mdp_sync:chr_file read;
 allow system_app mtk_mdp_sync:chr_file open;
 allow system_app mtk_mdp_sync:chr_file ioctl;
+
+# Neuralnetwork
+allow system_app mtk_hal_neuralnetworks:binder { call transfer };
