@@ -10,3 +10,8 @@ attribute mtkimsapdomain;
 #
 # # attribute that represents all MTK IMS types. It should be used by MD side module only.
 attribute mtkimsmddomain;
+
+# DFPS HIDL
+attribute hal_dfps;
+attribute hal_dfps_client;
+attribute hal_dfps_server;

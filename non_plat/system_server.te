@@ -267,3 +267,6 @@ dontaudit system_server iorapd:process setsched;
 # TEE
 allow system_server teei_fp_device:chr_file rw_file_perms;
 allow system_server teei_client_device:chr_file r_file_perms;
+
+# DFPS
+hal_client_domain(system_server,hal_dfps)
