@@ -373,3 +373,8 @@ MTK_M4U_T_SEC_INIT
 # Operation : For android Q allowing ioctl
 allow mtk_hal_camera mtk_hal_camera:unix_stream_socket { ioctl };
 allowxperm mtk_hal_camera mtk_hal_camera:unix_stream_socket ioctl IIOCNETAIF;
+
+# TODO(b/152082918): Hacks to get OpenCamera/CameraGo "work"ing.
+allow mtk_hal_camera sysfs:file rw_file_perms;
+allow mtk_hal_camera system_server:binder call;
+allow mtk_hal_camera Vcodec_device:chr_file rw_file_perms;

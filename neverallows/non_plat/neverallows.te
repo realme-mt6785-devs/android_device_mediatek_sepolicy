@@ -17,6 +17,8 @@ full_treble_only(`
     init
     merged_hal_service
     mtk_hal_bluetooth
+    # TODO(b/152082918) Remove mtk_hal_camera line when permissions are fixed.
+    mtk_hal_camera
     mtk_hal_power
     mtk_hal_usb
     mtk_hal_wifi
