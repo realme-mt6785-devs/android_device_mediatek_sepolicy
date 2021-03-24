@@ -131,6 +131,7 @@ full_treble_only(`
     -fastbootd
     -hal_camera
     -init
+    -otapreopt_chroot
     -recovery
     -shell
     -slideshow

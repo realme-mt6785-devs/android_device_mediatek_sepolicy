@@ -219,6 +219,7 @@ full_treble_only(`
     hal_camera_default
     init
     mtk_hal_camera
+    otapreopt_chroot
     recovery
     shell
     slideshow
