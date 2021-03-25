@@ -64,3 +64,6 @@ r_dir_file(fuelgauged_nvram, sysfs_batteryinfo)
 allow fuelgauged_nvram mnt_vendor_file:dir search;
 
 allow fuelgauged_nvram sysfs_boot_mode:file { open read };
+
+# Allow ReadDefaultFstab().
+read_fstab(fuelgauged_nvram)
