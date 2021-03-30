@@ -56,3 +56,12 @@ allowxperm system_app proc_mtk_jpeg:file ioctl {
 # Purpose: Allow system app to access mtk fpsgo
 allow system_app sysfs_fpsgo:dir search;
 allow system_app sysfs_fpsgo:file r_file_perms;
+
+# Date 2021/03/29
+# Purpose: To support System navigation selection
+allow system_app mtk_cmdq_device:chr_file read;
+allow system_app mtk_cmdq_device:chr_file open;
+allow system_app mtk_cmdq_device:chr_file ioctl;
+allow system_app mtk_mdp_sync:chr_file read;
+allow system_app mtk_mdp_sync:chr_file open;
+allow system_app mtk_mdp_sync:chr_file ioctl;
