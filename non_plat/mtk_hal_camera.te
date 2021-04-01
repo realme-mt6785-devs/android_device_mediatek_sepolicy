@@ -378,3 +378,6 @@ allowxperm mtk_hal_camera mtk_hal_camera:unix_stream_socket ioctl IIOCNETAIF;
 allow mtk_hal_camera sysfs:file rw_file_perms;
 allow mtk_hal_camera system_server:binder call;
 allow mtk_hal_camera Vcodec_device:chr_file rw_file_perms;
+
+# Allow ReadDefaultFstab().
+read_fstab(mtk_hal_camera)
