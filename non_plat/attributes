@@ -15,3 +15,8 @@ attribute mtkimsmddomain;
 attribute hal_dfps;
 attribute hal_dfps_client;
 attribute hal_dfps_server;
+
+# TEE
+attribute hal_tee_client;
+attribute hal_tee_server;
+attribute hal_tee;
