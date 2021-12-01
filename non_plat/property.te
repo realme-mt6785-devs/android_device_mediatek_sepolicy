@@ -17,6 +17,8 @@ vendor_internal_prop(usp_prop)
 vendor_internal_prop(mtk_default_prop)
 
 # Properties used only in /vendor
+vendor_internal_prop(ctl_ccci_rpcd_prop)
+vendor_internal_prop(ctl_ccci2_rpcd_prop)
 vendor_internal_prop(ctl_volte_imcb_prop)
 vendor_internal_prop(ctl_volte_ua_prop)
 vendor_internal_prop(mtk_md_status_prop)

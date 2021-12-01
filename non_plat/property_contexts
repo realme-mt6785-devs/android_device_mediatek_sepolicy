@@ -348,3 +348,7 @@ persist.vendor.gba u:object_r:vendor_ims_xcap_prop:s0
 persist.vendor.radio.ss.mode u:object_r:vendor_ims_xcap_prop:s0
 persist.vendor.radio.ss.xrdm u:object_r:vendor_ims_xcap_prop:s0
 persist.vendor.radio.xcap.cfn u:object_r:vendor_ims_xcap_prop:s0
+
+# MDinit
+ctl.vendor.ccci_rpcd         u:object_r:ctl_ccci_rpcd_prop:s0
+ctl.vendor.ccci2_rpcd         u:object_r:ctl_ccci2_rpcd_prop:s0
