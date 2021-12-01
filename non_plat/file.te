@@ -534,5 +534,12 @@ type volte_imcb_socket, file_type;
 type wfca_socket, file_type;
 type volte_imsvt1_socket, file_type;
 
+# mobicore device type and file type
+type mobicore_admin_device, dev_type;
+type mobicore_user_device, dev_type, mlstrustedobject;
+type mobicore_tui_device, dev_type;
+type mobicore_data_file, file_type, data_file_type;
+type mobicore_vendor_file, file_type, vendor_file_type;
+
 type proc_cpu_alignment, fs_type, proc_type;
 type proc_last_kmsg, fs_type, proc_type;
