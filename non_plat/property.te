@@ -123,8 +123,10 @@ vendor_restricted_prop(vendor_mtk_wmt_prop)
 vendor_restricted_prop(vendor_mtk_gpu_prop)
 vendor_restricted_prop(vendor_mtk_sensor_prop)
 vendor_restricted_prop(debug_bq_dump_prop)
+vendor_restricted_prop(netdagent_prop)
 
 # Properties with can be read by all domains
+typeattribute netdagent_prop mtk_core_property_type;
 typeattribute mtk_camera_prop                        mtk_core_property_type;
 typeattribute mtk_network_prop                       mtk_core_property_type;
 typeattribute mtk_wod_prop                           mtk_core_property_type;

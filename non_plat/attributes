@@ -25,3 +25,7 @@ attribute hal_tee;
 attribute mtk_hal_pplagent;
 attribute mtk_hal_pplagent_client;
 attribute mtk_hal_pplagent_server;
+
+attribute mtk_hal_netdagent;
+attribute mtk_hal_netdagent_client;
+attribute mtk_hal_netdagent_server;

@@ -74,3 +74,6 @@ allow mtkrild mnld:unix_dgram_socket sendto;
 # Purpose: Fix rilproxy SeLinux warning of pre-defined socket
 allow rild gsmrild_socket:sock_file write;
 
+# Allow the find/call of netdagent for rilproxy
+allow rild mtk_hal_netdagent_hwservice:hwservice_manager find;
+allow rild netdagent:binder call;

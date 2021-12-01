@@ -92,3 +92,4 @@ vendor.trustonic.tee::ITee                                           u:object_r:
 vendor.trustonic.tee.tui::ITui                                       u:object_r:hal_tee_hwservice:s0
 
 vendor.mediatek.hardware.pplagent::IPplAgent u:object_r:mtk_hal_pplagent_hwservice:s0
+vendor.mediatek.hardware.netdagent::INetdagent u:object_r:mtk_hal_netdagent_hwservice:s0

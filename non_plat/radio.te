@@ -60,3 +60,6 @@ allow radio ppl_agent_service:service_manager find;
 # Purpose: P SQC, for SMS framework access PplAgent HIDL interface
 allow radio mtk_hal_pplagent_hwservice:hwservice_manager find;
 allow radio ppl_agent:binder call;
+
+# Purpose : Allow EM use mtk_hal_netdagent_hwservice
+hal_client_domain(radio,mtk_hal_netdagent)

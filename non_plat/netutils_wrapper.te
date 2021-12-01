@@ -4,3 +4,7 @@ allow netutils_wrapper ipsec_mon: {
     netlink_route_socket
     netlink_xfrm_socket
 } { read write };
+
+#============= netutils_wrapper for netdagent==============
+allow netutils_wrapper netdagent:fd use;
+allow netutils_wrapper netdagent:unix_stream_socket { read write };

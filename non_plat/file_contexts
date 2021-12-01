@@ -829,3 +829,6 @@
 
 # MTK PPL
 /(system\/vendor|vendor)/bin/ppl_agent u:object_r:ppl_agent_exec:s0
+
+# netdagent
+/(system\/vendor|vendor)/bin/netdagent u:object_r:netdagent_exec:s0
