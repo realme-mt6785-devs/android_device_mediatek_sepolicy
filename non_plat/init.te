@@ -149,3 +149,5 @@ allow init teei_client_device:chr_file rw_file_perms;
 
 # DFPS
 allow init mtk_hal_dfps_exec:file getattr;
+
+allow init mobicore_user_device:chr_file { ioctl map open read write };
