@@ -90,3 +90,5 @@ vendor.mediatek.hardware.dfps::IFpsPolicyService u:object_r:mtk_hal_dfps_hwservi
 # TEE
 vendor.trustonic.tee::ITee                                           u:object_r:hal_tee_hwservice:s0
 vendor.trustonic.tee.tui::ITui                                       u:object_r:hal_tee_hwservice:s0
+
+vendor.mediatek.hardware.pplagent::IPplAgent u:object_r:mtk_hal_pplagent_hwservice:s0

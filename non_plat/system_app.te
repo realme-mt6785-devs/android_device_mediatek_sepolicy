@@ -68,3 +68,6 @@ allow system_app mtk_mdp_sync:chr_file ioctl;
 
 # Neuralnetwork
 allow system_app mtk_hal_neuralnetworks:binder { call transfer };
+
+allow system_app mtk_hal_pplagent_hwservice:hwservice_manager find;
+allow system_app ppl_agent:binder call;

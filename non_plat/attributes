@@ -20,3 +20,8 @@ attribute hal_dfps_server;
 attribute hal_tee_client;
 attribute hal_tee_server;
 attribute hal_tee;
+
+# PPL
+attribute mtk_hal_pplagent;
+attribute mtk_hal_pplagent_client;
+attribute mtk_hal_pplagent_server;

@@ -79,3 +79,5 @@ type mtk_hal_dfps_hwservice, hwservice_manager_type;
 
 # TEE
 type hal_tee_hwservice, hwservice_manager_type;
+
+type mtk_hal_pplagent_hwservice, hwservice_manager_type;

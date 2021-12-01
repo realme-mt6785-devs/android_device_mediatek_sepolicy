@@ -119,3 +119,8 @@ allowxperm platform_app proc_mtk_jpeg:file ioctl {
 
 # Neuralnetwork
 allow platform_app mtk_hal_neuralnetworks:binder { call transfer };
+
+# Purpose : Allow System UI to find ppl agent
+# Package: com.android.systemui.keyguard
+allow platform_app mtk_hal_pplagent_hwservice:hwservice_manager find;
+allow platform_app ppl_agent:binder call;
