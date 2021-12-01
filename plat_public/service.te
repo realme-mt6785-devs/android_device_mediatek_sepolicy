@@ -8,3 +8,4 @@
 type nvram_agent_service, service_manager_type;
 type vtservice_service, service_manager_type;
 type vtservice_hidl_service, service_manager_type;
+type mediacodec_service, service_manager_type;

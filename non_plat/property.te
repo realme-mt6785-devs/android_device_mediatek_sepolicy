@@ -20,6 +20,9 @@ vendor_internal_prop(mtk_default_prop)
 vendor_internal_prop(ctl_volte_imcb_prop)
 vendor_internal_prop(ctl_volte_ua_prop)
 vendor_internal_prop(mtk_md_status_prop)
+vendor_internal_prop(mtk_dsbp_support_prop)
+vendor_internal_prop(mtk_thermal_config_prop)
+vendor_internal_prop(mtk_volte_prop)
 vendor_internal_prop(vendor_mtk_ctl_ccci2_fsd_prop)
 vendor_internal_prop(vendor_mtk_ctl_ccci3_fsd_prop)
 vendor_internal_prop(vendor_mtk_ctl_ccci_fsd_prop)
@@ -117,6 +120,7 @@ vendor_restricted_prop(vendor_mtk_wifi_hotspot_prop)
 vendor_restricted_prop(vendor_mtk_wmt_prop)
 vendor_restricted_prop(vendor_mtk_gpu_prop)
 vendor_restricted_prop(vendor_mtk_sensor_prop)
+vendor_restricted_prop(debug_bq_dump_prop)
 
 # Properties with can be read by all domains
 typeattribute mtk_camera_prop                        mtk_core_property_type;
@@ -189,6 +193,7 @@ typeattribute vendor_mtk_wifi_hotspot_prop           mtk_core_property_type;
 typeattribute vendor_mtk_wmt_prop                    mtk_core_property_type;
 typeattribute vendor_mtk_gpu_prop                    mtk_core_property_type;
 typeattribute vendor_mtk_sensor_prop                 mtk_core_property_type;
+typeattribute debug_bq_dump_prop                     mtk_core_property_type;
 
 # Properties which can't be accessed by device-sepcific domains
 typeattribute vendor_ims_xcap_prop                   extended_core_property_type;

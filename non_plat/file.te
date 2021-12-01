@@ -533,3 +533,6 @@ type volte_ua_socket, file_type;
 type volte_imcb_socket, file_type;
 type wfca_socket, file_type;
 type volte_imsvt1_socket, file_type;
+
+type proc_cpu_alignment, fs_type, proc_type;
+type proc_last_kmsg, fs_type, proc_type;
