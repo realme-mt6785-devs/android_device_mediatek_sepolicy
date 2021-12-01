@@ -543,3 +543,4 @@ type mobicore_vendor_file, file_type, vendor_file_type;
 
 type proc_cpu_alignment, fs_type, proc_type;
 type proc_last_kmsg, fs_type, proc_type;
+type volte_stack_socket, file_type;

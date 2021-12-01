@@ -832,3 +832,6 @@
 
 # netdagent
 /(system\/vendor|vendor)/bin/netdagent u:object_r:netdagent_exec:s0
+
+/dev/socket/volte_stack(/.*)?	 u:object_r:volte_stack_socket:s0
+/(system\/vendor|vendor)/bin/volte_stack	 u:object_r:volte_stack_exec:s0
