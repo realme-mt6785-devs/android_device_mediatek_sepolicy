@@ -19,5 +19,6 @@ allow volte_stack node:udp_socket node_bind;
 allow volte_stack self:udp_socket rw_socket_perms_no_ioctl;
 allow volte_stack netd:unix_stream_socket connectto;
 allow volte_stack kernel:system module_request;
+allow volte_stack self:capability { setgid setuid sys_admin };
 
 set_prop(volte_stack, mtk_network_prop)

@@ -18,3 +18,5 @@ allow volte_imsm_93 device:lnk_file { create unlink };
 set_prop(volte_imsm_93, usp_prop)
 set_prop(volte_imsm_93, ril_mux_report_case_prop)
 set_prop(volte_imsm_93, mtk_volte_prop)
+
+unix_socket_connect(volte_imsm_93, volte_imcb, volte_imcb)

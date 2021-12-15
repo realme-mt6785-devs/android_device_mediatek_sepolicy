@@ -19,4 +19,13 @@ allow volte_imcb {
     netd_socket
 }:sock_file write;
 
+allow volte_imcb devpts:chr_file { setattr rw_file_perms };
+allow volte_imcb ccci_device:chr_file rw_file_perms;
+allow volte_imcb self:capability { setgid setuid sys_admin };
+allow volte_imcb self:capability2 wake_alarm;
+
+allow volte_imcb mtk_radio_device:dir rw_dir_perms;
+allow volte_imcb mtk_radio_device:lnk_file create_file_perms;
+
+r_dir_file(volte_imcb, sysfs_ccci)
 set_prop(volte_imcb, mtk_volte_prop)
