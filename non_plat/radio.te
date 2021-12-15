@@ -63,3 +63,5 @@ allow radio ppl_agent:binder call;
 
 # Purpose : Allow EM use mtk_hal_netdagent_hwservice
 hal_client_domain(radio,mtk_hal_netdagent)
+
+set_prop(radio, vendor_mtk_radio_prop)
