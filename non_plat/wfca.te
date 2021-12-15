@@ -20,3 +20,5 @@ allow wfca ccci_device:chr_file { ioctl read write open };
 allow wfca sysfs_wake_lock:file { read write open };
 
 dontaudit wfca self:capability dac_override;
+allow wfca volte_ua:fd use;
+allow wfca volte_ua:udp_socket { getattr getopt read setopt write };

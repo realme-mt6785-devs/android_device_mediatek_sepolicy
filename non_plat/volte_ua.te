@@ -16,3 +16,4 @@ allow volte_ua self:capability { setgid setuid };
 allow volte_ua self:capability2 { wake_alarm };
 
 unix_socket_connect(volte_ua, volte_stack, volte_stack)
+unix_socket_connect(volte_ua, wfca, wfca)
