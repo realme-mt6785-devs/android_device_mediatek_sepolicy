@@ -238,7 +238,6 @@ set_prop(meta_tst, ctl_default_prop)
 
 #Date: W17.25
 # Purpose : Allow meta_tst stop service which occupy data partition.
-set_prop(meta_tst, system_mtk_ctl_emdlogger1_prop)
 
 #Date: W17.27
 # Purpose: STMicro NFC solution integration

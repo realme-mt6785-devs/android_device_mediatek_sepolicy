@@ -103,7 +103,6 @@ allow cameraserver self:process { ptrace };
 # Purpose : for boot animation.
 # allow cameraserver bootanim:binder { transfer call };
 
-# allow cameraserver mtkbootanimation:binder { transfer call };
 # Data : WK14.38
 # Operation : Migration
 # Purpose : dump for debug
@@ -266,10 +265,8 @@ allowxperm cameraserver proc_ged:file ioctl { proc_ged_ioctls };
 # allow cameraserver camera_wpe_device:chr_file rw_file_perms;
 
 # Date : WK16.49
-# Operation : label aee_aed sockets
 # Purpose : Engineering mode need access for aee commmand
 # userdebug_or_eng(`
-# allow cameraserver aee_aed:unix_stream_socket connectto;
 # ')
 
 # Date : WK17.19

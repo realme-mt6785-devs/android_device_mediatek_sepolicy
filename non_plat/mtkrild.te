@@ -86,7 +86,6 @@ allow mtkrild sysfs_ccci:dir search;
 allow mtkrild sysfs_ccci:file r_file_perms;
 
 #For Kryptowire mtklog issue
-allow mtkrild aee_aedv:unix_stream_socket connectto;
 # Allow ioctl in order to control network interface
 allowxperm mtkrild self:udp_socket ioctl {SIOCDELRT SIOCSIFFLAGS SIOCSIFADDR SIOCKILLADDR SIOCDEVPRIVATE SIOCDEVPRIVATE_1};
 

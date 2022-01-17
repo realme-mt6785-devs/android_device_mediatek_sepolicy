@@ -263,7 +263,6 @@ allow factory flashlight_device:chr_file rw_file_perms;
 
 # Date: WK15.25
 #Purpose: for unmount sdcardfs and stop services which are using data partition
-set_prop(factory, system_mtk_ctl_emdlogger1_prop)
 # Date: WK17.07
 # Purpose: Clear bootdevice (eMMC/UFS) may need to unmount tmpfs
 allow factory tmpfs:filesystem unmount;
@@ -402,7 +401,6 @@ get_prop(factory, radio_control_prop)
 # Date : WK19.38
 # Operation : Q Migration
 # Purpose: Allow clear eMMC
-set_prop(factory, system_mtk_ctl_mdlogger_prop)
 
 # Date : WK19.41
 # Operation : Q Migration

@@ -25,8 +25,6 @@ vendor.mtklog         u:object_r:system_mtk_debug_mtklog_prop:s0
 persist.vendor.mtklog u:object_r:system_mtk_persist_mtklog_prop:s0
 vendor.netlog         u:object_r:system_mtk_debug_netlog_prop:s0
 
-#=============allow mdlogger==============
-vendor.mdlogger      u:object_r:system_mtk_debug_mdlogger_prop:s0
 vendor.mdl           u:object_r:system_mtk_mdl_prop:s0
 vendor.starting.mode u:object_r:system_mtk_mdl_start_prop:s0
 persist.vendor.mdl   u:object_r:system_mtk_persist_mdlog_prop:s0
@@ -73,11 +71,4 @@ vendor.bthcisnoop u:object_r:system_mtk_vendor_bluetooth_prop:s0
 #=============allow radio to set/get xcap rawurl config================
 persist.vendor.mtk.xcap.rawurl u:object_r:system_mtk_persist_xcap_rawurl_prop:s0
 
-#=============allow ccci_mdinit to ctl. mdlogger==============
-ctl.mdlogger   u:object_r:system_mtk_ctl_mdlogger_prop:s0
-ctl.emdlogger1 u:object_r:system_mtk_ctl_emdlogger1_prop:s0
-ctl.emdlogger2 u:object_r:system_mtk_ctl_emdlogger2_prop:s0
-ctl.emdlogger3 u:object_r:system_mtk_ctl_emdlogger3_prop:s0
 
-init.svc.emdlogger1 u:object_r:system_mtk_init_svc_emdlogger1_prop:s0
-init.svc.aee_aedv   u:object_r:system_mtk_init_svc_aee_aedv_prop:s0

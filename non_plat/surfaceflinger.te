@@ -38,11 +38,8 @@ allow surfaceflinger sysfs_boot_mode:file r_file_perms;
 binder_use(surfaceflinger)
 binder_call(surfaceflinger, binderservicedomain)
 binder_call(surfaceflinger, appdomain)
-binder_call(surfaceflinger, mtkbootanimation)
 binder_service(surfaceflinger)
 
-allow surfaceflinger mtkbootanimation:dir search;
-allow surfaceflinger mtkbootanimation:file { read getattr open };
 
 # Date : W17.43
 # Operation : Migration

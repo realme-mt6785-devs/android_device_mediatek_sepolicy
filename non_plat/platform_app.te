@@ -20,14 +20,7 @@ allow platform_app fm_device:chr_file rw_file_perms;
 # Date : 2014/09/11
 # Operation : Migration
 # Purpose : MTKLogger need setup local socket with native daemon:mobile_logd,
-# netdialog,mdlogger,emdlogger,cmddumper
 # Package: com.mediatek.mtklogger
-allow platform_app mobile_log_d:unix_stream_socket connectto;
-allow platform_app mdlogger:unix_stream_socket connectto;
-allow platform_app emdlogger:unix_stream_socket connectto;
-allow platform_app cmddumper:unix_stream_socket connectto;
-allow platform_app connsyslogger:unix_stream_socket connectto;
-unix_socket_connect(platform_app, netdiag, netdiag)
 # Date: 2018/11/17
 # purpose: allow MTKLogger to control Bluetooth HCI log via socket
 allow platform_app bluetooth:unix_stream_socket connectto;

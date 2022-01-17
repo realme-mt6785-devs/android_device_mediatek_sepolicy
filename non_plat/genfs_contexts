@@ -140,7 +140,6 @@ genfscon sysfs /devices/platform/pwmleds/leds  u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/disp_leds/leds  u:object_r:sysfs_leds:s0
 
 #Date : 2018/11/22
-#Purpose: allow mdlogger to read mdinfo file
 genfscon sysfs /kernel/md/mdee u:object_r:sysfs_mdinfo:s0
 
 # Date : 2019/07/03
@@ -169,7 +168,6 @@ genfscon sysfs /devices/platform/externdevice/mmc_host/mmc1 u:object_r:sysfs_dev
 genfscon sysfs /module/gf_spi_tee u:object_r:sysfs_gf_spi_tee:s0
 
 # Date : 2019/10/22
-# Purpose : mrdump_tool(copy_process by aee_aedv) need to write data to lbaooo
 genfscon sysfs /module/mrdump/version u:object_r:sysfs_mrdump:s0
 genfscon sysfs /firmware/devicetree/base/chosen/mrdump,lk u:object_r:sysfs_mrdump:s0
 genfscon sysfs /module/mrdump/parameters/lbaooo u:object_r:sysfs_mrdump:s0

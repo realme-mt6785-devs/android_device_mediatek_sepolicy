@@ -15,7 +15,6 @@ allow audioserver sdcard_type:file unlink;
 # Purpose : for boot animation.
 allow audioserver bootanim:binder { transfer call };
 
-allow audioserver mtkbootanimation:binder { transfer call };
 
 # Data : WK14.38
 # Operation : Migration

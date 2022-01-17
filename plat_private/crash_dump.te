@@ -70,7 +70,6 @@ allow crash_dump tombstone_data_file:file create_file_perms;
 # /proc/pid/
 allow crash_dump self:capability { fowner chown fsetid sys_nice sys_resource net_admin sys_module setgid setuid kill };
 
-# system(cmd) aee_dumpstate aee_archive
 allow crash_dump shell_exec:file rx_file_perms;
 
 # PROCESS_FILE_STATE

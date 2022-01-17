@@ -8,7 +8,6 @@ ctl.vendor.gsm0710muxd u:object_r:vendor_mtk_ctl_gsm0710muxd_prop:s0
 #=============allow mtkrild to set persist.ril property==============
 vendor.ril.ipo u:object_r:vendor_mtk_ril_ipo_prop:s0
 
-#=============allow mdlogger==============
 vendor.usb.         u:object_r:vendor_mtk_usb_prop:s0
 persist.vendor.usb. u:object_r:vendor_mtk_usb_prop:s0
 

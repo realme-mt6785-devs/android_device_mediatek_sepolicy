@@ -109,7 +109,6 @@ allow mediaserver SUB2AF_device:chr_file rw_file_perms;
 # Purpose : for boot animation.
 allow mediaserver bootanim:binder { transfer call };
 
-allow mediaserver mtkbootanimation:binder { transfer call };
 
 # Data : WK14.38
 # Operation : Migration

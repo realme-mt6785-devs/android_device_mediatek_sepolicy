@@ -15,11 +15,6 @@ wakelock_use(ccci_mdinit)
 
 #=============allow ccci_mdinit to start c2krild==============
 set_prop(ccci_mdinit, vendor_mtk_ctl_viarild_prop)
-#=============allow ccci_mdinit to start/stop rild, mdlogger==============
-set_prop(ccci_mdinit, system_mtk_ctl_mdlogger_prop)
-set_prop(ccci_mdinit, system_mtk_ctl_emdlogger1_prop)
-set_prop(ccci_mdinit, system_mtk_ctl_emdlogger2_prop)
-set_prop(ccci_mdinit, system_mtk_ctl_emdlogger3_prop)
 set_prop(ccci_mdinit, vendor_mtk_ctl_gsm0710muxd_prop)
 set_prop(ccci_mdinit, vendor_mtk_ctl_ril-daemon-mtk_prop)
 set_prop(ccci_mdinit, vendor_mtk_ctl_fusion_ril_mtk_prop)
@@ -38,8 +33,6 @@ set_prop(ccci_mdinit, vendor_mtk_ctl_ccci3_fsd_prop)
 
 # GOOGLE: Commented out for b/169606103
 #get_prop(ccci_mdinit, vendor_default_prop)
-get_prop(ccci_mdinit, system_mtk_init_svc_emdlogger1_prop)
-get_prop(ccci_mdinit, system_mtk_init_svc_aee_aedv_prop)
 
 allow ccci_mdinit ccci_device:chr_file rw_file_perms;
 allow ccci_mdinit ccci_monitor_device:chr_file rw_file_perms;

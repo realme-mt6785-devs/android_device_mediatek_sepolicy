@@ -103,11 +103,9 @@ allow system_server vendor_framework_file:dir r_file_perms;
 allow system_server vendor_framework_file:file getattr;
 
 # Date:W17.22
-# Operation : add aee_aed socket rule
 # Purpose : type=1400 audit(0.0:134519): avc: denied { connectto }
 #           for comm=4572726F722064756D703A20737973
 #           path=00636F6D2E6D746B2E6165652E6165645F3634
-#           scontext=u:r:system_server:s0 tcontext=u:r:aee_aed:s0
 #           tclass=unix_stream_socket permissive=0
 allow system_server crash_dump:unix_stream_socket connectto;
 
@@ -136,8 +134,6 @@ binder_call(system_server, mnld)
 # Purpose : for network log dumpsys setting/netd information
 #           audit(0.0:914): avc: denied { write } for path="pipe:[46088]"
 #           dev="pipefs" ino=46088 scontext=u:r:system_server:s0
-#           tcontext=u:r:netdiag:s0 tclass=fifo_file permissive=1
-allow system_server netdiag:fifo_file write;
 
 # Date : WK17.32
 # Operation : Migration

@@ -24,7 +24,6 @@ system_internal_prop(system_mtk_bgdata_disabled_prop)
 system_internal_prop(system_mtk_bootani_prop)
 system_internal_prop(system_mtk_connsysfw_prop)
 system_internal_prop(system_mtk_debug_bq_dump_prop)
-system_internal_prop(system_mtk_debug_mdlogger_prop)
 system_internal_prop(system_mtk_debug_mtk_aee_prop)
 system_internal_prop(system_mtk_debug_mtklog_prop)
 system_internal_prop(system_mtk_debug_netlog_prop)
@@ -51,7 +50,6 @@ typeattribute system_mtk_bgdata_disabled_prop       extended_core_property_type;
 typeattribute system_mtk_bootani_prop               extended_core_property_type;
 typeattribute system_mtk_connsysfw_prop             extended_core_property_type;
 typeattribute system_mtk_debug_bq_dump_prop         extended_core_property_type;
-typeattribute system_mtk_debug_mdlogger_prop        extended_core_property_type;
 typeattribute system_mtk_debug_mtk_aee_prop         extended_core_property_type;
 typeattribute system_mtk_debug_mtklog_prop          extended_core_property_type;
 typeattribute system_mtk_debug_netlog_prop          extended_core_property_type;
