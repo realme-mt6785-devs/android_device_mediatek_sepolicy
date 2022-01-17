@@ -124,6 +124,7 @@ vendor_restricted_prop(vendor_mtk_gpu_prop)
 vendor_restricted_prop(vendor_mtk_sensor_prop)
 vendor_restricted_prop(debug_bq_dump_prop)
 vendor_restricted_prop(netdagent_prop)
+vendor_restricted_prop(vendor_imsconfig_prop)
 
 # Properties with can be read by all domains
 typeattribute netdagent_prop mtk_core_property_type;
@@ -201,3 +202,4 @@ typeattribute debug_bq_dump_prop                     mtk_core_property_type;
 
 # Properties which can't be accessed by device-sepcific domains
 typeattribute vendor_ims_xcap_prop                   extended_core_property_type;
+typeattribute vendor_imsconfig_prop                  extended_core_property_type;

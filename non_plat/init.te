@@ -151,3 +151,13 @@ allow init teei_client_device:chr_file rw_file_perms;
 allow init mtk_hal_dfps_exec:file getattr;
 
 allow init mobicore_user_device:chr_file { ioctl map open read write };
+
+allow init {
+    volte_ut_socket
+    wfca_socket
+    volte_imsa1_socket
+    volte_imsa2_socket
+    bip_socket
+    xcap_socket
+    wod_socket
+}:sock_file create_file_perms;

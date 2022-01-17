@@ -66,4 +66,6 @@ hal_client_domain(radio,mtk_hal_netdagent)
 
 set_prop(radio, vendor_mtk_radio_prop)
 
+set_prop(radio, vendor_imsconfig_prop)
+
 allow radio vtservice_service:service_manager find;

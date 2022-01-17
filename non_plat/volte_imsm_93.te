@@ -17,3 +17,5 @@ set_prop(volte_imsm_93, ril_mux_report_case_prop)
 set_prop(volte_imsm_93, mtk_volte_prop)
 
 unix_socket_connect(volte_imsm_93, volte_imcb, volte_imcb)
+
+allow volte_imsm_93 volte_imsa1_socket:sock_file write;

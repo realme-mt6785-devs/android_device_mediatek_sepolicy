@@ -530,6 +530,13 @@ type volte_ua_socket, file_type;
 type volte_imcb_socket, file_type;
 type wfca_socket, file_type;
 type volte_imsvt1_socket, file_type;
+type volte_imsa1_socket, file_type;
+type volte_imsa2_socket, file_type;
+type volte_ut_socket, file_type;
+
+type bip_socket, file_type;
+type xcap_socket, file_type;
+type wod_socket, file_type;
 
 # mobicore device type and file type
 type mobicore_admin_device, dev_type;

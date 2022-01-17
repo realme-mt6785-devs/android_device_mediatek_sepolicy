@@ -6,6 +6,7 @@ init_daemon_domain(volte_ua)
 allow volte_ua {
     volte_ua_socket
     netd_socket
+    volte_vt_socket
 }:sock_file write;
 
 allow volte_ua node:udp_socket node_bind;
