@@ -37,4 +37,4 @@ allow mtk_hal_neuralnetworks proc_ged:file r_file_perms;
 
 allowxperm mtk_hal_neuralnetworks proc_ged:file ioctl { proc_ged_ioctls };
 
-add_service(mtk_hal_neuralnetworks, hal_neuralnetworks_hwservice)
+add_hwservice(mtk_hal_neuralnetworks, hal_neuralnetworks_hwservice)
