@@ -8,9 +8,6 @@ allow bip self:tcp_socket { create_socket_perms listen accept };
 allow bip self:udp_socket create_socket_perms;
 allow bip self:rawip_socket { read write create getattr bind setopt };
 
-allow bip socket_device:dir { write add_name remove_name };
-allow bip socket_device:sock_file { write create unlink };
-
 allow bip { node port netd }:udp_socket node_bind;
 allow bip { fwmarkd_socket property_socket }:sock_file write;
 allow bip init:unix_stream_socket connectto;

@@ -5,7 +5,6 @@ init_daemon_domain(volte_imcb)
 
 allow volte_imcb { port node }:tcp_socket node_bind;
 allow volte_imcb self:tcp_socket { create bind listen accept setopt read getattr write };
-allow volte_imcb socket_device:sock_file write;
 
 allow volte_imcb {
     volte_ua

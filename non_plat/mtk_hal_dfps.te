@@ -10,7 +10,6 @@ hal_server_domain(mtk_hal_dfps, hal_dfps)
 
 add_hwservice(hal_dfps_server, mtk_hal_dfps_hwservice)
 
-r_dir_file(mtk_hal_dfps, sysfs_type)
 r_dir_file(mtk_hal_dfps, proc_net);
 
 get_prop(mtk_hal_dfps, hwservicemanager_prop)

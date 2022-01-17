@@ -19,8 +19,5 @@ allow epdg_wod init:unix_stream_socket connectto;
 allow epdg_wod kernel:process signal;
 allow epdg_wod system_server:process { signull signal };
 
-allow epdg_wod device:dir { write add_name };
-allow epdg_wod device:lnk_file create;
-
 set_prop(epdg_wod, mtk_wod_prop)
 set_prop(epdg_wod, persist_wod_prop)

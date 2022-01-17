@@ -6,7 +6,6 @@ init_daemon_domain(vpud_native)
 allow vpud_native ion_device:chr_file { ioctl read write open };
 allow vpud_native vcu_device:chr_file rw_file_perms;
 allow vpud_native MTK_SMI_device:chr_file { open read ioctl };
-allow vpud_native proc:file { ioctl read getattr open };
 allow vpud_native init:unix_stream_socket connectto;
 allow vpud_native property_socket:sock_file write;
 allow vpud_native sysfs_device_tree_model:file r_file_perms;

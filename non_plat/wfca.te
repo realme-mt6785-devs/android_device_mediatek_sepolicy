@@ -11,8 +11,6 @@ allow wfca self:udp_socket { ioctl read write create getattr bind setopt shutdow
 allow wfca self:rawip_socket { read write create getattr bind setopt };
 allow wfca self:packet_socket { read create setopt };
 
-allow wfca socket_device:sock_file { write create unlink };
-allow wfca socket_device:dir { write add_name remove_name };
 
 allow wfca { node port }:{ udp_socket rawip_socket } node_bind;
 allow wfca fwmarkd_socket:sock_file write;

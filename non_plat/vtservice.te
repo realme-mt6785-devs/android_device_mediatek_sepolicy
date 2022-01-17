@@ -45,28 +45,21 @@ allow vtservice_hidl MTK_SMI_device:chr_file { read write ioctl open };
 allow vtservice_hidl fwmarkd_socket:sock_file write;
 allow vtservice_hidl netd:unix_stream_socket connectto;
 allow vtservice_hidl untrusted_app:binder call;
-allow vtservice_hidl proc:file open;
 
 allow vtservice audioserver_service:service_manager find;
 allow vtservice mnt_user_file:dir search;
 allow vtservice property_socket:sock_file write;
 allow vtservice surfaceflinger:binder call;
-allow vtservice system_data_file:dir write;
 
 allow vtservice audioserver:binder call;
 allow vtservice init:unix_stream_socket connectto;
 allow vtservice mnt_user_file:lnk_file read;
-allow vtservice system_data_file:dir add_name;
 
 allow vtservice media_rw_data_file:dir create_dir_perms;
 allow vtservice media_rw_data_file:file { write create open };
 
 allow vtservice proc_ged:file r_file_perms;
 allowxperm vtservice proc_ged:file ioctl { proc_ged_ioctls };
-allow vtservice system_data_file:dir remove_name;
-
-allow vtservice system_data_file:dir { open read create };
-allow vtservice system_data_file:sock_file { create open read write unlink };
 
 allow vtservice_hidl self:udp_socket { create bind connect read write setopt getattr getopt shutdown };
 allow vtservice_hidl node:udp_socket { node_bind };
@@ -144,9 +137,7 @@ allow vtservice hal_graphics_mapper_hwservice:hwservice_manager find;
 allow vtservice netd:unix_stream_socket connectto;
 allow vtservice ion_device:chr_file ioctl;
 allow vtservice MTK_SMI_device:chr_file { read write ioctl open };
-allow vtservice proc:file getattr;
 allow vtservice mtk_cmdq_device:chr_file { read ioctl open };
-allow vtservice_hidl proc:file read;
 allow vtservice merged_hal_service:fd use;
 allow vtservice merged_hal_service:binder call;
 

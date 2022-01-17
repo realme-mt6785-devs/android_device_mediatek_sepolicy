@@ -3,8 +3,6 @@ type xcap_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(xcap)
 
-allow xcap socket_device:sock_file { write create unlink };
-allow xcap socket_device:dir { write add_name remove_name };
 
 allow xcap self:capability { setgid setuid net_admin net_raw };
 allow xcap self:rawip_socket { read write create getattr bind setopt };
