@@ -3,7 +3,7 @@ type bip_exec, exec_type, file_type, vendor_file_type;
 
 init_daemon_domain(bip)
 
-allow bip self:netlink_route_socket read;
+allow bip self:netlink_route_socket { create_socket_perms_no_ioctl nlmsg_read };
 allow bip self:tcp_socket { create_socket_perms listen accept };
 allow bip self:udp_socket create_socket_perms;
 allow bip self:rawip_socket { read write create getattr bind setopt };
