@@ -97,3 +97,5 @@ set_prop(vendor_init, mtk_camera_prop)
 
 #  MTK DSBP property
 set_prop(vendor_init, mtk_dsbp_support_prop)
+
+set_prop(vendor_init, vendor_mtk_atm_mdmode_prop)
