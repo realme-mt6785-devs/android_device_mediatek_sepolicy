@@ -39,6 +39,8 @@ genfscon proc /mtk_memcfg/slabtrace u:object_r:proc_slabtrace:s0
 genfscon proc /mtk_cmdq_debug/status u:object_r:proc_cmdq_debug:s0
 genfscon proc /mtk_cmdq_debug/record u:object_r:proc_cmdq_debug:s0
 genfscon proc /cpuhvfs/dbg_repo u:object_r:proc_dbg_repo:s0
+genfscon proc /sys/kernel/sched_migration_cost_ns u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/sched_stune_task_threshold u:object_r:proc_sched:s0
 
 # Purpose dump not exit file
 genfscon proc /isp_p2/isp_p2_dump u:object_r:proc_isp_p2_dump:s0
@@ -402,3 +404,7 @@ genfscon sysfs /devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-debu
 genfscon sysfs /devices/platform/soc/10012000.dvfsrc/10012000.dvfsrc:dvfsrc-up u:object_r:sysfs_dvfsrc_dbg:s0
 
 genfscon sysfs /devices/platform/CONNAC u:object_r:sysfs_net:s0
+
+genfscon proc /sys/vm/dirty_writeback_centisecs u:object_r:proc_dirty:s0
+
+genfscon proc /driver/wmt_user_proc u:object_r:proc_wmtuserproc:s0

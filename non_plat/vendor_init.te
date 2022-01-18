@@ -99,3 +99,9 @@ set_prop(vendor_init, mtk_camera_prop)
 set_prop(vendor_init, mtk_dsbp_support_prop)
 
 set_prop(vendor_init, vendor_mtk_atm_mdmode_prop)
+
+allow vendor_init proc_sched:file rw_file_perms;
+
+allow vendor_init proc_dirty:file rw_file_perms;
+
+allow vendor_init proc_wmtuserproc:file rw_file_perms;
