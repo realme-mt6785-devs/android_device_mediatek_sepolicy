@@ -13,3 +13,7 @@ allow untrusted_app proc_mtktz:file r_file_perms;
 
 # Neural network
 allow untrusted_app mtk_hal_neuralnetworks:binder { call transfer };
+
+get_prop(untrusted_app, vendor_mtk_microtrust_tee_prop)
+get_prop(untrusted_app, vendor_mtk_trustkernel_tee_prop)
+get_prop(untrusted_app, vendor_mtk_trustonic_tee_prop)

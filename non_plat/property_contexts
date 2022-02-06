@@ -372,3 +372,8 @@ ro.vendor.globalpq.       u:object_r:vendor_mtk_render_prop:s0
 persist.vendor.dp.        u:object_r:vendor_mtk_render_prop:s0
 vendor.dp.                u:object_r:vendor_mtk_render_prop:s0
 vendor.sys.pq             u:object_r:vendor_mtk_render_prop:s0
+
+# TEE
+ro.vendor.mtk_trustonic_tee_support  u:object_r:vendor_mtk_trustonic_tee_prop:s0
+ro.vendor.mtk_microtrust_tee_support u:object_r:vendor_mtk_microtrust_tee_prop:s0
+ro.vendor.mtk_trustkernel_tee_support u:object_r:vendor_mtk_trustkernel_tee_prop:s0

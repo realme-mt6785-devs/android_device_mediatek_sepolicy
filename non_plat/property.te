@@ -136,6 +136,9 @@ vendor_restricted_prop(vendor_mtk_ims_eims_pdn_prop)
 vendor_restricted_prop(vendor_ril_md_prop)
 vendor_restricted_prop(vendor_mtk_hvolte_indicator)
 vendor_restricted_prop(vendor_mtk_ims_prop)
+vendor_restricted_prop(vendor_mtk_microtrust_tee_prop)
+vendor_restricted_prop(vendor_mtk_trustkernel_tee_prop)
+vendor_restricted_prop(vendor_mtk_trustonic_tee_prop)
 
 # Properties with can be read by all domains
 typeattribute netdagent_prop mtk_core_property_type;
@@ -217,6 +220,9 @@ typeattribute vendor_mtk_ims_eims_pdn_prop           mtk_core_property_type;
 typeattribute vendor_ril_md_prop                     mtk_core_property_type;
 typeattribute vendor_mtk_hvolte_indicator            mtk_core_property_type;
 typeattribute vendor_mtk_ims_prop                    mtk_core_property_type;
+typeattribute vendor_mtk_trustonic_tee_prop          mtk_core_property_type;
+typeattribute vendor_mtk_microtrust_tee_prop         mtk_core_property_type;
+typeattribute vendor_mtk_trustonic_tee_prop          mtk_core_property_type;
 
 # Properties which can't be accessed by device-sepcific domains
 typeattribute vendor_ims_xcap_prop                   extended_core_property_type;
