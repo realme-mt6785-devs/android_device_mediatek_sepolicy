@@ -352,3 +352,4 @@ ctl.vendor.ccci2_rpcd         u:object_r:ctl_ccci2_rpcd_prop:s0
 vendor.net.rndis.client u:object_r:netdagent_prop:s0
 
 vendor.ril.imsconfig.force.notify u:object_r:vendor_imsconfig_prop:s0
+vendor.net. u:object_r:vendor_mtk_network_prop:s0

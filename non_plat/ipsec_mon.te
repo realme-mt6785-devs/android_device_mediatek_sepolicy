@@ -16,7 +16,7 @@ allowxperm ipsec_mon self:udp_socket ioctl { SIOCDEVPRIVATE_2 };
 allow ipsec_mon devpts:chr_file { open read write };
 allow ipsec_mon proc_net:file { open write };
 
-set_prop(ipsec_mon, mtk_network_prop)
+set_prop(ipsec_mon, vendor_mtk_network_prop)
 
 allowxperm ipsec_mon self:udp_socket ioctl SIOCDEVPRIVATE;
 dontaudit ipsec_mon kernel:system  module_request;

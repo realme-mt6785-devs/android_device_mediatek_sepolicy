@@ -21,4 +21,4 @@ allow volte_stack netd:unix_stream_socket connectto;
 allow volte_stack kernel:system module_request;
 allow volte_stack self:capability { setgid setuid sys_admin };
 
-set_prop(volte_stack, mtk_network_prop)
+set_prop(volte_stack, vendor_mtk_network_prop)

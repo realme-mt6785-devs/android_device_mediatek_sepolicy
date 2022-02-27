@@ -40,7 +40,7 @@ vendor_internal_prop(vendor_wifi_version)
 
 # Properties which can't be written outside vendor
 vendor_restricted_prop(mtk_camera_prop)
-vendor_restricted_prop(mtk_network_prop)
+vendor_restricted_prop(vendor_mtk_network_prop)
 vendor_restricted_prop(mtk_wod_prop)
 vendor_restricted_prop(persist_wod_prop)
 vendor_restricted_prop(vendor_ims_xcap_prop)
@@ -129,7 +129,7 @@ vendor_restricted_prop(vendor_imsconfig_prop)
 # Properties with can be read by all domains
 typeattribute netdagent_prop mtk_core_property_type;
 typeattribute mtk_camera_prop                        mtk_core_property_type;
-typeattribute mtk_network_prop                       mtk_core_property_type;
+typeattribute vendor_mtk_network_prop                       mtk_core_property_type;
 typeattribute mtk_wod_prop                           mtk_core_property_type;
 typeattribute persist_wod_prop                       mtk_core_property_type;
 typeattribute vendor_mtk_aal_ro_prop                 mtk_core_property_type;
