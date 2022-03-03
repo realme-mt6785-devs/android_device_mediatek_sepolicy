@@ -165,3 +165,12 @@ set_prop(rild, vendor_mtk_imstestmode_prop)
 # Operation: R migration
 # Purpose: Allow rild to get system_boot_reason_prop
 get_prop(rild, system_boot_reason_prop)
+
+set_prop(rild, vendor_mtk_provision_prop)
+set_prop(rild, vendor_mtk_cdma_prop)
+set_prop(rild, vendor_mtk_wfc_prop)
+set_prop(rild, vendor_mtk_ims_eims_pdn_prop)
+set_prop(rild, vendor_ril_md_prop)
+set_prop(rild, vendor_mtk_hvolte_indicator)
+set_prop(rild, vendor_mtk_ims_prop)
+set_prop(rild, vendor_mtk_volte_prop)

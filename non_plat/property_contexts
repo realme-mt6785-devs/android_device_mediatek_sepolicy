@@ -353,3 +353,12 @@ vendor.net.rndis.client u:object_r:netdagent_prop:s0
 
 vendor.ril.imsconfig.force.notify u:object_r:vendor_imsconfig_prop:s0
 vendor.net. u:object_r:vendor_mtk_network_prop:s0
+persist.vendor.mtk.provision. u:object_r:vendor_mtk_provision_prop:s0
+vendor.cdma. u:object_r:vendor_mtk_cdma_prop:s0
+persist.vendor.mtk.wfc.enable u:object_r:vendor_mtk_wfc_prop:s0
+vendor.ims.eims.pdn.info u:object_r:vendor_mtk_ims_eims_pdn_prop:s0
+vendor.sms.md.ready u:object_r:vendor_ril_md_prop:s0
+persist.vendor.mtk_hvolte_indicator u:object_r:vendor_mtk_hvolte_indicator:s0
+persist.vendor.mtk.volte.enable u:object_r:vendor_mtk_volte_prop:s0
+persist.vendor.mtk.vilte.enable u:object_r:vendor_mtk_volte_prop:s0
+ro.vendor.md_mims_support u:object_r:vendor_mtk_ims_prop:s0
