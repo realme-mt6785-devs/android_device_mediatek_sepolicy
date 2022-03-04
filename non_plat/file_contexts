@@ -837,3 +837,5 @@
 
 /dev/socket/volte_stack(/.*)?	 u:object_r:volte_stack_socket:s0
 /(system\/vendor|vendor)/bin/volte_stack	 u:object_r:volte_stack_exec:s0
+
+/data/vendor/ipsec(/.*)?  u:object_r:ipsec_vendor_data_file:s0

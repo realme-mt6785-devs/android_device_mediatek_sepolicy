@@ -552,3 +552,5 @@ type volte_stack_socket, file_type;
 type sysfs_battery_supply, fs_type, sysfs_type;
 
 type proc_wmtuserproc, fs_type, proc_type;
+
+type ipsec_vendor_data_file, file_type, data_file_type;
