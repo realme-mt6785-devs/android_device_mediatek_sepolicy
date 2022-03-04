@@ -1,3 +1,5 @@
+BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW := true
+
 # Board specific SELinux policy variable definitions
 BOARD_VENDOR_SEPOLICY_DIRS := \
         device/mediatek/sepolicy/neverallows/non_plat \

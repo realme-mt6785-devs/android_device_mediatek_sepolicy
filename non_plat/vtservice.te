@@ -153,7 +153,9 @@ allowxperm vtservice proc_perfmgr:file ioctl {
   PERFMGR_FPSGO_BQID
 };
 
+##
 get_prop(vtservice, vendor_default_prop)
+##
 
 allow vtservice mtk_hal_mms_hwservice:hwservice_manager find;
 allow vtservice cameraserver:dir search;
