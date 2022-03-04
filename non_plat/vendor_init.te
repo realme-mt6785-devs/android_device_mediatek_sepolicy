@@ -105,3 +105,5 @@ allow vendor_init proc_sched:file rw_file_perms;
 allow vendor_init proc_dirty:file rw_file_perms;
 
 allow vendor_init proc_wmtuserproc:file rw_file_perms;
+
+set_prop(vendor_init, vendor_mtk_dsbp_support_prop)
