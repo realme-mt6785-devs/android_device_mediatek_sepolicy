@@ -99,3 +99,6 @@ allow ccci_mdinit sysfs_dt_firmware_android:dir search;
 # Purpose: no trigger avc log when call nvram api
 dontaudit ccci_mdinit gsi_metadata_file:dir search;
 
+allow ccci_mdinit sysfs_boot_mode:file r_file_perms;
+allow ccci_mdinit sysfs_dt_firmware_android:dir r_dir_perms;
+allow ccci_mdinit sysfs_dt_firmware_android:file r_file_perms;
