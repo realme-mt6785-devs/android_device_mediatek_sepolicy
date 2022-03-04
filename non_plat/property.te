@@ -10,6 +10,8 @@
 # vendor_restricted_prop    -- Properties which can't be written outside vendor
 # vendor_public_prop        -- Properties with no restrictions
 
+system_public_prop(vendor_imsconfig_prop)
+
 # TODO: Remove after fixing Modem SEPolicy
 vendor_internal_prop(ril_mux_report_case_prop)
 vendor_internal_prop(ctl_muxreport-daemon_prop)
@@ -124,7 +126,6 @@ vendor_restricted_prop(vendor_mtk_gpu_prop)
 vendor_restricted_prop(vendor_mtk_sensor_prop)
 vendor_restricted_prop(debug_bq_dump_prop)
 vendor_restricted_prop(netdagent_prop)
-vendor_restricted_prop(vendor_imsconfig_prop)
 vendor_restricted_prop(vendor_mtk_provision_prop)
 vendor_restricted_prop(vendor_mtk_cdma_prop)
 vendor_restricted_prop(vendor_mtk_wfc_prop)
@@ -216,4 +217,3 @@ typeattribute vendor_mtk_ims_prop                    mtk_core_property_type;
 
 # Properties which can't be accessed by device-sepcific domains
 typeattribute vendor_ims_xcap_prop                   extended_core_property_type;
-typeattribute vendor_imsconfig_prop                  extended_core_property_type;
