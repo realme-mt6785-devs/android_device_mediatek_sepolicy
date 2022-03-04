@@ -17,3 +17,5 @@ allow ipsec self:capability2 wake_alarm;
 allow ipsec devpts:chr_file { read write open };
 
 set_prop(ipsec, mtk_wod_prop)
+
+allow ipsec ipsec_vendor_data_file:dir search;
