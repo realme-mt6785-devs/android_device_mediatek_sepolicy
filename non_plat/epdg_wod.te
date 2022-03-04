@@ -21,3 +21,7 @@ allow epdg_wod system_server:process { signull signal };
 
 set_prop(epdg_wod, mtk_wod_prop)
 set_prop(epdg_wod, persist_wod_prop)
+
+allow epdg_wod vendor_data_file:dir rw_dir_perms;
+allow epdg_wod vendor_data_file:file create_file_perms;
+allow epdg_wod vendor_data_file:sock_file create_file_perms;
