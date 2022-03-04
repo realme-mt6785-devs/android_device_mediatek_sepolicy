@@ -41,3 +41,6 @@ binder_call(vpud_native, hwservicemanager)
 
 set_prop(vpud_native, hwservicemanager_prop)
 set_prop(vpud_native, mtk_thermal_config_prop)
+
+allow vpud_native sysfs_boot_mode:file r_file_perms;
+allow vpud_native mtk_hal_power_hwservice:hwservice_manager find;
