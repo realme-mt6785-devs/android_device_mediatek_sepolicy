@@ -65,3 +65,6 @@ allow hal_graphics_composer_default dri_device:chr_file rw_file_perms;
 # Purpose: HWC has to access allocator for dbq
 hal_client_domain(hal_graphics_composer_default, hal_graphics_allocator);
 binder_call(hal_graphics_composer_default, hal_graphics_allocator)
+
+hal_client_domain(hal_graphics_composer_default, hal_allocator)
+hal_client_domain(hal_graphics_composer_default, hal_pq)

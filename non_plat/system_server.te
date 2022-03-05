@@ -273,3 +273,5 @@ allow system_server mobicore_vendor_file:dir { getattr open read };
 # Purpose : Add mtk_hal_netdagent_hwservice for EM firewall usage
 allow system_server mtk_hal_netdagent_hwservice:hwservice_manager find;
 allow system_server netdagent:binder call;
+
+hal_client_domain(system_server, hal_pq)
