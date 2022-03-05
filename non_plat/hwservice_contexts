@@ -99,3 +99,4 @@ vendor.mediatek.hardware.apuware.xrp::INeuronXrp       u:object_r:hal_neuralnetw
 
 # Wifi
 vendor.mediatek.hardware.wifi.supplicant::ISupplicant u:object_r:hal_wifi_supplicant_hwservice:s0
+vendor.mediatek.hardware.wifi.hostapd::IHostapd u:object_r:hal_wifi_hostapd_hwservice:s0
