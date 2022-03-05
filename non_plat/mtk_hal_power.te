@@ -219,3 +219,5 @@ allow mtk_hal_power netdagent:binder call;
 
 allow mtk_hal_power vpud_native:dir { search getattr };
 allow mtk_hal_power vpud_native:file { open read };
+
+add_hwservice(mtk_hal_power, mtk_hal_power_hwservice)
