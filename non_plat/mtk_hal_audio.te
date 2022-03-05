@@ -1,5 +1,7 @@
 type mtk_hal_audio, domain;
+typeattribute mtk_hal_audio hal_audio_client;
 hal_server_domain(mtk_hal_audio, hal_audio)
+# hal_client_domain(mtk_hal_audio, hal_audio)
 
 type mtk_hal_audio_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(mtk_hal_audio)
