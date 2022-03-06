@@ -76,3 +76,6 @@ get_prop(surfaceflinger, vendor_mtk_graphics_hwc_hdr_prop)
 
 # DFPS
 hal_client_domain(surfaceflinger, hal_dfps)
+
+hal_client_domain(surfaceflinger, hal_allocator)
+hal_client_domain(surfaceflinger, hal_pq)
