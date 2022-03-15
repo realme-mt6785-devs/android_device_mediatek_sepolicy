@@ -371,3 +371,4 @@ ro.mtk_deinterlace_support       u:object_r:vendor_mtk_deinterlace_support_prop:
 ro.vendor.globalpq.       u:object_r:vendor_mtk_render_prop:s0
 persist.vendor.dp.        u:object_r:vendor_mtk_render_prop:s0
 vendor.dp.                u:object_r:vendor_mtk_render_prop:s0
+vendor.sys.pq             u:object_r:vendor_mtk_render_prop:s0
