@@ -19,3 +19,6 @@ allow ipsec devpts:chr_file { read write open };
 set_prop(ipsec, mtk_wod_prop)
 
 allow ipsec ipsec_vendor_data_file:dir search;
+allow ipsec sysfs_wake_lock:file rw_file_perms;
+allow ipsec self:capability2 block_suspend;
+dontaudit ipsec self:capability dac_override;
