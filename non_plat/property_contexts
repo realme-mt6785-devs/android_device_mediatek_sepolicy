@@ -362,3 +362,7 @@ persist.vendor.mtk_hvolte_indicator u:object_r:vendor_mtk_hvolte_indicator:s0
 persist.vendor.mtk.volte.enable u:object_r:vendor_mtk_volte_prop:s0
 persist.vendor.mtk.vilte.enable u:object_r:vendor_mtk_volte_prop:s0
 ro.vendor.md_mims_support u:object_r:vendor_mtk_ims_prop:s0
+
+# Media
+ro.mtk_crossmount_support        u:object_r:vendor_mtk_deinterlace_support_prop:s0
+ro.mtk_deinterlace_support       u:object_r:vendor_mtk_deinterlace_support_prop:s0

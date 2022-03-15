@@ -12,6 +12,8 @@
 
 system_public_prop(vendor_imsconfig_prop)
 
+vendor_public_prop(vendor_mtk_deinterlace_support_prop)
+
 # TODO: Remove after fixing Modem SEPolicy
 vendor_internal_prop(ril_mux_report_case_prop)
 vendor_internal_prop(ctl_muxreport-daemon_prop)
