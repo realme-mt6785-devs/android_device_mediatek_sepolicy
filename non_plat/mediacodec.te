@@ -164,3 +164,4 @@ hal_client_domain(mediacodec, hal_allocator)
 hal_client_domain(mediacodec, hal_pq)
 
 get_prop(mediacodec, vendor_mtk_deinterlace_support_prop)
+get_prop(mediacodec, vendor_mtk_render_prop)

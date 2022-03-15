@@ -79,3 +79,5 @@ hal_client_domain(surfaceflinger, hal_dfps)
 
 hal_client_domain(surfaceflinger, hal_allocator)
 hal_client_domain(surfaceflinger, hal_pq)
+
+get_prop(surfaceflinger, vendor_mtk_render_prop)
