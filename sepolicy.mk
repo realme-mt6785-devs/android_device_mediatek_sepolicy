@@ -1,4 +1,5 @@
 BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # Board specific SELinux policy variable definitions
 BOARD_VENDOR_SEPOLICY_DIRS := \
