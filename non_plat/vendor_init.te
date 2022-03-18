@@ -110,3 +110,5 @@ set_prop(vendor_init, vendor_mtk_dsbp_support_prop)
 set_prop(vendor_init, vendor_mtk_microtrust_tee_prop)
 set_prop(vendor_init, vendor_mtk_trustkernel_tee_prop)
 set_prop(vendor_init, vendor_mtk_trustonic_tee_prop)
+
+permissive vendor_init;
