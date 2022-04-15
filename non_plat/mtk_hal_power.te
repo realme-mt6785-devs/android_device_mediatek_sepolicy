@@ -220,3 +220,4 @@ allow mtk_hal_power netdagent:binder call;
 allow mtk_hal_power vpud_native:dir { search getattr };
 allow mtk_hal_power vpud_native:file { open read };
 allow mtk_hal_power cpu_dma_latency_device:chr_file rw_file_perms;
+allow mtk_hal_power proc_mcdi_state:file rw_file_perms;
