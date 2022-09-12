@@ -685,8 +685,10 @@
 /(vendor|system/vendor)/bin/fpsgo  u:object_r:fpsgo_native_exec:s0
 /(vendor|system/vendor)/bin/xgff_test  u:object_r:xgff_test_native_exec:s0
 
+/(vendor|system/vendor)/bin/ccci_fsd u:object_r:ccci_fsd_exec:s0
+
 /(vendor|system/vendor)/bin/biosensord_nvram                                                u:object_r:biosensord_nvram_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.1-service-mediatek           u:object_r:mtk_hal_bluetooth_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.[0|1]-service-mediatek       u:object_r:mtk_hal_bluetooth_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.1-service-mediatek                u:object_r:mtk_hal_gnss_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss-service\.mediatek                    u:object_r:mtk_hal_gnss_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.audio\.service\.mediatek                  u:object_r:mtk_hal_audio_exec:s0
@@ -726,7 +728,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.pq@2\.2-service u:object_r:mtk_hal_pq_exec:s0
 
 # MMS hal
-/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.6-service u:object_r:mtk_hal_mms_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mms@1\.[5|6]-service u:object_r:mtk_hal_mms_exec:s0
 
 #MMAgent hal
 /(vendor|system/vendor)/bin/hw/vendor\.mediatek\.hardware\.mmagent@[0-9]+\.[0-9]+-service u:object_r:mtk_hal_mmagent_exec:s0
