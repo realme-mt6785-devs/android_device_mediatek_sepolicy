@@ -77,3 +77,5 @@ read_fstab(nvram_daemon)
 
 # Purpose: Wifi NVRAM ConnFem Kernel node access
 allow nvram_daemon connfem_device:chr_file rw_file_perms;
+
+r_dir_file(nvram_daemon, sysfs_dt_firmware_android)
