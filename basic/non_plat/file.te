@@ -568,6 +568,8 @@ type consyslog_data_file, file_type, data_file_type, core_data_file_type;
 
 type nfc_socket_file, file_type, data_file_type, core_data_file_type;
 
+type zram_swap_file, file_type, data_file_type, core_data_file_type;
+
 ##########################
 # Socket types
 #
