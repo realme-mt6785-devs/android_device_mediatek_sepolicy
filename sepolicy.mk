@@ -1,4 +1,6 @@
 # Board specific SELinux policy variable definitions
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 MTK_SEPOLICY_PATH := device/mediatek/sepolicy
 
 BOARD_SEPOLICY_DIRS += \
