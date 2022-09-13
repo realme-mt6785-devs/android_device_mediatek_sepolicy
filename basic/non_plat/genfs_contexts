@@ -602,8 +602,20 @@ genfscon sysfs /devices/virtual/usb_rawbulk/ets/wakeup                          
 genfscon sysfs /devices/virtual/usb_rawbulk/gps/wakeup                                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/usb_rawbulk/pcv/wakeup                                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/wakeup/wakeup                                                                                               u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1f000000.mdp/wakeup/wakeup2/event_count                                                            u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1f000000.mdp/wakeup/wakeup2                                                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1f000000.mdp/wakeup/wakeup2                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/rtc/rtc0/wakeup10                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt6359-rtc/wakeup/wakeup8                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6359-pmic/mt635x-auxadc/wakeup/wakeup4                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10228000.gce/wakeup/wakeup0                                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_chg.2.auto/wakeup/wakeup12                                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/wakeup/wakeup11                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-004e/tcpc/type_c_port0/dual-role-type_c_port0/wakeup13                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11201000.mtu3_0/wakeup/wakeup16                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/ac/wakeup17                                                                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/battery/wakeup19                                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/usb/wakeup18                                                                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/mt_charger/power_supply/charger/wakeup1                                                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/mt_charger/wakeup/wakeup2                                                                                  u:object_r:sysfs_wakeup:s0
 
 # allow gpu to set dbg
 genfscon sysfs /disp/dbg1  u:object_r:sysfs_gpu_mtk:s0
