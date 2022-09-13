@@ -245,7 +245,6 @@ set_prop(meta_tst, system_mtk_ctl_emdlogger1_prop)
 #Date: W17.27
 # Purpose: STMicro NFC solution integration
 allow meta_tst vendor_file:file rx_file_perms;
-allow meta_tst debugfs_tracing:file w_file_perms;
 
 # Date: W17.29
 # Purpose : Allow meta_tst to call vendor.mediatek.hardware.keymaster_attestation@1.0-service.

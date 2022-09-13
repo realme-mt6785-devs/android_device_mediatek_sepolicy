@@ -36,7 +36,6 @@ binder_call(vtservice_hidl, vtservice)
 
 get_prop(vtservice_hidl, hwservicemanager_prop)
 
-allow vtservice_hidl debugfs_tracing:file w_file_perms;
 allow vtservice_hidl system_file:dir r_file_perms;
 allow vtservice_hidl rild:unix_stream_socket connectto;
 

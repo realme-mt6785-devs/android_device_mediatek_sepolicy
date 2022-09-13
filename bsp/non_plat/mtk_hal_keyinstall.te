@@ -24,4 +24,3 @@ allow mtk_hal_keyinstall persist_data_file:file { read write create open setattr
 allow mtk_hal_keyinstall key_install_data_file:dir { write add_name remove_name search };
 allow mtk_hal_keyinstall key_install_data_file:file { write create setattr read getattr unlink open append };
 
-allow mtk_hal_keyinstall debugfs_tracing:file { write };

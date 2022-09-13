@@ -20,7 +20,6 @@ allow mediacodec persist_data_file:dir search;
 # Date : WK16.28
 # Operation : video codec driver
 # Purpose : for performance profiling and timing issue tracking during video playback
-allow mediacodec debugfs_fb:dir search;
 
 # Date : WK16.29
 # Operation : Migration

@@ -64,9 +64,6 @@ allow init vendor_block_device:lnk_file relabelto;
 # Purpose: Fix gnss hal service fail
 allow init mtk_hal_gnss_exec:file getattr;
 
-# Fix boot up violation
-allow init debugfs_tracing_instances:file relabelfrom;
-
 # Date: W17.22
 # Operation : New Feature
 # Purpose : Add for A/B system

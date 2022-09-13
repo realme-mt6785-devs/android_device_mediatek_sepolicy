@@ -122,7 +122,6 @@ allow vtservice mediametrics:binder call;
 allow vtservice self:udp_socket create_socket_perms_no_ioctl;
 allow vtservice node:udp_socket node_bind;
 
-allow vtservice debugfs_ion:dir search;
 allow vtservice fwmarkd_socket:sock_file write;
 allow vtservice hal_graphics_allocator_default:binder call;
 allow vtservice hal_graphics_allocator_default:fd use;

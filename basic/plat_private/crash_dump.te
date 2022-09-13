@@ -81,9 +81,6 @@ allow crash_dump crash_dump:file r_file_perms;
 # Purpose : allow crash_dump to read /proc/version
 allow crash_dump proc_version:file r_file_perms;
 
-# Purpose: Allow crash_dump to write /sys/kernel/debug/tracing/snapshot
-userdebug_or_eng(`allow crash_dump debugfs_tracing_debug:file rw_file_perms;')
-
 # Purpose: receive dropbox message
 allow crash_dump dropbox_data_file:file { getattr read };
 allow crash_dump dropbox_service:service_manager find;

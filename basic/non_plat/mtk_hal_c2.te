@@ -31,7 +31,6 @@ neverallow mtk_hal_c2 { file_type fs_type }:file execute_no_trans;
 neverallow mtk_hal_c2 domain:{ tcp_socket udp_socket rawip_socket } *;
 
 #============= mtk_hal_c2 ==============
-allow mtk_hal_c2 debugfs_ion:dir search;
 allow mtk_hal_c2 proc_ged:file rw_file_perms;
 allowxperm mtk_hal_c2 proc_ged:file ioctl { proc_ged_ioctls };
 allow mtk_hal_c2 gpu_device:dir search;

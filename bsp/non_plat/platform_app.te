@@ -54,7 +54,6 @@ hal_client_domain(platform_app, hal_allocator)
 allow platform_app mtk_hal_pplagent_hwservice:hwservice_manager find;
 allow platform_app ppl_agent:binder call;
 
-allow platform_app debugfs_ion:dir search;
 
 # Date: 2018/06/19
 # Operation: Migration

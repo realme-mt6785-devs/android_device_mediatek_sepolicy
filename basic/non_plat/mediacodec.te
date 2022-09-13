@@ -95,7 +95,6 @@ vndbinder_use(mediacodec)
 # Date : WK1721
 # Purpose: For FULL TREBLE
 allow mediacodec system_file:dir r_dir_perms;
-allow mediacodec debugfs_ion:dir search;
 
 
 # Date : WK17.30

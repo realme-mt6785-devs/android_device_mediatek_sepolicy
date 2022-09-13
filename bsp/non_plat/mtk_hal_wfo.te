@@ -12,4 +12,3 @@ hal_server_domain(mtk_hal_wfo, hal_mtk_wfo)
 # Operation : IT
 # Purpose: WifiOffloadService HIDL Migration
 allow mtk_hal_wfo mal_mfi_socket:sock_file write;
-allow mtk_hal_wfo debugfs_tracing:file w_file_perms;

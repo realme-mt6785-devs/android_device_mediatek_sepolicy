@@ -8,7 +8,6 @@
 allow hal_gatekeeper_default mobicore:unix_stream_socket { connectto read write };
 allow hal_gatekeeper_default mobicore_user_device:chr_file { read write open ioctl};
 
-allow hal_gatekeeper_default debugfs_tracing:file write;
 allow hal_gatekeeper_default mnt_vendor_file:dir search;
 allow hal_gatekeeper_default persist_data_file:dir { write search add_name remove_name};
 allow hal_gatekeeper_default persist_data_file:file { write read getattr open create unlink};

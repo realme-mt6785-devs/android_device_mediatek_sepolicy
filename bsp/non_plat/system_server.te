@@ -76,9 +76,6 @@ hal_client_domain(system_server, hal_mtk_fm)
 # Date : W19.12
 # Operation : For DuraSpeed Migration
 allow system_server proc_cpu_loading:file rw_file_perms;
-userdebug_or_eng(`
-allow system_server debugfs_tracing_debug:file r_file_perms;
-')
 allow system_server proc_low_memory_hit:file rw_file_perms;
 allow system_server duraspeed_data_file:dir create_dir_perms;
 allow system_server duraspeed_data_file:file create_file_perms;

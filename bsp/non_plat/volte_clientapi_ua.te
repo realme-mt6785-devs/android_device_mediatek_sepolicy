@@ -19,4 +19,3 @@ binder_call(volte_clientapi_ua, platform_app)
 # Operation : IT
 # Purpose: clientapi HIDL Migration
 get_prop(volte_clientapi_ua, hwservicemanager_prop)
-allow volte_clientapi_ua debugfs_tracing:file w_file_perms;

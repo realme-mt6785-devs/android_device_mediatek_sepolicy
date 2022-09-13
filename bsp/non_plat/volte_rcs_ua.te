@@ -15,11 +15,6 @@ hal_server_domain(volte_rcs_ua, hal_rcs)
 # call into system_app process (callbacks)
 binder_call(volte_rcs_ua, system_app)
 
-# Date : W17.31
-# Operation : IT
-# Purpose: Rcs HIDL Migration
-allow volte_rcs_ua debugfs_tracing:file { write open };
-
 # Date : W1747
 # Operation: RCS over Internet development
 # Purpose: For volte_rcs_ua to be able to talk to rcs_volte_stack

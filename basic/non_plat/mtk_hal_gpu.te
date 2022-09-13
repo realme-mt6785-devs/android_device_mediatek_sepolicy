@@ -35,10 +35,7 @@ allow mtk_hal_gpu graphics_device:chr_file rw_file_perms;
 allow mtk_hal_gpu init:unix_stream_socket connectto;
 allow mtk_hal_gpu property_socket:sock_file write;
 
-allow mtk_hal_gpu debugfs_ged:dir rw_dir_perms;
-allow mtk_hal_gpu debugfs_ged:file rw_file_perms;
 allow mtk_hal_gpu proc_ged:file rw_file_perms;
 
 allow mtk_hal_gpu hal_graphics_allocator_default:fd use;
 allow mtk_hal_gpu ion_device:chr_file r_file_perms;
-allow mtk_hal_gpu debugfs_ion:dir search;

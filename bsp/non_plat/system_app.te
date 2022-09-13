@@ -39,11 +39,6 @@ allow system_app proc_slogger:file rw_file_perms;
 # Purpose: Allow to use HAL PQ
 hal_client_domain(system_app, hal_mtk_pq)
 
-# Date : WK17.29
-# Operation : Migration
-# Purpose : for device bring up, not to block early SQC
-allow system_app debugfs_ion:dir search;
-
 # Date:W17.29
 # Operation : presence hal developing
 # Purpose : Allow to use HAL presence
@@ -116,7 +111,6 @@ get_prop(system_app, vendor_mtk_ss_vendor_prop)
 # Date: 2018/04/18
 # Purpose: Allow to use HIDL and access mtk_hal_neuralnetworks
 allow system_app mtk_hal_neuralnetworks:binder { call transfer };
-allow system_app debugfs_ion:dir search;
 
 # Date: 2018/10/31
 # Operation: Support SubsidyLock

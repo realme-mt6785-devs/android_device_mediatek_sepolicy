@@ -16,7 +16,6 @@ allowxperm camerapostalgo proc_perfmgr:file ioctl {
 
 allow camerapostalgo proc_ged:file r_file_perms;
 allowxperm camerapostalgo proc_ged:file ioctl { proc_ged_ioctls };
-allow camerapostalgo debugfs_ion:dir search;
 
 # ipc call
 hal_client_domain(camerapostalgo, hal_mtk_mms)

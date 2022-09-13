@@ -6,9 +6,6 @@
 allow dumpstate aee_dumpsys_data_file:dir w_dir_perms;
 allow dumpstate aee_dumpsys_data_file:file create_file_perms;
 
-# Purpose: debugfs files
-allow dumpstate procfs_blockio:file r_file_perms;
-
 # Purpose: /sys/kernel/ccci/md_chn
 allow dumpstate sysfs_ccci:dir search;
 allow dumpstate sysfs_ccci:file r_file_perms;
@@ -82,7 +79,6 @@ allow dumpstate surfaceflinger:fifo_file rw_file_perms;
 # Date : W19.26
 # Operation : Migration
 # Purpose : fix google dumpstate avc error in xTS
-allow dumpstate debugfs_mmc:dir search;
 allow dumpstate mnt_media_rw_file:dir getattr;
 
 # Date: 19/07/15
@@ -109,14 +105,8 @@ allow dumpstate sysfs_cache_status:file r_file_perms;
 
 hal_client_domain(dumpstate, hal_light)
 
-#Purpose: Allow dumpstate to read /sys/kernel/tracing/instances/mmstat/trace
-allow dumpstate debugfs_tracing_instances:dir r_dir_perms;
-allow dumpstate debugfs_tracing_instances:file r_file_perms;
-
 allow dumpstate proc_ion:dir r_dir_perms;
 allow dumpstate proc_ion:file r_file_perms;
 allow dumpstate proc_m4u_dbg:dir r_dir_perms;
 allow dumpstate proc_m4u_dbg:file r_file_perms;
 allow dumpstate proc_mtkfb:file r_file_perms;
-
-allow dumpstate proc_ccci_dump:file r_file_perms;

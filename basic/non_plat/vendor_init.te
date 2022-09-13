@@ -70,13 +70,6 @@ set_prop(vendor_init, vendor_mtk_wifi_hotspot_prop)
 set_prop(vendor_init, vendor_mtk_wifi_hal_prop)
 set_prop(vendor_init, vendor_mtk_powerhal_prop)
 
-# mmstat tracer
-allow vendor_init debugfs_tracing_instances:dir create_dir_perms;
-allow vendor_init debugfs_tracing_instances:file w_file_perms;
-
-#boot tracer
-allow vendor_init debugfs_tracing_debug:file w_file_perms;
-
 # Set surfaceflinger cpu policy property
 set_prop(vendor_init, vendor_mtk_debug_sf_cpupolicy_prop)
 

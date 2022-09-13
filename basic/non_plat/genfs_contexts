@@ -624,18 +624,6 @@ genfscon sysfs /class/extdev_io u:object_r:sysfs_extdev:s0
 genfscon sysfs /kernel/cm_mgr u:object_r:sysfs_cm_mgr:s0
 
 ##########################
-# debugfs files
-#
-genfscon debugfs /displowpower       u:object_r:debugfs_fb:s0
-genfscon debugfs /disp               u:object_r:debugfs_fb:s0
-genfscon debugfs /dispsys            u:object_r:debugfs_fb:s0
-genfscon debugfs /fbconfig           u:object_r:debugfs_fb:s0
-genfscon debugfs /fpsgo              u:object_r:debugfs_fpsgo:s0
-genfscon debugfs /ion/clients        u:object_r:debugfs_ion:s0
-genfscon debugfs /mtkfb              u:object_r:debugfs_fb:s0
-genfscon debugfs /mmprofile          u:object_r:debugfs_fb:s0
-
-##########################
 # other files
 #
 genfscon iso9660 / u:object_r:iso9660:s0

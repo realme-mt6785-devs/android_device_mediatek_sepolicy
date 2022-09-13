@@ -17,5 +17,4 @@ allow hal_fingerprint_default mobicore_user_device:chr_file rw_file_perms;
 allow hal_fingerprint_default mobicore_user_device:unix_stream_socket connectto;
 allow hal_fingerprint_default mobicore:unix_stream_socket connectto;
 allow hal_fingerprint_default tmpfs:chr_file rw_file_perms;
-allow hal_fingerprint_default debugfs_trace_marker:file rw_file_perms;
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;

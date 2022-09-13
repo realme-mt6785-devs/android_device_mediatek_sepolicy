@@ -288,7 +288,6 @@ allow factory sysfs_power:file rw_file_perms;
 allow factory sysfs_power:dir r_dir_perms;
 allow factory self:capability2 block_suspend;
 allow factory sysfs_vibrator:file rw_file_perms;
-allow factory debugfs_ion:dir search;
 allow factory selinuxfs:file r_file_perms;
 allow factory sysfs_devices_block:dir r_dir_perms;
 allow factory vendor_mtk_factory_start_prop:file read;

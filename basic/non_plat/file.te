@@ -363,19 +363,6 @@ type sysfs_boot_info, fs_type, sysfs_type;
 type sysfs_cm_mgr, fs_type, sysfs_type;
 
 ##########################
-# Debug Filesystem types
-#
-
-# display debugfs file
-type debugfs_fb, fs_type, debugfs_type;
-
-# fpsgo debugfs file
-type debugfs_fpsgo, fs_type, debugfs_type;
-
-# memtrack debugfs file
-type debugfs_ion, fs_type, debugfs_type;
-
-##########################
 # Other Filesystem types
 #
 # for labeling /mnt/cd-rom as iso9660

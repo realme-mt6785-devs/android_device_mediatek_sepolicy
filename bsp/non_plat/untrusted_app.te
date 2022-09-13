@@ -28,7 +28,6 @@ allow untrusted_app mediaserver:dir search;
 # Date: 2018/04/18
 # Purpose: Allow untrusted_app to use HIDL and access mtk_hal_neuralnetworks
 allow untrusted_app mtk_hal_neuralnetworks:binder { call transfer };
-allow untrusted_app debugfs_ion:dir search;
 
 # Date: 2020/06/29
 # Operation : eMBMS Migration

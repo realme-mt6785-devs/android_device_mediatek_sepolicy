@@ -177,10 +177,6 @@ allow mtk_hal_audio fuse:dir r_dir_perms;
 # for usb phone call, allow sys_nice
 allow mtk_hal_audio self:capability sys_nice;
 
-# Date : W17.29
-# Boot for opening trace file: Permission denied (13)
-allow mtk_hal_audio debugfs_tracing:file w_file_perms;
-
 # Audio Tuning Tool Android O porting
 binder_call(mtk_hal_audio, audiocmdservice_atci)
 
@@ -214,11 +210,6 @@ allow mtk_hal_audio gpu_device:dir search;
 
 # Date : WK20.26
 allow mtk_hal_audio sysfs_dt_firmware_android:file r_file_perms;
-
-# Date : WK20.36
-# Operation : Migration
-# Purpose : AAudio HAL
-allow mtk_hal_audio debugfs_ion:dir search;
 
 # Date : 2021/06/15
 # Purpose: Allow to change mtk MMQoS scenario

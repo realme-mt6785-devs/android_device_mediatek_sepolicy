@@ -25,4 +25,3 @@ allow mtk_hal_imsa rild_imsm_socket:sock_file w_file_perms;
 # Operation : IMSA sanity
 # Purpose : Add permission for IMSA to access radio
 allow mtk_hal_imsa radio:binder call;
-allow mtk_hal_imsa debugfs_tracing:file w_file_perms;

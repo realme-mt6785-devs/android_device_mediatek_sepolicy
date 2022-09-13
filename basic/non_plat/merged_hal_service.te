@@ -33,7 +33,6 @@ allow merged_hal_service mnld:unix_dgram_socket sendto;
 hal_server_domain(merged_hal_service, hal_graphics_allocator)
 allow merged_hal_service gpu_device:dir search;
 allow merged_hal_service sw_sync_device:chr_file rw_file_perms;
-allow merged_hal_service debugfs_tracing:file w_file_perms;
 
 #for ape hidl permissions
 hal_server_domain(merged_hal_service, hal_mtk_codecservice)

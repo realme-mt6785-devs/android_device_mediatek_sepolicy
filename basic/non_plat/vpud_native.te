@@ -33,7 +33,6 @@ allow vpud_native tee_device:chr_file rw_file_perms;
 hal_client_domain(vpud_native, hal_power)
 
 allow vpud_native mediaserver:fd use;
-allow vpud_native debugfs_ion:dir search;
 
 not_full_treble(`
   allow vpud_native shell_exec:file { execute read open execute_no_trans getattr };
