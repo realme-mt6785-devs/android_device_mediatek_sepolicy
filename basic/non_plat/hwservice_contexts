@@ -90,3 +90,4 @@ vendor.mediatek.hardware.composer_ext::IComposerExt u:object_r:mtk_hal_composer_
 
 vendor.mediatek.hardware.keyinstall::IKeyinstall u:object_r:mtk_hal_keyinstall_hwservice:s0
 vendor.mediatek.hardware.gpu::IGraphicExt u:object_r:mtk_hal_gpu_hwservice:s0
+vendor.mediatek.hardware.mtkcodecservice::IMtkCodecService u:object_r:hal_mtkcodecservice_hwservice:s0
